@@ -32,6 +32,10 @@ export interface Product {
   applications: LocalizedText[]
   moq?: string
   rawSpecifications?: string
+  rawDescription?: string
+  nameZh?: string
+  categoryZh?: string
+  categoryEn?: string
 }
 
 export interface NewsArticle {
