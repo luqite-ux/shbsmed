@@ -74,13 +74,13 @@ export function HeroCarousel() {
                   isActive && !reducedMotion ? "scale-100" : "scale-[1.015]",
                 )}
               />
-              <div className="absolute inset-0 bg-gradient-to-l from-brand-blue-deep/90 via-brand-blue-deep/60 to-brand-blue-deep/15" />
+              <div className={cn("absolute inset-0 from-brand-blue-deep/90 via-brand-blue-deep/60 to-brand-blue-deep/15",slide.textSide === "left" ? "bg-gradient-to-r" : "bg-gradient-to-l")} />
             </div>
           )
         })}
 
         <div className="relative z-10 flex h-full max-w-7xl flex-col justify-center px-4 sm:mx-auto sm:px-6 lg:px-8">
-          <div className="w-full sm:ml-auto sm:max-w-[50%] lg:max-w-[48%]">
+          <div className={cn("w-full sm:max-w-[50%] lg:max-w-[48%]",activeSlide.textSide === "right" && "sm:ml-auto")}>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-teal">{activeSlide.eyebrow}</p>
             <h1 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
               {activeSlide.heading}

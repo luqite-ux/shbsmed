@@ -10,6 +10,7 @@ export interface HeroSlide {
   eyebrow: string
   heading: string
   subheading: string
+  textSide: "left" | "right"
 }
 
 export const heroSlides: HeroSlide[] = [
@@ -21,6 +22,7 @@ export const heroSlides: HeroSlide[] = [
     heading: "Precision-manufactured radiofrequency components, built for repeatable procedural use",
     subheading:
       "Shanghai Brightstone Medical Technology Limited manufactures disposable RF electrodes and multi-configuration RF cannulas across dedicated production lines in Shanghai.",
+    textSide: "right",
   },
   {
     id: "automated-assembly",
@@ -30,6 +32,7 @@ export const heroSlides: HeroSlide[] = [
     heading: "Automated cutting and assembly lines behind every finished component",
     subheading:
       "Four dedicated product lines and two custom needle-component lines support consistent output at approximately 150,000 units per month.",
+    textSide: "left",
   },
   {
     id: "needle-detail",
@@ -39,6 +42,7 @@ export const heroSlides: HeroSlide[] = [
     heading: "Configurable gauge, length, and tip geometry for your specification",
     subheading:
       "OEM/ODM programs, sample requests, and custom configurations are reviewed directly by our production and quality team.",
+    textSide: "right",
   },
 ]
 
