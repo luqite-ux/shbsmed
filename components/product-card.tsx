@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 import type { Product } from "@/lib/types"
 
 export function ProductCard({ product }: { product: Product }) {
-  const cardSpecs = product.specs.slice(0, 3)
+  const cardSpecs = product.specs.filter((spec) => spec.value.en.length <= 64).slice(0, 3)
 
   return (
     <Link
