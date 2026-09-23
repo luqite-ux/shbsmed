@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "verified_at": "2026-09-23T03:26:38.830Z",
+  "row": {
+    "tenant_id": "fd8a0387-ffb2-4cf1-87d3-be3a3a15810b",
+    "expires_on": null,
+    "enforcement_enabled": false,
+    "guard_version": "1"
+  }
+}

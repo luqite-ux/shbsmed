@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-09-23T03:20:38.818Z",
+  "base": "https://shbsmed.com",
+  "checks": {
+    "sitemap": {
+      "result": "PASS",
+      "url_count": 57,
+      "failures": []
+    },
+    "seo": {
+      "result": "FAIL",
+      "home_status": 200,
+      "robots_status": 200,
+      "organization_schema": true,
+      "favicon": true
+    },
+    "form": {
+      "result": "PASS",
+      "status": 200
+    },
+    "data": {
+      "result": "PASS",
+      "products": 49,
+      "articles": 0,
+      "inquiries": 0,
+      "domain": "shbsmed.com",
+      "admin_group": 2,
+      "forbidden_hits": false
+    }
+  },
+  "result": "FAIL"
+}

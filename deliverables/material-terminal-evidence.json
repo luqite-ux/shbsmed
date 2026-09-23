@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "verified_at": "2026-09-23T03:19:22.151Z",
+  "base": "https://shbsmed.com",
+  "tenant": {
+    "id": "fd8a0387-ffb2-4cf1-87d3-be3a3a15810b",
+    "domain": "shbsmed.com",
+    "display_name": "上海明石医疗科技有限公司"
+  },
+  "backend_product_count": 49,
+  "pages": {
+    "/": {
+      "status": 200,
+      "bytes": 69455
+    },
+    "/products": {
+      "status": 200,
+      "bytes": 267254
+    },
+    "/manufacturing": {
+      "status": 200,
+      "bytes": 35439
+    },
+    "/capabilities": {
+      "status": 200,
+      "bytes": 83887
+    },
+    "/quality": {
+      "status": 200,
+      "bytes": 37421
+    },
+    "/about": {
+      "status": 200,
+      "bytes": 35067
+    },
+    "/news": {
+      "status": 200,
+      "bytes": 27021
+    },
+    "/contact": {
+      "status": 200,
+      "bytes": 45970
+    }
+  },
+  "media_routes": {
+    "images": "/capabilities",
+    "videos": "/manufacturing"
+  }
+}

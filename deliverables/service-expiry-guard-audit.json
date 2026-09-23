@@ -1,0 +1,38 @@
+{
+  "projectName": "shbsmed-guard-mudikz2p",
+  "syntheticTenantId": "81fb172a-8052-4d8c-a681-6b7f553b5e47",
+  "checks": {
+    "publicExpiredStatus": {
+      "result": "FAIL",
+      "status": 200,
+      "body": {
+        "available": true,
+        "status": "active",
+        "checkedAt": "2026-09-23T02:58:25.624Z",
+        "version": 1
+      }
+    },
+    "simulatedExpired": {
+      "result": "FAIL",
+      "status": 200
+    },
+    "adminReachable": {
+      "result": "PASS",
+      "status": 200
+    },
+    "renewalRecovery": {
+      "result": "PASS",
+      "status": 200
+    },
+    "normal": {
+      "result": "PASS",
+      "status": 200
+    }
+  },
+  "cleanup": {
+    "vercelProject": "DELETED",
+    "serviceTermRows": 0,
+    "tenantRows": 0,
+    "forcedCleanupAfterImmutableAuditTrigger": "PASS"
+  }
+}

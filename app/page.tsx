@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { SiteHeader } from "@/components/site-header"
+export const metadata={alternates:{canonical:"https://shbsmed.com/"}}
 import { SiteFooter } from "@/components/site-footer"
 import { FamilyCard } from "@/components/family-card"
 import { ProductCard } from "@/components/product-card"
