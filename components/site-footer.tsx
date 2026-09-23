@@ -35,7 +35,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <BrandLogo className="[&_span:first-child]:text-white [&_span:last-child]:text-white/60" />
+            <BrandLogo size="footer" className="[&_span:first-child]:text-white [&_span:last-child]:text-white/60" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               {company.legalNameEn} manufactures disposable RF electrodes and multi-configuration RF cannulas from a
               dedicated {company.facilityArea} facility in Shanghai, China.
