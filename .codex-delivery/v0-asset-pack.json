@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "representative_only": true,
+  "assets": [
+    {
+      "local_path": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image1.png",
+      "purpose": "official-logo-and-favicon-source",
+      "ledger_reference": "xl/media/image1.png"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\1.jpg",
+      "purpose": "customer-provided-banner",
+      "ledger_reference": "轮播图/1.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\2.jpg",
+      "purpose": "customer-provided-banner",
+      "ledger_reference": "轮播图/2.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\3.jpg",
+      "purpose": "customer-provided-banner",
+      "ledger_reference": "轮播图/3.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "purpose": "representative-product-type",
+      "ledger_reference": "产品优化/一次性使用射频电极照片.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "purpose": "representative-product-type",
+      "ledger_reference": "产品优化/一次性使用射频套管（直尖型）.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "purpose": "representative-product-type",
+      "ledger_reference": "产品优化/一次性射频套管（弯尖型）.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "purpose": "representative-product-type",
+      "ledger_reference": "产品优化/一次性射频套管（弯钝型）.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "purpose": "representative-product-type",
+      "ledger_reference": "产品优化/一次性射频套管（弯尖侧孔型）.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\video-frames\\video-1-sheet.jpg",
+      "purpose": "representative-manufacturing-video-frames",
+      "ledger_reference": "materials/extracted/video-frames/video-1-sheet.jpg"
+    },
+    {
+      "local_path": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\video-frames\\video-2-sheet.jpg",
+      "purpose": "representative-manufacturing-video-frames",
+      "ledger_reference": "materials/extracted/video-frames/video-2-sheet.jpg"
+    }
+  ],
+  "excluded_scope": "All remaining product, factory, quality, exhibition and original video assets remain in full-content-manifest for complete integration."
+}

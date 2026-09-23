@@ -1,0 +1,15 @@
+# Homepage Media Slot Plan
+
+| Module | Buyer purpose | Customer media source | Desktop / 390px treatment | CTA and fallback | Codex integration responsibility |
+|---|---|---|---|---|---|
+| Hero carousel | Establish product category fit and precision-manufacturing credibility | All three `轮播图/*.jpg` banners | 3840×800 full bleed; per-slide focal positions from banner manifest; 390px gets independently cropped safe zones | `Explore Products` and `Request a Quote`; reduced motion shows slide 1 without autoplay | Preserve all three originals and implement per-slide crop metadata |
+| Product families | Help buyers distinguish electrode and four cannula tip structures | `产品优化/*.jpg` plus workbook product imagery | 4–5 clean contain cards on continuous pale-blue stages; 2-column mobile | Product family → filtered products; image error uses brand-neutral placeholder, not another SKU | Replace representative cards with all 49 backend SKUs after template PASS |
+| Application fit | Explain RF pain-treatment and OEM needle-component use without overstating outcomes | Product close-ups and neutral line icons | Two-column evidence narrative; mobile stacked | `Discuss Your Application` → RFQ | Keep medical claims limited to customer-supplied wording and avoid efficacy guarantees |
+| Manufacturing proof | Demonstrate real process capability | `5全自动切割机.mp4`, `6线切割.mp4`, equipment photo `14全自动打印机.jpg` | Two video panels with posters; play only in viewport; mobile uses poster-first controls | `View Manufacturing` | Transcode web-ready MP4/WebM, add poster, captions/labels, reduced-motion fallback |
+| Facility & quality | Build trust with real site evidence | cleanroom `10/11`, inspection lab `12/13`, warehouses `3/4`, finished goods `15/16/17` | Editorial grid with varied but aligned ratios; single-column mobile | `Quality & Compliance` | Use every relevant image across Home, Manufacturing, About and Quality, not audit-only galleries |
+| Capacity facts | Answer supplier qualification questions | Excel company rows 15–18 | Four concise metrics with semantic icons; no unsupported superlatives | `Send Requirements` | Values remain backend-editable and sourced from tenant settings |
+| Exhibition / market presence | Show real customer-facing activity | `18/19/20展会照片` | 3-up evidence strip; swipeable mobile | `Contact Our Team` | Crop for privacy where needed; do not infer customer names or contracts |
+| FAQ | Reduce RFQ friction on MOQ, samples, OEM/ODM and lead times | FAQ sheet rows 4–29, excluding prohibited warranty row 30 | Accessible accordion; no hidden content in DOM | Inline RFQ link | Preserve factual answers; remove warranty/guarantee language globally |
+| Final RFQ | Convert qualified visitors | Product family thumbnail + cleanroom background | Split proof-and-form layout; stacked mobile | Full inquiry form with 4-character CAPTCHA position | Later connect Supabase, atomic CAPTCHA, success/error states and notification rules |
+
+Result: `homepage_conversion_plan_result = PASS`. The page sequence directly answers product fit, specifications, manufacturing evidence, MOQ/sample/OEM questions and gives repeated RFQ paths.

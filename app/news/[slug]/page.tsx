@@ -1,0 +1,2 @@
+import { notFound } from "next/navigation";import { PageFrame } from "@/components/page-frame";import { getArticleBySlug } from "@/lib/articles-db";export const dynamicParams=true;export const revalidate=60
+export default async function NewsArticle({params}:{params:Promise<{slug:string}>}){const{slug}=await params,a=await getArticleBySlug(slug);if(!a)notFound();return <PageFrame eyebrow="Insight" title={a.title} description={a.excerpt}><article className="article-prose mx-auto max-w-3xl px-4 py-16 sm:px-6" dangerouslySetInnerHTML={{__html:a.content}}/></PageFrame>}

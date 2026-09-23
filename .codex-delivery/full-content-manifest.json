@@ -1,0 +1,808 @@
+{
+  "version": 1,
+  "company": {
+    "legal_name_zh": "上海明石医疗科技有限公司",
+    "legal_name_en": "Shanghai Brightstone Medical Technology Limited",
+    "legal_name_en_status": "official_customer_supplied",
+    "brand": "Brightstone Medical",
+    "domain": "shbsmed.com",
+    "email": "info@shbsmed.com",
+    "address_zh": "上海市青浦区朱家角镇康泰路78号1幢3层"
+  },
+  "products": [
+    {
+      "product_key": "re2750-bm",
+      "row": 4,
+      "product_id": "RE2750-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频电极",
+      "name_en": "Single-use Radio frequency (RE) Electrode",
+      "description": "该产品专用于治疗三叉神经痛等各种顽固性疼痛或椎间盘突出症。其与射频套管组合使用，并与射频治疗仪连接，输出射频电波作用于神经组织靶点进行热凝和神经调节或对椎间盘髓核组织进行消融，以有效通过配备转接线，可连接不同品牌的射频治仪。                                                                                    This product is specially designed for the treatment of various intractable pains such as trigeminal neuralgia or intervertebral disc herniation. It is used in combination with a radio‑frequency cannula and connected to a radio‑frequency therapeutic apparatus. It outputs radio‑frequency waves to act on target nerve tissues for thermocoagulation and nerve modulation, or ablate the nucleus pulposus tissue of intervertebral discs for effective treatment. Equipped with an adapter cable, it can be connected to radio‑frequency therapeutic apparatuses of different brands.",
+      "specifications": "线规：27G                              有效长度：50 mm                          长度色标：绿色                       可与同等有效长度的射频套管配套使用。                                                                                                                           Gauge：27G                             Effective length：50 mm                                  Length color scale：Green            Compatible with RF cannulas of the same effective length.",
+      "moq": "500pcs  ",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg"
+      ]
+    },
+    {
+      "product_key": "re27100-bm",
+      "row": 5,
+      "product_id": "RE27100-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频电极",
+      "name_en": "Single-use Radio frequency (RE) Electrode",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：27G                                                                      有效长度：100 mm                                                    长度色标：蓝色                                                           可与同等有效长度的射频套管配套使用。                                                                                                                 Gauge：27G                                                         Effective length：100 mm                                  Length color scale：Blue                                   Compatible with RF cannulas of the same effective length.                                              ",
+      "moq": "500pcs  ",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg"
+      ]
+    },
+    {
+      "product_key": "re27150-bm",
+      "row": 6,
+      "product_id": "RE27150-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频电极",
+      "name_en": "Single-use Radio frequency (RE) Electrode",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：27G                                                                         有效长度：150 mm                                                          长度色标：黄色                                                                                 可与同等有效长度的射频套管配套使用。                                                                                                                Gauge：27G                                                   Effective length：150 mm                                  Length color scale：Yellow                                                   Compatible with RF cannulas of the same effective length.                         ",
+      "moq": "500pcs  ",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg"
+      ]
+    },
+    {
+      "product_key": "re27100b-bm",
+      "row": 7,
+      "product_id": "RE27100B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频电极",
+      "name_en": "Single-use Radio frequency (RE) Electrode",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：27G                                                                      有效长度：100 mm                                                    长度色标：蓝色                                                           仅限于与RC201010L-BM，RC181010L-BM射频套管配套使用。                                                                                                               Gauge：27G                                                         Effective length：100 mm                                  Length color scale：Blue                                                For use only with cannulas RC201010L-BM，RC181010L-BM.     ",
+      "moq": "500pcs  ",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg"
+      ]
+    },
+    {
+      "product_key": "re27150b-bm",
+      "row": 8,
+      "product_id": "RE27150B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频电极",
+      "name_en": "Single-use Radio frequency (RE) Electrode",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：27G                                                                      有效长度：150 mm                                                            长度色标：黄色                                                           仅限于与RC201510L-BM，RC181510L-BM射频套管配套使用。                                                                                                                 Gauge：27G                                                            Effective length：150 mm                                  Length color scale：Yellow                                           For use only with cannulas RC201510L-BM，RC181510L-BM.       ",
+      "moq": "500pcs  ",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg"
+      ]
+    },
+    {
+      "product_key": "rc22505s-bm",
+      "row": 9,
+      "product_id": "RC22505S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "该产品专用于治疗三叉神经痛等各种顽固性疼痛或椎间盘突出症。其与射频电极组合使用，经射频电极与射频治疗仪连接，输出射频电波作用于神经组织靶点进行热凝和神经调节或对椎间盘髓核组织进行消融，以有效通过配备转接线，可连接不同品牌的射频治仪。                                    直尖型头部结构适用于简单直行路径的靶点穿刺。                                                                                                                   This product is specially designed for the treatment of various intractable pains such as trigeminal neuralgia or intervertebral disc herniation.Used in combination with RF electrode, connected to RF therapy unit via RF electrode It outputs radio‑frequency waves to act on target nerve tissues for thermocoagulation and nerve modulation, or ablate the nucleus pulposus tissue of intervertebral discs for effective treatment. Equipped with an adapter cable, it can be connected to radio‑frequency therapeutic apparatuses of different brands.                      Straight sharp tip structure is suitable for target puncture along simple straight access paths.",
+      "specifications": "线规：22G                                                                           有效长度：50 mm                                                                 非绝缘长度：5 mm                                                         线规色标：黑色                                                                   头部结构：直尖型                                                      直尖型头部结构适用于简单直行路径的靶点穿刺。                                                                        Gauge：22G                                                                 Effective length：50 mm                                           Active tip length：5 mm                                  Guege color scale：Black                                             Tip Structure：Straight Sharp Tip               Straight sharp tip structure is suitable for target puncture along simple straight access paths.        ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc22510s-bm",
+      "row": 10,
+      "product_id": "RC22510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                          有效长度：50 mm                                                           非绝缘长度：10 mm                                                      线规色标：黑色                                                                  头部结构：直尖型                                                                                                                Gauge：22G                                                              Effective length：50 mm                                         Active tip length：10 mm                                  Guege color scale：Black                                   Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221005s-bm",
+      "row": 11,
+      "product_id": "RC221005S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                 有效长度：100 mm                                                           非绝缘长度：5 mm                                                       线规色标：黑色                                                            头部结构：直尖型                                                                                                                Gauge：22G                                                                           Effective length：100 mm                                        Active tip length：5 mm                                  Guege color scale：Black                                          Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221010s-bm",
+      "row": 12,
+      "product_id": "RC221010S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黑色                                                                   头部结构：直尖型                                                                                                                Gauge：22G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Black                                          Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221505s-bm",
+      "row": 13,
+      "product_id": "RC221505S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                          有效长度：150 mm                                                           非绝缘长度：5 mm                                                      线规色标：黑色                                                                  头部结构：直尖型                                                                                                                Gauge：22G                                                              Effective length：150 mm                                         Active tip length：5 mm                                  Guege color scale：Black                                   Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221510s-bm",
+      "row": 14,
+      "product_id": "RC221510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                 有效长度：150 mm                                                           非绝缘长度：10 mm                                                       线规色标：黑色                                                            头部结构：直尖型                                                                                                                Gauge：22G                                                                           Effective length：150 mm                                        Active tip length：10 mm                                  Guege color scale：Black                                          Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc20505s-bm",
+      "row": 15,
+      "product_id": "RC20505S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：50 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：50 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc20510s-bm",
+      "row": 16,
+      "product_id": "RC20510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：50 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：50 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201005s-bm",
+      "row": 17,
+      "product_id": "RC201005S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201010s-bm",
+      "row": 18,
+      "product_id": "RC201010S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201505s-bm",
+      "row": 19,
+      "product_id": "RC201505S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201510s-bm",
+      "row": 20,
+      "product_id": "RC201510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：直尖型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181005s-bm",
+      "row": 21,
+      "product_id": "RC181005S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：100 mm                                                                  非绝缘长度：5 mm                                                      线规色标：粉红色                                                                   头部结构：直尖型                                                                                                                Gauge：18G                                                      Effective length：100 mm                                          Active tip length：5 mm                                  Guege color scale：Pink                                        Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181010s-bm",
+      "row": 22,
+      "product_id": "RC181010S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：直尖型                                                                                                                Gauge：18G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：PIink                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181505s-bm",
+      "row": 23,
+      "product_id": "RC181505S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：150 mm                                                                  非绝缘长度：5 mm                                                      线规色标：粉红色                                                                   头部结构：直尖型                                                                                                                Gauge：18G                                                      Effective length：150 mm                                          Active tip length：5 mm                                  Guege color scale：Pink                                        Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181510s-bm",
+      "row": 24,
+      "product_id": "RC181510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：直尖型                                                                                                                Gauge：18G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：PIink                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc161010s-bm",
+      "row": 25,
+      "product_id": "RC161010S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：16G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：白色                                                                   头部结构：直尖型                                                                                                                Gauge：16G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：White                                       Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc161510s-bm",
+      "row": 26,
+      "product_id": "RC161510S-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：16G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：白色                                                                   头部结构：直尖型                                                                                                                Gauge：16G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：White                                         Tip Structure：Straight Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc22505c-bm",
+      "row": 27,
+      "product_id": "RC22505C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "该产品专用于治疗三叉神经痛等各种顽固性疼痛或椎间盘突出症。其与射频电极组合使用，经射频电极与射频治疗仪连接，输出射频电波作用于神经组织靶点进行热凝和神经调节或对椎间盘髓核组织进行消融，以有效通过配备转接线，可连接不同品牌的射频治仪。                                            特有的弯尖型头部结构适用于需绕行或较复杂路径的靶点穿刺。                                                                                                                               This product is specially designed for the treatment of various intractable pains such as trigeminal neuralgia or intervertebral disc herniation.Used in combination with RF electrode, connected to RF therapy unit via RF electrode It outputs radio‑frequency waves to act on target nerve tissues for thermocoagulation and nerve modulation, or ablate the nucleus pulposus tissue of intervertebral discs for effective treatment. Equipped with an adapter cable, it can be connected to radio‑frequency therapeutic apparatuses of different brands.                      Unique curved sharp tip for target puncture with detour or complex access paths.",
+      "specifications": "线规：22G                                                                           有效长度：50 mm                                                                 非绝缘长度：5 mm                                                         线规色标：黑色                                                                   头部结构：弯尖型                                          特有的弯尖型头部结构适用于需绕行或较复杂路径的靶点穿刺。                                                                                                                                                             Gauge：22G                                                                 Effective length：50 mm                                           Active tip length：5 mm                                  Guege color scale：Black                                             Tip Structure：Curved Sharp Tip             Unique curved sharp tip for target puncture with detour or complex access paths.",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc22510c-bm",
+      "row": 28,
+      "product_id": "RC22510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                          有效长度：50 mm                                                           非绝缘长度：10 mm                                                      线规色标：黑色                                                                  头部结构：弯尖型                                                                                                                Gauge：22G                                                              Effective length：50 mm                                         Active tip length：10 mm                                  Guege color scale：Black                                   Tip Structure：Curved Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221005c-bm",
+      "row": 29,
+      "product_id": "RC221005C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                 有效长度：100 mm                                                           非绝缘长度：5 mm                                                       线规色标：黑色                                                            头部结构：弯尖型                                                                                                                Gauge：22G                                                                           Effective length：100 mm                                        Active tip length：5 mm                                  Guege color scale：Black                                          Tip Structure：Curved Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221010c-bm",
+      "row": 30,
+      "product_id": "RC221010C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黑色                                                                   头部结构：弯尖型                                                                                                                Gauge：22G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Black                                          Tip Structure：Curved Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221505c-bm",
+      "row": 31,
+      "product_id": "RC221505C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                          有效长度：150 mm                                                           非绝缘长度：5 mm                                                      线规色标：黑色                                                                  头部结构：弯尖型                                                                                                                Gauge：22G                                                              Effective length：150 mm                                         Active tip length：5 mm                                  Guege color scale：Black                                   Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc221510c-bm",
+      "row": 32,
+      "product_id": "RC221510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：22G                                                                 有效长度：150 mm                                                           非绝缘长度：10 mm                                                       线规色标：黑色                                                            头部结构：弯尖型                                                                                                                Gauge：22G                                                                           Effective length：150 mm                                        Active tip length：10 mm                                  Guege color scale：Black                                          Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc20505c-bm",
+      "row": 33,
+      "product_id": "RC20505C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：50 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：50 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc20510c-bm",
+      "row": 34,
+      "product_id": "RC20510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：50 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：50 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip         ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201005c-bm",
+      "row": 35,
+      "product_id": "RC201005C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201010c-bm",
+      "row": 36,
+      "product_id": "RC201010C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip             ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201505c-bm",
+      "row": 37,
+      "product_id": "RC201505C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201510c-bm",
+      "row": 38,
+      "product_id": "RC201510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯尖型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip            ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181005c-bm",
+      "row": 39,
+      "product_id": "RC181005C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：100 mm                                                                  非绝缘长度：5 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖型                                                                                                                Gauge：18G                                                      Effective length：100 mm                                          Active tip length：5 mm                                  Guege color scale：Pink                                        Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181010c-bm",
+      "row": 40,
+      "product_id": "RC181010C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖型                                                                                                                Gauge：18G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：PIink                                         Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181505c-bm",
+      "row": 41,
+      "product_id": "RC181505C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：150 mm                                                                  非绝缘长度：5 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖型                                                                                                                Gauge：18G                                                      Effective length：150 mm                                          Active tip length：5 mm                                  Guege color scale：Pink                                        Tip Structure：Curved Sharp Tip            ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181510c-bm",
+      "row": 42,
+      "product_id": "RC181510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖型                                                                                                                Gauge：18G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：PIink                                         Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc161010c-bm",
+      "row": 43,
+      "product_id": "RC161010C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：16G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：白色                                                                   头部结构：弯尖型                                                                                                                Gauge：16G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：White                                       Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc161510c-bm",
+      "row": 44,
+      "product_id": "RC161510C-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：16G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：白色                                                                   头部结构：弯尖型                                                                                                                Gauge：16G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：White                                         Tip Structure：Curved Sharp Tip              ",
+      "moq": "3000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201005b-bm",
+      "row": 45,
+      "product_id": "RC201005B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "该产品专用于治疗三叉神经痛等各种顽固性疼痛或椎间盘突出症。其与射频电极组合使用，经射频电极与射频治疗仪连接，输出射频电波作用于神经组织靶点进行热凝和神经调节或对椎间盘髓核组织进行消融，以有效通过配备转接线，可连接不同品牌的射频治仪。                                         特有的弯钝型头部结构适用于血管或神经较密集的区域的靶点穿刺。                                                                                                                    This product is specially designed for the treatment of various intractable pains such as trigeminal neuralgia or intervertebral disc herniation.Used in combination with RF electrode, connected to RF therapy unit via RF electrode It outputs radio‑frequency waves to act on target nerve tissues for thermocoagulation and nerve modulation, or ablate the nucleus pulposus tissue of intervertebral discs for effective treatment. Equipped with an adapter cable, it can be connected to radio‑frequency therapeutic apparatuses of different brands.                      Unique curved blunt tip for target puncture in vascular and nerve-dense regions.",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：弯钝型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Blunt Tip              Unique curved blunt tip for target puncture in vascular and nerve-dense regions.",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201010b-bm",
+      "row": 46,
+      "product_id": "RC201010B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯钝型                                                                                                                Gauge：20G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Blunt Tip               ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201505b-bm",
+      "row": 47,
+      "product_id": "RC201505B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：5 mm                                                      线规色标：黄色                                                                   头部结构：弯钝型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：5 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Blunt Tip                ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201510b-bm",
+      "row": 48,
+      "product_id": "RC201510B-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯钝型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Blunt Tip              ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201010y-bm",
+      "row": 49,
+      "product_id": "RC201010Y-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "该产品专用于治疗三叉神经痛等各种顽固性疼痛或椎间盘突出症。其与射频电极组合使用，经射频电极与射频治疗仪连接，输出射频电波作用于神经组织靶点进行热凝和神经调节或对椎间盘髓核组织进行消融，以有效通过配备转接线，可连接不同品牌的射频治仪。                                    特有的弯尖侧孔型头部结构，可使电极前端从射频套管侧孔处穿出，与套管针尖构成“Y”形，适用于需实施较大区域热凝的靶点穿刺，可部分替代双针模式。                                                                                                  This product is specially designed for the treatment of various intractable pains such as trigeminal neuralgia or intervertebral disc herniation.Used in combination with RF electrode, connected to RF therapy unit via RF electrode It outputs radio‑frequency waves to act on target nerve tissues for thermocoagulation and nerve modulation, or ablate the nucleus pulposus tissue of intervertebral discs for effective treatment. Equipped with an adapter cable, it can be connected to radio‑frequency therapeutic apparatuses of different brands.                      The unique curved sharp tip with side port enables the electrode tip to exit through the side port of the RF cannula and form a \"Y\" configuration with the cannula tip for target puncture needing large-area thermocoagulation, partially replacing the double-needle mode.",
+      "specifications": "线规：20G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯尖侧孔型                                   特有的弯尖侧孔型头部结构，可使电极前端从射频套管侧孔处穿出，与套管针尖构成“Y”形，适用于需实施较大区域热凝的靶点穿刺，可部分替代双针模式。                                                                                    Gauge：20G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                        Tip Structure：Curved Sharp Tip with Side Port                                                                The unique curved sharp tip with side port enables the electrode tip to exit through the side port of the RF cannula and form a \"Y\" configuration with the cannula tip for target puncture needing large-area thermocoagulation, partially replacing the double-needle mode.",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc201510y-bm",
+      "row": 50,
+      "product_id": "RC201510Y-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：20G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：黄色                                                                   头部结构：弯尖侧孔型                                                                                                                Gauge：20G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：Yellow                                         Tip Structure：Curved Sharp Tip with Side Port                          ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181010y-bm",
+      "row": 51,
+      "product_id": "RC181010Y-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：100 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖侧孔型                                                                                                                Gauge：18G                                                      Effective length：100 mm                                          Active tip length：10 mm                                  Guege color scale：Pink                                        Tip Structure：Curved Sharp Tip with Side Port                         ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）头部特写.jpg"
+      ]
+    },
+    {
+      "product_key": "rc181510y-bm",
+      "row": 52,
+      "product_id": "RC181510Y-BM",
+      "category_zh": "医用耗材",
+      "category_en": "Medical consumables",
+      "name_zh": "一次性使用射频套管",
+      "name_en": "Single-use Radio frequency  (RE) Cannula ",
+      "description": "同上                                                                                             Same as above",
+      "specifications": "线规：18G                                                                              有效长度：150 mm                                                                  非绝缘长度：10 mm                                                      线规色标：粉红色                                                                   头部结构：弯尖侧孔型                                                                                                                Gauge：18G                                                      Effective length：150 mm                                          Active tip length：10 mm                                  Guege color scale：PIink                                         Tip Structure：Curved Sharp Tip with Side Port                   ",
+      "moq": "1000pcs",
+      "images": [
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+        "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）头部特写.jpg"
+      ]
+    }
+  ],
+  "videos": [
+    "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\5全自动切割机.mp4",
+    "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\6线切割.mp4"
+  ],
+  "target_pages": [
+    "/",
+    "/about",
+    "/products",
+    "/products/[slug]",
+    "/manufacturing",
+    "/quality",
+    "/news",
+    "/news/[slug]",
+    "/contact"
+  ]
+}

@@ -1,0 +1,3 @@
+import { PageFrame } from "@/components/page-frame";import { ProductCard } from "@/components/product-card";import { fetchProductsData } from "@/lib/products-db"
+export const revalidate=60
+export default async function ProductsPage(){const{products}=await fetchProductsData();return <PageFrame eyebrow="Product catalog" title="Disposable RF electrodes and cannulas" description="Compare all 49 supplied specifications, then open a product to review its model, gauge, length, tip structure and MOQ."><section className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">{products.map(p=><ProductCard key={p.slug} product={p}/>)}</section></PageFrame>}

@@ -1,0 +1,892 @@
+{
+  "result": "PASS",
+  "tenantId": "fd8a0387-ffb2-4cf1-87d3-be3a3a15810b",
+  "productEvidence": [
+    {
+      "product_key": "re2750-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re2750-bm/01/19ab6ac6478cdb929f26.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re2750-bm/01/19ab6ac6478cdb929f26.jpg"
+      ],
+      "cover_sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "shared_cover_group": "electrode"
+    },
+    {
+      "product_key": "re27100-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27100-bm/01/19ab6ac6478cdb929f26.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27100-bm/01/19ab6ac6478cdb929f26.jpg"
+      ],
+      "cover_sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "shared_cover_group": "electrode"
+    },
+    {
+      "product_key": "re27150-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27150-bm/01/19ab6ac6478cdb929f26.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27150-bm/01/19ab6ac6478cdb929f26.jpg"
+      ],
+      "cover_sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "shared_cover_group": "electrode"
+    },
+    {
+      "product_key": "re27100b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27100b-bm/01/19ab6ac6478cdb929f26.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27100b-bm/01/19ab6ac6478cdb929f26.jpg"
+      ],
+      "cover_sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "shared_cover_group": "electrode"
+    },
+    {
+      "product_key": "re27150b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27150b-bm/01/19ab6ac6478cdb929f26.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/re27150b-bm/01/19ab6ac6478cdb929f26.jpg"
+      ],
+      "cover_sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "shared_cover_group": "electrode"
+    },
+    {
+      "product_key": "rc22505s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc22510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc221005s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc221010s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc221505s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc221510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc20505s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc20510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc201005s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc201010s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc201505s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc201510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc181005s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc181010s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc181505s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc181510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc161010s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc161510s-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510s-bm/01/6f5369c20f4d2430d34f.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510s-bm/01/6f5369c20f4d2430d34f.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510s-bm/02/9175bef3862fb79af691.jpg"
+      ],
+      "cover_sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "shared_cover_group": "straight-sharp"
+    },
+    {
+      "product_key": "rc22505c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22505c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc22510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc22510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc221005c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221005c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc221010c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221010c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc221505c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221505c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc221510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc221510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc20505c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20505c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc20510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc20510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc201005c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc201010c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc201505c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc201510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc181005c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181005c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc181010c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc181505c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181505c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc181510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc161010c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161010c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc161510c-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510c-bm/01/300048a012448d64a299.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510c-bm/01/300048a012448d64a299.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc161510c-bm/02/564a826f0eeaffb057b8.jpg"
+      ],
+      "cover_sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "shared_cover_group": "curved-sharp"
+    },
+    {
+      "product_key": "rc201005b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005b-bm/01/03d956cfdc381d63ed09.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005b-bm/01/03d956cfdc381d63ed09.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201005b-bm/02/551a96c897320d6d56b8.jpg"
+      ],
+      "cover_sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "shared_cover_group": "blunt"
+    },
+    {
+      "product_key": "rc201010b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010b-bm/01/03d956cfdc381d63ed09.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010b-bm/01/03d956cfdc381d63ed09.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010b-bm/02/551a96c897320d6d56b8.jpg"
+      ],
+      "cover_sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "shared_cover_group": "blunt"
+    },
+    {
+      "product_key": "rc201505b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505b-bm/01/03d956cfdc381d63ed09.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505b-bm/01/03d956cfdc381d63ed09.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201505b-bm/02/551a96c897320d6d56b8.jpg"
+      ],
+      "cover_sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "shared_cover_group": "blunt"
+    },
+    {
+      "product_key": "rc201510b-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510b-bm/01/03d956cfdc381d63ed09.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510b-bm/01/03d956cfdc381d63ed09.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510b-bm/02/551a96c897320d6d56b8.jpg"
+      ],
+      "cover_sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "shared_cover_group": "blunt"
+    },
+    {
+      "product_key": "rc201010y-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010y-bm/01/dde18b1658a875f3431d.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010y-bm/01/dde18b1658a875f3431d.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201010y-bm/02/1ab24ce9b0774e195be2.jpg"
+      ],
+      "cover_sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "shared_cover_group": "side-port"
+    },
+    {
+      "product_key": "rc201510y-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510y-bm/01/dde18b1658a875f3431d.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510y-bm/01/dde18b1658a875f3431d.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc201510y-bm/02/1ab24ce9b0774e195be2.jpg"
+      ],
+      "cover_sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "shared_cover_group": "side-port"
+    },
+    {
+      "product_key": "rc181010y-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010y-bm/01/dde18b1658a875f3431d.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010y-bm/01/dde18b1658a875f3431d.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181010y-bm/02/1ab24ce9b0774e195be2.jpg"
+      ],
+      "cover_sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "shared_cover_group": "side-port"
+    },
+    {
+      "product_key": "rc181510y-bm",
+      "cover_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510y-bm/01/dde18b1658a875f3431d.jpg",
+      "gallery_urls": [
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510y-bm/01/dde18b1658a875f3431d.jpg",
+        "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/products/rc181510y-bm/02/1ab24ce9b0774e195be2.jpg"
+      ],
+      "cover_sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "source_asset": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "shared_cover_group": "side-port"
+    }
+  ],
+  "allMedia": [
+    {
+      "asset_id": "asset-8dd942dbf031b2",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\10净化车间2.png",
+      "sha256": "47149137cb3053e55321aff43a669c90c1fe579a1817dd1ec8f1ad264c6329ff",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/47149137cb3053e55321.png",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-ec2beea8cd1738",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\11净化车间1.jpg",
+      "sha256": "56fe6919026f488580416b30fec77243bcdf025ea572549bb56298ac726f159d",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/56fe6919026f48858041.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-1536fe5f215df0",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\12检验室1.jpg",
+      "sha256": "f1b51a388c50cd09456f3b6cf114051120d3bdb08580ab310bae8bb77dfd2c1c",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/f1b51a388c50cd09456f.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-16e22ebf4f3c49",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\13检验室2.jpg",
+      "sha256": "ed1e5a04ee2030d5f7887859072757128a2443ae01643590602ed475773326a8",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/ed1e5a04ee2030d5f788.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-2b2b584f8697fe",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\14全自动打印机.jpg",
+      "sha256": "5e30b699f1692f86c96258b56d974d9616e4db26e806bc13152ed9b7fb420bec",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/5e30b699f1692f86c962.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-b52adb4d03c94f",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\15成品1.jpg",
+      "sha256": "804ba3daa6ec6736662279499f1e0d3eb3c27e41d8d288d34a7f962827185a86",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/804ba3daa6ec67366622.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-ef2e9e7a7676f6",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\16成品2.jpg",
+      "sha256": "22a3f008fcd8558f8dedd60a00d19ed7eca362d5f84d7ceccb5fa976dacfd7c2",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/22a3f008fcd8558f8ded.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-63ba7c6eb7460a",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\17成品3.jpg",
+      "sha256": "8bb112f1450f5cda8d86614fc11f0d9ab6adf5c55b52f9faf9660e63c5ab688f",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/8bb112f1450f5cda8d86.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-7efe8c9eb1a1b9",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\18展会照片.jpg",
+      "sha256": "83d613c8573be1e517da58a0c221b7408576fa49fd851d0e0c3ddcb89c115a22",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/83d613c8573be1e517da.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-f5c42a5df99052",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\19展会照片2.jpg",
+      "sha256": "66c3b96dca37ac8f1edef2cf91cc643c405f3ae36ef409dc9a86e400a7f50a12",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/66c3b96dca37ac8f1ede.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-5b830206e9dc73",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\1公司入户区.jpg",
+      "sha256": "75eb8db1a257129b8b9292738e9c557708196b182ea14e2d9b11bc5ca3a020df",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/75eb8db1a257129b8b92.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-3dd157ed0ac588",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\20展会照片3.jpg",
+      "sha256": "bf468db6c3362651be3effa116d90aec99764f63375410b1e42d4c6d0735c50e",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/bf468db6c3362651be3e.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-0730218e9a32a2",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\2办公室.jpg",
+      "sha256": "489381f1bb4ef2280a1625fe78caa70e826bdd6d352f43d69f0ead616c7f752b",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/489381f1bb4ef2280a16.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-a3cc31c0a3799b",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\3不锈钢管仓库.jpg",
+      "sha256": "84042b2b4d3f50dc77d81730253851876838ee801c9ce648109458aabe52f9a1",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/84042b2b4d3f50dc77d8.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-7ebeb9b6f8c8b5",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\4配件仓库.jpg",
+      "sha256": "517228a133326f9fee4b166b939ccf014ab8f36f93d36494840928d995c025f3",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/517228a133326f9fee4b.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-6f0adc93263fb1",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\7生产过程中的针管.jpg",
+      "sha256": "e0a8dfd384b00bfe8f7e00af9ced0cbc1791239e0c6f5799e854486d258c9a8c",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/e0a8dfd384b00bfe8f7e.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-044b8b97deb0c8",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\8半成品针管.jpg",
+      "sha256": "8fcdf248874d0007bb2c33d3f818099201427aa2bbd6d2e4aa292216877d9372",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/8fcdf248874d0007bb2c.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-c9998cee597eb4",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\9半成品针.jpg",
+      "sha256": "fe70ec7b49497b19a20e40330f11aafb05804fc9b084fde77677a581e1b93b9b",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/fe70ec7b49497b19a20e.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-9504224b83e574",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性使用射频套管（直尖型）.tif",
+      "sha256": "0b3c2bafef9847f2ddb090b6a941364f740b6a22e3006c3f0fdbadcff13d8d2a",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/0b3c2bafef9847f2ddb0.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-27ca30bf4057d2",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性使用射频电极照片.tif",
+      "sha256": "f81564b1b1a26292bfa3d81b48b93d5c7e683a733adcfab23b9bb447b720425d",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/f81564b1b1a26292bfa3.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-b1b4681a51c132",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖侧孔型）.tif",
+      "sha256": "a194d2ca909e5aa4b477a2ddacfd46bffab49b2c5afd9ae45445b7cabb331f72",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/a194d2ca909e5aa4b477.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-e9d32a6d55edde",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖侧孔型）头部特写.png",
+      "sha256": "e85f551c5c9c6b28b214ef73f2cbfc097e50b8afd5fe38ff884e72aa17ef7052",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/e85f551c5c9c6b28b214.png",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-3d25fcb346942e",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖型）.tif",
+      "sha256": "68af9015c78b2729dece1b6cc401b0673593081da715e6a4599c3984e0f5aa42",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/68af9015c78b2729dece.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-1e581ab38548b1",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖型）头部特写.jpg",
+      "sha256": "2d9c533041140693e42dc08ff2f9d7adcba796cd4412d45888b395a382e86294",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/2d9c533041140693e42d.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-f3fc4c774d415e",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯钝型）.tif",
+      "sha256": "2a8f5733ec284b7d553c7f40ff417a024d9a34c5c5ec1041736bdb9c52079be3",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/2a8f5733ec284b7d553c.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-5d7311f5f79819",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯钝型）头部特写.JPG",
+      "sha256": "598075833e3b83e17ada41b5e981bf54d12b912c8a71f45aa3f74468f3be7e4d",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/598075833e3b83e17ada.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-0d753b28770556",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（直尖型）头部特写.tif",
+      "sha256": "860910481d5fdd05e74b3a5be6f82d745ddb15b80ea9b8b195c04c22bf983b29",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/860910481d5fdd05e74b.tif",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-52f6b0fca4b35a",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/6f5369c20f4d2430d34f.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-54b215ccd089e4",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/19ab6ac6478cdb929f26.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-d4d9f06753aa5d",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/dde18b1658a875f3431d.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-8211ecd749f57a",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）头部特写.jpg",
+      "sha256": "1ab24ce9b0774e195be26732907d43426ab40405a1e4678a34fd9e0234684afb",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/1ab24ce9b0774e195be2.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-91af26ecd62c1c",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/300048a012448d64a299.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-53546efe7540fd",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）头部特写.jpg",
+      "sha256": "564a826f0eeaffb057b86fec1ad2f4952c514728e7187935812bedeb3b8bfa3a",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/564a826f0eeaffb057b8.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-82021adf37f424",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/03d956cfdc381d63ed09.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-3e56fbe1acbcad",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）头部特写.jpg",
+      "sha256": "551a96c897320d6d56b860157e3f10e51f1968396829b40691c0d5e25e2fc05c",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/551a96c897320d6d56b8.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-f00418bd803e88",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（直尖型）头部特写.jpg",
+      "sha256": "9175bef3862fb79af69150039d6e09b9d171fa719c7cd34e174d907204208dcf",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/9175bef3862fb79af691.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-d6089c67951ae1",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\1.jpg",
+      "sha256": "02c2ea6034700fe0d1fafd6f1c352907f88a0db4ba1c8b15079bc76c4c54afde",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/02c2ea6034700fe0d1fa.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-f7f4ad09d924ef",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\2.jpg",
+      "sha256": "b9e75016e7791d50e581288f1c7e43d850adf95311ca0bff5f71851b29ea4256",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/b9e75016e7791d50e581.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-a529d339f871c3",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\3.jpg",
+      "sha256": "1be68b9112dc4f195cf5b02d5b2f75a744bbf4179d87ff50beb29ed06047bd96",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/1be68b9112dc4f195cf5.jpg",
+      "type": "image"
+    },
+    {
+      "asset_id": "asset-47a636d92c1aff",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\5全自动切割机.mp4",
+      "sha256": "a2a53490171c46685a757a3da5e51d1ed37f57b0a1247c974c9c61224aee0921",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/videos/a2a53490171c46685a75.mp4",
+      "type": "video"
+    },
+    {
+      "asset_id": "asset-a5717ba3f01cdd",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\6线切割.mp4",
+      "sha256": "e4dc2474c3bbcd41172d1b078b01cb35470d62f2f53daed506b546f9bb8659f7",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/videos/e4dc2474c3bbcd41172d.mp4",
+      "type": "video"
+    },
+    {
+      "asset_id": "xlsx-media-01",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image1.png",
+      "sha256": "0b4b2361ec29eb6aa326d9d6044140ab038601282b10cd16d94e2317cc7e6cc5",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/0b4b2361ec29eb6aa326.png",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-02",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image10.jpeg",
+      "sha256": "ff7668be01a6e50ab9ecfff6dbc5d1c2441f425ae4e21dd6fc01373b7d1deba5",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/ff7668be01a6e50ab9ec.jpeg",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-03",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image11.png",
+      "sha256": "4f86c092db50472bd814f695d801e82d22e912b5dce537edaa766d67af3491ae",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/4f86c092db50472bd814.png",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-05",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image3.tiff",
+      "sha256": "678bd15b9d7cb56a81b6b2bf553939fc508d8c4f0add5a1f61bd8c059e057652",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/678bd15b9d7cb56a81b6.tiff",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-06",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image4.tiff",
+      "sha256": "0330ac4e8bdcec7e1a8401340bb8c28b6b223bbe9dda8ed2b49784185bf49c2a",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/0330ac4e8bdcec7e1a84.tiff",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-07",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image5.tiff",
+      "sha256": "a9d9f74a0f3a899ac3c6c1a62864c0d65ce20b61a0da3cc6fc45fa8b271de6ce",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/a9d9f74a0f3a899ac3c6.tiff",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-08",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image6.tiff",
+      "sha256": "4d869c421c43f09979ec63b1586ae7efbe9a113c4876cd081311350d957b72d7",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/4d869c421c43f09979ec.tiff",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-10",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image8.png",
+      "sha256": "1bdfbb769ffd4ca5eea2bc77a2a90acdfda072324cf37f6109f5fbed6da4d350",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/1bdfbb769ffd4ca5eea2.png",
+      "type": "embedded-image"
+    },
+    {
+      "asset_id": "xlsx-media-11",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image9.jpeg",
+      "sha256": "b7b6a9b12cb404fb46835f5f03587c5f8530ac34c0d2c63b0086d0d7803f3866",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/b7b6a9b12cb404fb4683.jpeg",
+      "type": "embedded-image"
+    }
+  ]
+}

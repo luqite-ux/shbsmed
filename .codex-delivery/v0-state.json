@@ -1,0 +1,103 @@
+{
+  "teamId": "team_v0pxRIIzSUGJleUTRNSz6GS4",
+  "projectId": "OIa6v2DBoEf",
+  "chatId": "ocZyvFiThzc",
+  "webUrl": "https://v0.app/chat/ocZyvFiThzc",
+  "createdAt": "2026-09-23T01:27:05.189Z",
+  "attachments": [
+    {
+      "localPath": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image1.png",
+      "sourceName": "image1.png",
+      "sha256": "0b4b2361ec29eb6aa326d9d6044140ab038601282b10cd16d94e2317cc7e6cc5",
+      "bytes": 49909,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/01-0b4b2361ec29.png"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\1.jpg",
+      "sourceName": "1.jpg",
+      "sha256": "02c2ea6034700fe0d1fafd6f1c352907f88a0db4ba1c8b15079bc76c4c54afde",
+      "bytes": 746595,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/02-02c2ea603470.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\2.jpg",
+      "sourceName": "2.jpg",
+      "sha256": "b9e75016e7791d50e581288f1c7e43d850adf95311ca0bff5f71851b29ea4256",
+      "bytes": 978173,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/03-b9e75016e779.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\轮播图\\3.jpg",
+      "sourceName": "3.jpg",
+      "sha256": "1be68b9112dc4f195cf5b02d5b2f75a744bbf4179d87ff50beb29ed06047bd96",
+      "bytes": 577716,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/04-1be68b9112dc.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频电极照片.jpg",
+      "sourceName": "一次性使用射频电极照片.jpg",
+      "sha256": "19ab6ac6478cdb929f269e363e68f138680b9b2ff4841bf42a2cb713adb259a5",
+      "bytes": 492259,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/05-19ab6ac6478c.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性使用射频套管（直尖型）.jpg",
+      "sourceName": "一次性使用射频套管（直尖型）.jpg",
+      "sha256": "6f5369c20f4d2430d34ffdd38c7bcf8cc8a5184e33d7a9b369bc9d4d5a2f6523",
+      "bytes": 523869,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/06-6f5369c20f4d.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖型）.jpg",
+      "sourceName": "一次性射频套管（弯尖型）.jpg",
+      "sha256": "300048a012448d64a2992277f9c022fc264924bc985d3537436c9c85e70bcd5e",
+      "bytes": 515592,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/07-300048a01244.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯钝型）.jpg",
+      "sourceName": "一次性射频套管（弯钝型）.jpg",
+      "sha256": "03d956cfdc381d63ed096fb616d465f1b844eeb591cd413f77265628a051afa8",
+      "bytes": 348086,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/08-03d956cfdc38.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\产品优化\\一次性射频套管（弯尖侧孔型）.jpg",
+      "sourceName": "一次性射频套管（弯尖侧孔型）.jpg",
+      "sha256": "dde18b1658a875f3431ddf6bd49647bb9509955bfc75216f8ad6e54455fe11e2",
+      "bytes": 389859,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/09-dde18b1658a8.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\video-frames\\video-1-sheet.jpg",
+      "sourceName": "video-1-sheet.jpg",
+      "sha256": "2749976fb8b2e9099fec1dfce1f408ae6313c86ae9c641661dfececec54c9c38",
+      "bytes": 75704,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/10-2749976fb8b2.jpg"
+    },
+    {
+      "localPath": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\video-frames\\video-2-sheet.jpg",
+      "sourceName": "video-2-sheet.jpg",
+      "sha256": "03a5dc085bc8b83685412e57547005f34095feb26795bd771a160dcc20a5aebc",
+      "bytes": 79587,
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/shbsmed/v0-input/11-03a5dc085bc8.jpg"
+    }
+  ],
+  "v0_calls": [
+    {
+      "chat_id": "ocZyvFiThzc",
+      "purpose": "initial",
+      "scope": "Home, Products/detail, About, Manufacturing, Quality, News/detail, Contact, favicon and MOT-SHBS-01..05",
+      "cost_usd": null,
+      "outcome": "usable_source",
+      "effective_full_site_generation": true,
+      "recorded_at": "2026-09-23T01:27:05.189Z",
+      "version_id": "b_EFlc787edvG",
+      "downloaded_at": "2026-09-23T01:32:27.401Z",
+      "local_repair_result": "PASS",
+      "local_build_result": "PASS",
+      "local_route_count": 10
+    }
+  ],
+  "completedVersionId": "b_EFlc787edvG"
+}

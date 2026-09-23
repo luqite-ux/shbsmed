@@ -1,0 +1,4 @@
+import { getSupabaseClient } from "@/lib/supabase"
+export type Article={slug:string;title:string;excerpt:string;content:string;publishedAt:string;image?:string}
+export async function getPublishedArticles():Promise<Article[]>{const db=getSupabaseClient();const tenant=process.env.NEXT_PUBLIC_TENANT_ID;if(!db||!tenant)return[];const {data}=await db.from('articles').select('*').eq('tenant_id',tenant).eq('is_published',true).order('published_at',{ascending:false});return (data||[]).map((a:any)=>({slug:a.slug,title:a.title_i18n?.en||a.title_en||a.title||'',excerpt:a.excerpt_i18n?.en||a.excerpt_en||a.excerpt||'',content:a.content_i18n?.en||a.content_en||a.content||'',publishedAt:a.published_at||a.created_at,image:a.featured_image||undefined}))}
+export async function getArticleBySlug(slug:string){return (await getPublishedArticles()).find(a=>a.slug===slug)}

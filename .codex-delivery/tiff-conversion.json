@@ -1,0 +1,106 @@
+{
+  "result": "PASS",
+  "converted": 10,
+  "items": [
+    {
+      "asset_id": "asset-9504224b83e574",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性使用射频套管（直尖型）.tif",
+      "sha256": "0b3c2bafef9847f2ddb090b6a941364f740b6a22e3006c3f0fdbadcff13d8d2a",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/fe3d4b5da4fe2ed87d49.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/0b3c2bafef9847f2ddb0.tif",
+      "derived_sha256": "fe3d4b5da4fe2ed87d497bc88d24afd7db6091c62d2e30b942dfb14d8522e286",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "asset-27ca30bf4057d2",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性使用射频电极照片.tif",
+      "sha256": "f81564b1b1a26292bfa3d81b48b93d5c7e683a733adcfab23b9bb447b720425d",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/28dc1f291d043bf5f81f.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/f81564b1b1a26292bfa3.tif",
+      "derived_sha256": "28dc1f291d043bf5f81f1680d79961cf905f4876e06eafaa2ea82c52c6781bbc",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "asset-b1b4681a51c132",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖侧孔型）.tif",
+      "sha256": "a194d2ca909e5aa4b477a2ddacfd46bffab49b2c5afd9ae45445b7cabb331f72",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/024b6ecf08d07d32d07a.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/a194d2ca909e5aa4b477.tif",
+      "derived_sha256": "024b6ecf08d07d32d07a8f4931d6124d8f4ad69b6dc0c53abe461e74e85da0e5",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "asset-3d25fcb346942e",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯尖型）.tif",
+      "sha256": "68af9015c78b2729dece1b6cc401b0673593081da715e6a4599c3984e0f5aa42",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/9178343ced4daa9b8be2.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/68af9015c78b2729dece.tif",
+      "derived_sha256": "9178343ced4daa9b8be27ea0fd89620cfd4d409723f15b2cc33278a5019c45fb",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "asset-f3fc4c774d415e",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（弯钝型）.tif",
+      "sha256": "2a8f5733ec284b7d553c7f40ff417a024d9a34c5c5ec1041736bdb9c52079be3",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/732a3a29831926cb91a2.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/2a8f5733ec284b7d553c.tif",
+      "derived_sha256": "732a3a29831926cb91a2aab5ff4140007f943330ab095d922a3f33997bc9fe3a",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "asset-0d753b28770556",
+      "source": "D:\\Cursor\\暂存\\1518-上海明石医疗科技\\上海明石照片9.10\\一次性射频套管（直尖型）头部特写.tif",
+      "sha256": "860910481d5fdd05e74b3a5be6f82d745ddb15b80ea9b8b195c04c22bf983b29",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/d3c99e913c68a2a31b78.webp",
+      "type": "image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/860910481d5fdd05e74b.tif",
+      "derived_sha256": "d3c99e913c68a2a31b78e5a7491b8fde1142d5befd004e5dcb5b1d22af28a3d3",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "xlsx-media-05",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image3.tiff",
+      "sha256": "678bd15b9d7cb56a81b6b2bf553939fc508d8c4f0add5a1f61bd8c059e057652",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/37feda0a92bdfdc4a309.webp",
+      "type": "embedded-image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/678bd15b9d7cb56a81b6.tiff",
+      "derived_sha256": "37feda0a92bdfdc4a309d636eb1058c843ca297e66812d3ecdc74e95a412c908",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "xlsx-media-06",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image4.tiff",
+      "sha256": "0330ac4e8bdcec7e1a8401340bb8c28b6b223bbe9dda8ed2b49784185bf49c2a",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/3a0c3de527078d4c8312.webp",
+      "type": "embedded-image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/0330ac4e8bdcec7e1a84.tiff",
+      "derived_sha256": "3a0c3de527078d4c8312511981387c885877bb13c181d4924f7ae7f7fc3cfc2c",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "xlsx-media-07",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image5.tiff",
+      "sha256": "a9d9f74a0f3a899ac3c6c1a62864c0d65ce20b61a0da3cc6fc45fa8b271de6ce",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/f5d35337e4dc48de74ec.webp",
+      "type": "embedded-image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/a9d9f74a0f3a899ac3c6.tiff",
+      "derived_sha256": "f5d35337e4dc48de74ec9e00adb68c702fb5c8c52023408e3d07c756d41bb604",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    },
+    {
+      "asset_id": "xlsx-media-08",
+      "source": "D:\\Cursor\\Grand\\shbsmed\\materials\\extracted\\xlsx-media\\image6.tiff",
+      "sha256": "4d869c421c43f09979ec63b1586ae7efbe9a113c4876cd081311350d957b72d7",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media-derived/888380eb685bf91da9f0.webp",
+      "type": "embedded-image",
+      "original_url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/4d869c421c43f09979ec.tiff",
+      "derived_sha256": "888380eb685bf91da9f0aa0f4006dae9755fb39e3c6b2848b86dfd1698c8d5c7",
+      "derivation": "faithful TIFF to WebP conversion; pixels only, no structural edit"
+    }
+  ]
+}

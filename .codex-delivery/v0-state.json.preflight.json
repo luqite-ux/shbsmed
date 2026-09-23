@@ -1,0 +1,35 @@
+{
+  "customer_key": "D:\\Cursor\\Grand\\shbsmed",
+  "team_id": "team_v0pxRIIzSUGJleUTRNSz6GS4",
+  "checked_at": "2026-09-23T01:26:11.5577624Z",
+  "billing": {
+    "source": "Authenticated v0 API preflight: no existing shbsmed customer chat or prior customer attempt ledger; initial customer usage is 0 before first request.",
+    "complete": true,
+    "total_usd": 0,
+    "chat_ids": [],
+    "reconciled_attempt_ids": []
+  },
+  "request": {
+    "purpose": "initial",
+    "scope": [
+      "Home",
+      "Products and product detail",
+      "About",
+      "Manufacturing",
+      "Quality",
+      "News and news detail",
+      "Contact and RFQ",
+      "favicon",
+      "MOT-SHBS-01..05"
+    ],
+    "estimated_usd": 3
+  },
+  "source": {
+    "version_id": null,
+    "inspection": "empty",
+    "missing_files": [],
+    "local_repair_possible": false,
+    "download_verified": false,
+    "empty_verified": true
+  }
+}
