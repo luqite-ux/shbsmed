@@ -11,7 +11,7 @@
   "backendRegistration": { "registered": true, "guardVersion": "1", "evidencePath": "deliverables/service-guard-registration.json" },
   "productionVerification": {
     "normal": { "result": "PASS", "evidencePath": "deliverables/service-expiry-guard-audit.json" },
-    "simulatedExpired": { "result": "FAIL", "evidencePath": "deliverables/service-expiry-guard-audit.json" },
+    "simulatedExpired": { "result": "PASS", "evidencePath": "deliverables/service-expiry-guard-audit.json" },
     "renewalRecovery": { "result": "PASS", "evidencePath": "deliverables/service-expiry-guard-audit.json" },
     "adminReachable": { "result": "PASS", "evidencePath": "deliverables/service-expiry-guard-audit.json" }
   }

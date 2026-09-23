@@ -1,19 +1,19 @@
 {
-  "projectName": "shbsmed-guard-mudikz2p",
-  "syntheticTenantId": "81fb172a-8052-4d8c-a681-6b7f553b5e47",
+  "projectName": "shbsmed-guard-mudt4lqb",
+  "syntheticTenantId": "916e9c3a-1c3e-4102-bf8f-09f701fad2cd",
   "checks": {
     "publicExpiredStatus": {
-      "result": "FAIL",
+      "result": "PASS",
       "status": 200,
       "body": {
-        "available": true,
-        "status": "active",
-        "checkedAt": "2026-09-23T02:58:25.624Z",
+        "available": false,
+        "status": "expired",
+        "checkedAt": "2026-09-23T07:56:19.586Z",
         "version": 1
       }
     },
     "simulatedExpired": {
-      "result": "FAIL",
+      "result": "PASS",
       "status": 200
     },
     "adminReachable": {
@@ -34,5 +34,6 @@
     "serviceTermRows": 0,
     "tenantRows": 0,
     "forcedCleanupAfterImmutableAuditTrigger": "PASS"
-  }
+  },
+  "resumedAt": "2026-09-23T08:02:18.001Z"
 }
