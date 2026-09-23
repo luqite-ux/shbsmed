@@ -7,7 +7,6 @@ const groups = [
   { title: "Facilities and workspaces", match: /公司入户区|办公室|仓库|净化车间/ },
   { title: "Production and quality control", match: /检验室|打印机|成品\d|生产过程|半成品/ },
   { title: "Trade shows and customer engagement", match: /展会/ },
-  { title: "RF product configurations", match: /射频套管|射频电极|轮播图|image(?:1|3|4|5|6|8|9|10|11)/ },
 ]
 
 function mediaLabel(source: string) {
@@ -23,25 +22,12 @@ function mediaLabel(source: string) {
   if (/半成品针管/.test(source)) return "Semi-finished needle tubes"
   if (/半成品针/.test(source)) return "Semi-finished needle components"
   if (/展会/.test(source)) return "International medical trade show"
-  if (/弯尖侧孔型.*头部特写/.test(source)) return "Side-port curved sharp tip detail"
-  if (/弯尖侧孔型/.test(source)) return "Side-port curved sharp RF cannula"
-  if (/弯尖型.*头部特写/.test(source)) return "Curved sharp tip detail"
-  if (/弯尖型/.test(source)) return "Curved sharp RF cannula"
-  if (/弯钝型.*头部特写/.test(source)) return "Curved blunt tip detail"
-  if (/弯钝型/.test(source)) return "Curved blunt RF cannula"
-  if (/直尖型.*头部特写/.test(source)) return "Straight sharp tip detail"
-  if (/直尖型/.test(source)) return "Straight sharp RF cannula"
-  if (/射频电极/.test(source)) return "Disposable RF electrode"
-  if (/轮播图/.test(source)) return "Brightstone product and manufacturing showcase"
-  if (/image1\./i.test(source)) return "Disposable RF electrode configuration"
-  if (/image(?:3|4|5|6)\./i.test(source)) return "RF cannula configuration"
-  if (/image(?:8|9|10|11)\./i.test(source)) return "RF electrode product reference"
   return "Brightstone Medical capability"
 }
 
 export const metadata = {
   title: "Manufacturing Capabilities",
-  description: "Explore Brightstone Medical facilities, production controls and RF product configurations.",
+  description: "Explore Brightstone Medical facilities, production controls and customer engagement.",
   alternates: { canonical: "https://shbsmed.com/capabilities" },
 }
 
@@ -51,8 +37,8 @@ export default function CapabilitiesPage() {
   return (
     <PageFrame
       eyebrow="Capabilities"
-      title="Facilities, production controls and RF product configurations"
-      description="Explore the manufacturing environment, quality-control resources and RF component portfolio behind Brightstone Medical."
+      title="Facilities, production controls and customer engagement"
+      description="Explore the manufacturing environment, quality-control resources and industry engagement behind Brightstone Medical."
     >
       <section className="mx-auto max-w-7xl space-y-16 px-4 py-16 sm:px-6 lg:px-8">
         {groups.map((group) => {
@@ -66,7 +52,7 @@ export default function CapabilitiesPage() {
                   return (
                     <figure className="overflow-hidden rounded-xl border bg-white" key={item.url}>
                       <div className="relative aspect-[4/3] bg-white">
-                        <Image src={item.url} alt={label} fill className={group.title === "RF product configurations" ? "object-contain p-1" : "object-cover"} />
+                        <Image src={item.url} alt={label} fill className="object-cover" />
                       </div>
                       <figcaption className="border-t px-4 py-3 text-sm text-muted-foreground">{label}</figcaption>
                     </figure>
