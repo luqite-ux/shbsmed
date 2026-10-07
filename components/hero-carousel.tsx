@@ -51,7 +51,7 @@ export function HeroCarousel() {
       onBlur={() => setPaused(false)}
       onTouchStart={() => setPaused(true)}
     >
-      <div className="relative h-[560px] w-full sm:h-[600px] lg:h-[680px]">
+      <div className="relative h-[620px] w-full sm:h-[600px] lg:h-[680px]">
         {heroSlides.map((slide, slideIndex) => {
           const isActive = slide.id === activeSlide.id
           return (
@@ -63,25 +63,27 @@ export function HeroCarousel() {
                 isActive ? "opacity-100" : "opacity-0",
               )}
             >
-              <Image
-                src={slide.image || "/placeholder.svg"}
-                alt=""
-                fill
-                priority={slideIndex === 0}
-                style={{ objectPosition: slide.focalPosition }}
-                className={cn(
-                  "object-cover transition-transform duration-[650ms] ease-out",
-                  isActive && !reducedMotion ? "scale-100" : "scale-[1.015]",
-                )}
-              />
-              <div className={cn("absolute inset-0 from-brand-blue-deep/90 via-brand-blue-deep/60 to-brand-blue-deep/15",slide.textSide === "left" ? "bg-gradient-to-r" : "bg-gradient-to-l")} />
+              <div className={cn("absolute inset-x-0 top-0 sm:inset-0 sm:h-full", slide.id === "manufacturing-standards" ? "h-[34%]" : "h-[38%]")}>
+                <Image
+                  src={slide.image}
+                  alt=""
+                  fill
+                  priority={slideIndex === 0}
+                  style={{ objectPosition: slide.focalPosition }}
+                  className={cn(
+                    "object-contain object-top transition-transform duration-[650ms] ease-out sm:object-cover",
+                    slide.id === "manufacturing-standards" && "object-cover object-left",
+                    isActive && !reducedMotion ? "scale-100" : "scale-[1.015]",
+                  )}
+                />
+              </div>
             </div>
           )
         })}
 
-        <div className="relative z-10 flex h-full max-w-7xl flex-col justify-center px-4 sm:mx-auto sm:px-6 lg:px-8">
-          <div className={cn("w-full sm:max-w-[50%] lg:max-w-[48%]",activeSlide.textSide === "right" && "sm:ml-auto")}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-teal">{activeSlide.eyebrow}</p>
+        <div className="relative z-10 flex h-full max-w-7xl flex-col justify-end px-4 pb-20 sm:mx-auto sm:justify-center sm:px-6 sm:pb-0 lg:px-8">
+          <div className={cn("w-full sm:max-w-[50%] lg:max-w-[48%]",activeSlide.textSide === "right" && "sm:ml-auto lg:max-w-[40%]")}>
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-200">{activeSlide.eyebrow}</p>
             <h1 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
               {activeSlide.heading}
             </h1>

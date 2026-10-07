@@ -16,33 +16,33 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     id: "precision-array",
-    image: "/images/banners/banner-precision-array.jpg",
-    focalPosition: "35% 50%",
-    eyebrow: "Disposable RF Electrodes & Cannulas",
-    heading: "Precision-manufactured radiofrequency components, built for repeatable procedural use",
+    image: "/images/banners/customer-rf-electrode-cannula-202610.jpg",
+    focalPosition: "100% 50%",
+    eyebrow: "Single-use RF Electrode and RF Cannula",
+    heading: "Minimally invasive RF thermocoagulation for precise pain relief",
     subheading:
-      "Shanghai Brightstone Medical Technology Limited manufactures disposable RF electrodes and multi-configuration RF cannulas across dedicated production lines in Shanghai.",
-    textSide: "right",
-  },
-  {
-    id: "automated-assembly",
-    image: "/images/banners/banner-automated-assembly.jpg",
-    focalPosition: "60% 45%",
-    eyebrow: "Automated Assembly",
-    heading: "Automated cutting and assembly lines behind every finished component",
-    subheading:
-      "Four dedicated product lines and two custom needle-component lines support consistent output at approximately 150,000 units per month.",
+      "Safe and efficient care focused on tailored treatment for chronic pain.",
     textSide: "left",
   },
   {
-    id: "needle-detail",
-    image: "/images/banners/banner-needle-detail.jpg",
-    focalPosition: "20% 50%",
-    eyebrow: "OEM / ODM Ready",
-    heading: "Configurable gauge, length, and tip geometry for your specification",
+    id: "manufacturing-standards",
+    image: "/images/banners/customer-cleanroom-202610.jpg",
+    focalPosition: "0% 50%",
+    eyebrow: "Medical Device Manufacturing",
+    heading: "Independent R&D and continuous refinement",
     subheading:
-      "OEM/ODM programs, sample requests, and custom configurations are reviewed directly by our production and quality team.",
+      "Rigorous medical device production standards and manufacturing expertise support minimally invasive clinical instruments.",
     textSide: "right",
+  },
+  {
+    id: "needle-detail",
+    image: "/images/banners/customer-curved-tip-cannula-202610.jpg",
+    focalPosition: "100% 50%",
+    eyebrow: "OEM / ODM Customization",
+    heading: "One-stop OEM/ODM customization",
+    subheading:
+      "From design and development through volume production, supporting global partners as they expand into new markets.",
+    textSide: "left",
   },
 ]
 

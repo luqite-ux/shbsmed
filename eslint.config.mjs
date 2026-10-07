@@ -1,0 +1,18 @@
+import { defineConfig, globalIgnores } from "eslint/config"
+import nextVitals from "eslint-config-next/core-web-vitals"
+import nextTs from "eslint-config-next/typescript"
+
+export default defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  {
+    // Existing components predate React's newer effect/purity diagnostics.
+    // Keep the rest of the Next and TypeScript checks active for this repository.
+    rules: {
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/purity": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+])
