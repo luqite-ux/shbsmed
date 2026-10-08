@@ -9,20 +9,20 @@ export const metadata: Metadata = {
 
 export default function MaintenancePage() {
   return (
-    <main className="relative flex min-h-screen items-center overflow-hidden bg-[#071d35] px-6 py-12 text-white sm:px-10">
+    <main className="relative flex min-h-screen items-center overflow-hidden bg-[#071d35] px-6 py-8 text-white sm:px-10 sm:py-12">
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-48 h-[34rem] w-[34rem] rounded-full bg-cyan-400/10 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute -bottom-72 left-0 h-[34rem] w-[34rem] rounded-full bg-blue-500/15 blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-5xl">
-        <header className="flex items-center gap-4 border-b border-white/15 pb-8">
-          <Image src="/images/brand/logo.png" alt="Brightstone Medical logo" width={56} height={56} className="h-12 w-12 object-contain sm:h-14 sm:w-14" priority />
+        <header className="flex flex-col items-start gap-5 border-b border-white/15 pb-8 sm:flex-row sm:items-center sm:gap-9">
+          <Image src="/images/brand/logo.png" alt="Brightstone Medical registered trademark logo" width={398} height={357} className="h-auto w-56 shrink-0 object-contain sm:w-64" priority />
           <div>
-            <p className="text-lg font-semibold tracking-tight sm:text-xl">Brightstone Medical</p>
-            <p className="text-xs uppercase tracking-[0.2em] text-cyan-100/80">Medical Technology</p>
+            <p className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Brightstone Medical</p>
+            <p className="mt-2 text-sm uppercase tracking-[0.17em] text-cyan-100/80 sm:text-base">Medical Technology</p>
           </div>
         </header>
 
-        <section className="max-w-3xl py-20 sm:py-28" aria-labelledby="maintenance-title">
+        <section className="max-w-3xl py-10 sm:py-12" aria-labelledby="maintenance-title">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-200">Website notice</p>
           <h1 id="maintenance-title" className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
             Our website is being updated

@@ -6,3 +6,4 @@
 - The old site source and content remain in this repository. This change does not schedule an automatic return to the old site.
 - To restore the public site after the customer approves it, remove the maintenance rewrite in `proxy.ts`, restore the former `app/robots.ts` and `app/sitemap.ts`, then deploy and verify the formal domain on desktop and mobile.
 - Local validation: the notice rendered on desktop and 390px mobile without horizontal overflow; the business email is a working `mailto:` link. The home, product list, product detail, contact and news routes returned the notice; `/admin/login` remained separate. `robots.txt` disallows crawling and the sitemap contains no old URLs.
+- Customer follow-up on October 8: enlarge the original registered trademark artwork and the visible company short name on the notice, with separate desktop and mobile layout checks. Keep the original logo artwork and aspect ratio.
