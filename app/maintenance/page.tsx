@@ -15,7 +15,7 @@ export default function MaintenancePage() {
 
       <div className="relative mx-auto w-full max-w-5xl">
         <header className="flex flex-col items-start gap-5 border-b border-white/15 pb-8 sm:flex-row sm:items-center sm:gap-9">
-          <Image src="/images/brand/maintenance-logo-20261008.jpg" alt="Brightstone Medical registered trademark logo" width={680} height={657} className="h-auto w-56 shrink-0 object-contain sm:w-64" priority />
+          <Image src="/images/brand/maintenance-logo-20261008.jpg" alt="Brightstone Medical registered trademark logo" width={680} height={657} className="h-auto w-72 shrink-0 object-contain sm:w-80" priority />
           <div>
             <p className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Brightstone Medical</p>
             <p className="mt-2 text-sm uppercase tracking-[0.17em] text-cyan-100/80 sm:text-base">Medical Technology</p>
