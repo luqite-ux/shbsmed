@@ -42,5 +42,5 @@ export const getContractComponents=cache(async(language?:string)=>{
  ])
  if(categoryError||productError)throw new Error('Component service is unavailable')
  const groups=(categories||[]).filter(c=>inCategoryBranch(c,categories||[],'contract-components'))
- return (products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,group:localized(group.name_i18n,locale)||group.name}})
+ return (products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||'',group:localized(group.name_i18n,locale)||group.name}})
 })
