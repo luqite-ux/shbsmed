@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "bone-marrow-biopsy-components",
+    "name": "Bone Marrow Biopsy Components",
+    "group": "Biopsy",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/d7e867265bbfbbcd74fcd01c5e4ccc49bc3256ea339c09d904184dcafae97c36.png"
+  },
+  {
+    "slug": "cutting-biopsy-components",
+    "name": "Cutting Biopsy Components",
+    "group": "Biopsy",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/c9726e128fa866b56bb827fc4b611e7550c5299d480647ac626274a3308f254b.png"
+  },
+  {
+    "slug": "aspiration-biopsy-components",
+    "name": "Aspiration Biopsy Components",
+    "group": "Biopsy",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/18d14c9fa9ae2b286f48b5752381d7ccf0f37c95ba1504a6b324291c27074436.png"
+  },
+  {
+    "slug": "triangular-echogenic-surface",
+    "name": "Triangular Echogenic Surface",
+    "group": "Surface processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/f2c46cb2d08e01be873ce82d03149402572780e4a483870e8ef3032991bb1dc2.png"
+  },
+  {
+    "slug": "mesh-echogenic-surface",
+    "name": "Mesh Echogenic Surface",
+    "group": "Surface processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/0db2bc11262b2ff9779482a31280b8e73550140310f3bab91401f7181288fffc.png"
+  },
+  {
+    "slug": "matte-echogenic-surface",
+    "name": "Matte Echogenic Surface",
+    "group": "Surface processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/fc8735c2822caa50fb82502949c1142ef47a6bbdcdbbb50df6c3d6f8e3cad135.png"
+  },
+  {
+    "slug": "back-hole-tip",
+    "name": "Beveled Tip with Back Hole",
+    "group": "Tip structures",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/68eb4aad3e19d0d667e191af21e6de988544a18a4b1058195037203b3074c484.png"
+  },
+  {
+    "slug": "pencil-point",
+    "name": "Pen-shaped Tip",
+    "group": "Tip structures",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/6c16b9fea2fecc2b7c710a37e713673c84b7f7658e373d6d30bff5efa4447c11.png"
+  },
+  {
+    "slug": "ball-tip-side-hole",
+    "name": "Ball Tip with Side Hole",
+    "group": "Tip structures",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/7c5b181399564ec03b808aa9a756b16276d97debbeb6a77b07735cfe70ea1f97.png"
+  },
+  {
+    "slug": "flared-end",
+    "name": "Flared Tube End",
+    "group": "Tube-end processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/52a92795ac5a8e2f04b8fcccb124b55740287ce58063b602cf112315f1f2449a.png"
+  },
+  {
+    "slug": "reduced-end",
+    "name": "Reduced Tube End",
+    "group": "Tube-end processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/124ebe37def02bcdeced964c37565abf872d4049f43940d0b6e349c2f6d6bf37.png"
+  },
+  {
+    "slug": "knurled-end",
+    "name": "Knurled Tube End",
+    "group": "Tube-end processing",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/c1d8876f3084756fd9f5bac1354abb856b4eaf6aeac1ed2ad82b297f5bef41fb.png"
+  }
+]

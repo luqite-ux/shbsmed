@@ -1,146 +1,23 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
-import { useCallback, useEffect, useRef, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { heroSlides } from "@/lib/data/media"
-import { cn } from "@/lib/utils"
-
-const AUTOPLAY_MS = 6500
-
-export function HeroCarousel() {
-  const [index, setIndex] = useState(0)
-  const [reducedMotion, setReducedMotion] = useState(false)
-  const [paused, setPaused] = useState(false)
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
-    setReducedMotion(mediaQuery.matches)
-    const handler = (event: MediaQueryListEvent) => setReducedMotion(event.matches)
-    mediaQuery.addEventListener("change", handler)
-    return () => mediaQuery.removeEventListener("change", handler)
-  }, [])
-
-  useEffect(() => {
-    if (reducedMotion || paused) return
-    timerRef.current = setInterval(() => {
-      setIndex((current) => (current + 1) % heroSlides.length)
-    }, AUTOPLAY_MS)
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
-    }
-  }, [reducedMotion, paused])
-
-  const goTo = useCallback((next: number) => {
-    setIndex((next + heroSlides.length) % heroSlides.length)
-  }, [])
-
-  const activeSlide = reducedMotion ? heroSlides[0] : heroSlides[index]
-
-  return (
-    <section
-      aria-roledescription="carousel"
-      aria-label="Featured product and manufacturing highlights"
-      className="relative isolate overflow-hidden bg-brand-blue-deep"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
-      onTouchStart={() => setPaused(true)}
-    >
-      <div className="relative h-[620px] w-full sm:h-[600px] lg:h-[680px]">
-        {heroSlides.map((slide, slideIndex) => {
-          const isActive = slide.id === activeSlide.id
-          return (
-            <div
-              key={slide.id}
-              aria-hidden={!isActive}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-[650ms] ease-out",
-                isActive ? "opacity-100" : "opacity-0",
-              )}
-            >
-              <div className={cn("absolute inset-x-0 top-0 sm:inset-0 sm:h-full", slide.id === "manufacturing-standards" ? "h-[34%]" : "h-[38%]")}>
-                <Image
-                  src={slide.image}
-                  alt=""
-                  fill
-                  priority={slideIndex === 0}
-                  style={{ objectPosition: slide.focalPosition }}
-                  className={cn(
-                    "object-contain object-top transition-transform duration-[650ms] ease-out sm:object-cover",
-                    slide.id === "manufacturing-standards" && "object-cover object-left",
-                    isActive && !reducedMotion ? "scale-100" : "scale-[1.015]",
-                  )}
-                />
-              </div>
-            </div>
-          )
-        })}
-
-        <div className="relative z-10 flex h-full max-w-7xl flex-col justify-end px-4 pb-20 sm:mx-auto sm:justify-center sm:px-6 sm:pb-0 lg:px-8">
-          <div className={cn("w-full sm:max-w-[50%] lg:max-w-[48%]",activeSlide.textSide === "right" && "sm:ml-auto lg:max-w-[40%]")}>
-            <p className="text-xs font-semibold uppercase tracking-widest text-teal-200">{activeSlide.eyebrow}</p>
-            <h1 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-              {activeSlide.heading}
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">{activeSlide.subheading}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-white text-brand-blue-deep hover:bg-white/90">
-                <Link href="/products">Explore Products</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/40 bg-white/5 text-white hover:bg-white/15 hover:text-white"
-              >
-                <Link href="/contact">Request a Quote</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {!reducedMotion && (
-          <>
-            <button
-              type="button"
-              onClick={() => goTo(index - 1)}
-              aria-label="Previous slide"
-              className="absolute left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur transition-colors hover:bg-white/25 sm:flex"
-            >
-              <ChevronLeft className="size-5" aria-hidden="true" />
-            </button>
-            <button
-              type="button"
-              onClick={() => goTo(index + 1)}
-              aria-label="Next slide"
-              className="absolute right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur transition-colors hover:bg-white/25 sm:flex"
-            >
-              <ChevronRight className="size-5" aria-hidden="true" />
-            </button>
-
-            <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-              {heroSlides.map((slide, slideIndex) => (
-                <button
-                  key={slide.id}
-                  type="button"
-                  onClick={() => goTo(slideIndex)}
-                  aria-label={`Go to slide ${slideIndex + 1}`}
-                  aria-current={slide.id === activeSlide.id}
-                  className={cn(
-                    "h-2 rounded-full transition-all duration-200",
-                    slide.id === activeSlide.id ? "w-6 bg-white" : "w-2 bg-white/40 hover:bg-white/70",
-                  )}
-                />
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    </section>
-  )
+import {SiteText,SiteImage} from '@/components/site-copy'
+import Link from '@/components/localized-link'
+import { useEffect, useState } from "react"
+import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
+import seed from "@/lib/site-seed.json"
+export function HeroCarousel({slides=seed.slides}:{slides?:typeof seed.slides}) {
+ const [index,setIndex]=useState(0),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(true)
+ useEffect(()=>{const q=matchMedia('(prefers-reduced-motion: reduce)');setReduced(q.matches);const f=()=>setReduced(q.matches);q.addEventListener('change',f);return()=>q.removeEventListener('change',f)},[])
+ useEffect(()=>{if(paused||reduced)return;const t=setInterval(()=>{if(!document.hidden)setIndex(i=>(i+1)%slides.length)},7000);return()=>clearInterval(t)},[paused,reduced,slides.length])
+ const active=slides[index]
+ return <section aria-label="Brightstone Medical highlights" aria-roledescription="carousel" className={`medical-hero ${active.theme==='dark'?'hero-dark':'hero-light'}`} onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)} onFocus={()=>setPaused(true)}>
+  <div className="hero-stage">
+   {slides.map((s,i)=><SiteImage key={s.id} src={s.image} alt="" aria-hidden={index!==i} fetchPriority={i===0?'high':'auto'} className={`hero-image ${index===i?'active':''}`} style={{objectPosition:s.focus}}/>) }
+   <div key={active.id} className={`hero-copy hero-copy-${active.side} hero-copy-${active.id}`} data-slide-copy={active.id}>
+    <p className="eyebrow"><SiteText value={"Brightstone Medical"}/></p><h1><SiteText value={active.heading}/></h1><p className="hero-description"><SiteText value={active.description}/></p>
+    <Link className="medical-button" href={active.href}><SiteText value={active.cta}/><ArrowRight size={17}/></Link>
+   </div>
+  </div>
+  <div className="hero-controls"><div className="flex items-center gap-2">{slides.map((s,i)=><button key={s.id} onClick={()=>{setIndex(i);setPaused(true)}} aria-label={`Show Banner ${i+1}`} aria-current={index===i?'true':undefined} className={`hero-dot ${index===i?'active':''}`}/>)}</div><div className="flex gap-1"><button aria-label="Previous Banner" onClick={()=>{setIndex(i=>(i+slides.length-1)%slides.length);setPaused(true)}}><ChevronLeft size={18}/></button><button aria-label={paused?'Play Banners':'Pause Banners'} onClick={()=>setPaused(p=>!p)}>{paused?<Play size={17}/>:<Pause size={17}/>}</button><button aria-label="Next Banner" onClick={()=>{setIndex(i=>(i+1)%slides.length);setPaused(true)}}><ChevronRight size={18}/></button></div></div>
+ </section>
 }

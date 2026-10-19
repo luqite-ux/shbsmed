@@ -30,6 +30,9 @@ export function Reveal({ children, className, delay = 0, as = "div" }: RevealPro
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
+            if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && typeof node.animate==='function') {
+              try { node.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:560,delay:Math.min(delay,210),easing:'cubic-bezier(.16,1,.3,1)'}) } catch { /* Leave content visible when animation is unavailable. */ }
+            }
             setIsVisible(true)
             observer.disconnect()
           }
@@ -40,7 +43,7 @@ export function Reveal({ children, className, delay = 0, as = "div" }: RevealPro
 
     observer.observe(node)
     return () => observer.disconnect()
-  }, [])
+  }, [delay])
 
   const Comp = as as any
 

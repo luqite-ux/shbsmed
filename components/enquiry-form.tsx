@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, type FormEvent } from "react"
+import { useRef, useState, type FormEvent } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -21,40 +21,43 @@ export function EnquiryForm({
   products: EnquiryProduct[]
 }) {
   const [notice, setNotice] = useState("")
+  const [noticeKind,setNoticeKind]=useState<'success'|'error'>('success')
   const [pending, setPending] = useState(false)
   const [refreshKey, setRefreshKey] = useState(0)
+  const attachmentInput=useRef<HTMLInputElement>(null)
+  const [attachmentName,setAttachmentName]=useState('')
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form=event.currentTarget
     setPending(true);setNotice("")
-    const data=Object.fromEntries(new FormData(form).entries())
-    data.subject=String(data.product||"Website RFQ")
-    try{const response=await fetch('/api/inquiries',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to send inquiry.');form.reset();setRefreshKey(v=>v+1);setNotice('Thank you. Your inquiry has been received.')}catch(error){setNotice(error instanceof Error?error.message:'Unable to send inquiry.')}finally{setPending(false)}
+    const data=new FormData(form)
+    data.set('subject',products.find(p=>p.slug===data.get('product'))?.name||'Website RFQ')
+    try{const response=await fetch('/api/inquiries',{method:'POST',body:data});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to send inquiry.');form.reset();setAttachmentName('');setNoticeKind('success');setNotice('Thank you. Your inquiry has been received.')}catch(error){setNoticeKind('error');setNotice(error instanceof Error?error.message:'Unable to send inquiry.')}finally{setRefreshKey(v=>v+1);setPending(false)}
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 sm:p-8" noValidate>
+    <form onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 sm:p-8">
       <FieldGroup>
         <div className="grid gap-6 sm:grid-cols-2">
           <Field>
             <FieldLabel htmlFor="name">Full name</FieldLabel>
-            <Input id="name" name="name" required autoComplete="name" placeholder="Jane Buyer" />
+            <Input id="name" name="name" required maxLength={200} autoComplete="name" placeholder="Your full name" />
           </Field>
           <Field>
             <FieldLabel htmlFor="company">Company</FieldLabel>
-            <Input id="company" name="company" required autoComplete="organization" placeholder="Your company" />
+            <Input id="company" name="company" required maxLength={200} autoComplete="organization" placeholder="Your company" />
           </Field>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
           <Field>
             <FieldLabel htmlFor="email">Email</FieldLabel>
-            <Input id="email" name="email" type="email" required autoComplete="email" placeholder="you@company.com" />
+            <Input id="email" name="email" type="email" required maxLength={254} autoComplete="email" placeholder="you@company.com" />
           </Field>
           <Field>
             <FieldLabel htmlFor="phone">Phone (optional)</FieldLabel>
-            <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+1 555 000 0000" />
+            <Input id="phone" name="phone" type="tel" maxLength={80} autoComplete="tel" placeholder="Country code and phone number" />
           </Field>
         </div>
 
@@ -81,18 +84,28 @@ export function EnquiryForm({
             id="message"
             name="message"
             required
+            maxLength={10000}
             rows={5}
             placeholder="Target industry, quantity, dimensions, delivery destination and timeline."
           />
           <FieldDescription>The more application detail you share, the more useful our reply can be.</FieldDescription>
         </Field>
 
+        <Field>
+          <FieldLabel htmlFor="attachment">Drawing or specification (optional)</FieldLabel>
+          <input ref={attachmentInput} id="attachment" name="attachment" type="file" hidden accept=".pdf,.jpg,.jpeg,.png" onChange={event=>setAttachmentName(event.currentTarget.files?.[0]?.name||'')} />
+          <div className="flex min-w-0 items-center gap-3 rounded-md border border-input p-2">
+            <button type="button" className="shrink-0 rounded bg-brand-blue px-3 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue" onClick={()=>attachmentInput.current?.click()}>Choose file</button>
+            <span aria-live="polite" className="min-w-0 break-all text-sm text-muted-foreground">{attachmentName||'No file selected'}</span>
+          </div>
+          <FieldDescription>One PDF, JPG or PNG file, up to 3 MB. Do not include patient information.</FieldDescription>
+        </Field>
         <InquiryCaptchaField refreshKey={refreshKey} />
 
         <Button disabled={pending} type="submit" size="lg" className="bg-brand-blue text-white hover:bg-brand-blue-deep">
           {pending ? "Sending…" : "Send Enquiry"}
         </Button>
-        {notice && <p role="status" className="rounded-md bg-blue-50 p-3 text-sm text-blue-950">{notice}</p>}
+        {notice && <p role={noticeKind==='error'?'alert':'status'} className={`rounded-md p-3 text-sm ${noticeKind==='error'?'bg-red-50 text-red-900':'bg-green-50 text-green-900'}`}>{notice}</p>}
       </FieldGroup>
     </form>
   )

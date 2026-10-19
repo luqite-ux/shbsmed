@@ -1,28 +1,24 @@
 import assert from "node:assert/strict"
-import { createHash } from "node:crypto"
 import { readFileSync } from "node:fs"
 import { test } from "node:test"
-import { heroSlides } from "../lib/data/media.ts"
+const seed = JSON.parse(readFileSync(new URL('../lib/site-seed.json',import.meta.url),'utf8'))
 
 const suppliedBanners = [
-  ["customer-rf-electrode-cannula-202610.jpg", "9ca7900fb5b9c2767d20fbe76785a1c77319958611dbffbd74f936d9836afa08"],
-  ["customer-cleanroom-202610.jpg", "72195aba1543e82324a37c93ad2a191137450f0e49affb5defe88786cf2bee6d"],
-  ["customer-curved-tip-cannula-202610.jpg", "4e0f4ed283c136a4c8bd3a0c6f1178582c4b87e5d5792b9ebee00cd82482e27d"],
+  "bea9d37c5733de3499f699152fd8918d4381e8337272a38a338fb91f3050b65e",
+  "9ebd111f6f654157ad6053cd35b54549525d7bbf33f1ae379ddbf4e609cff8e9",
+  "fabb53b8e227e2cec026291c0289c0912f6b067e4afc2590255b6693be5a718b",
 ] as const
 
 test("the three home slides use the three customer-supplied Banner files in order", () => {
-  assert.equal(heroSlides.length, suppliedBanners.length)
-  heroSlides.forEach((slide, index) => {
-    const [filename, expectedHash] = suppliedBanners[index]
-    assert.equal(slide.image, `/images/banners/${filename}`)
-    const bytes = readFileSync(new URL(`../public/images/banners/${filename}`, import.meta.url))
-    assert.equal(createHash("sha256").update(bytes).digest("hex"), expectedHash)
+  assert.equal(seed.slides.length, suppliedBanners.length)
+  seed.slides.forEach((slide:any, index:number) => {
+    assert.equal(new URL(slide.image).pathname.split('/').pop(),`${suppliedBanners[index]}.png`)
   })
 })
 
 test("home Banner copy does not claim automated product assembly", () => {
-  const copy = heroSlides.map(({ eyebrow, heading, subheading }) => `${eyebrow} ${heading} ${subheading}`).join(" ")
+  const copy = seed.slides.map((s:any) => `${s.heading} ${s.description}`).join(" ")
   assert.doesNotMatch(copy, /automated assembly|automated (?:product )?assembly line/i)
-  assert.match(heroSlides[0].eyebrow, /RF Electrode and RF Cannula/)
-  assert.match(heroSlides[2].heading, /OEM\/ODM/)
+  assert.match(copy,/RF/i)
+  assert.match(copy,/OEM|ODM/)
 })

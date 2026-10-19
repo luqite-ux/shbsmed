@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server.js"
 
 import { SESSION_COOKIE } from "./lib/admin-session.ts"
 import { applyServiceExpiryGuard } from "./lib/service-guard-middleware.ts"
+import {protectPreviewResponse} from './lib/site-content/preview-protection.ts'
 
 const MAINTENANCE_PATH = "/maintenance"
 
@@ -20,18 +21,14 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  if (!isMaintenanceExcludedPath(pathname)) {
-    const url = request.nextUrl.clone()
-    url.pathname = MAINTENANCE_PATH
-    const response = NextResponse.rewrite(url)
-    response.headers.set("X-Robots-Tag", "noindex, nofollow")
-    return response
-  }
-
   const serviceGuardResponse = await applyServiceExpiryGuard(request)
-  if (serviceGuardResponse) return serviceGuardResponse
+  if (serviceGuardResponse){protectPreviewResponse(serviceGuardResponse.headers,request.cookies.has('__Host-hq-site-preview'));return serviceGuardResponse}
 
-  return NextResponse.next()
+  const requestHeaders=new Headers(request.headers)
+  requestHeaders.set('x-brightstone-path',pathname)
+  const response=NextResponse.next({request:{headers:requestHeaders}})
+  protectPreviewResponse(response.headers,request.cookies.has('__Host-hq-site-preview'))
+  return response
 }
 
 export const config = {

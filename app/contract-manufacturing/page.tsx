@@ -1,0 +1,10 @@
+import {pageMetadata} from '@/lib/site-content/metadata'
+import {SiteText} from '@/components/site-copy'
+import {PageFrame} from '@/components/page-frame'
+import {ComponentSeries} from '@/components/component-series'
+import {Reveal} from '@/components/reveal'
+import {PhotoGroup,InquiryBand} from '@/components/medical-sections'
+import seed from '@/lib/site-seed.json'
+import {getContractComponents} from '@/lib/medical-products'
+export async function generateMetadata(){return pageMetadata("/contract-manufacturing",{title:'Needle Tube & Stylet Contract Manufacturing',description:'Explore needle tubes, stylets, biopsy components, tip structures, tube-end processing and echogenic surfaces.',alternates:{canonical:'https://shbsmed.com/contract-manufacturing'}})}
+export default async function Contract(){const parts=await getContractComponents();return <PageFrame eyebrow="Contract manufacturing" title="Needle tubes, stylets and medical-device components" description="Explore component structures and machining examples. Share your drawings, dimensions and quantity to discuss manufacturing requirements."><Reveal as="section" className="medical-shell medical-section"><ComponentSeries parts={parts}/><div className="medical-copy-panel"><h2><SiteText value={"Custom needle-component manufacturing"}/></h2><p><SiteText value={"We support component manufacturing from drawings or samples. Please specify the material, dimensions, tip structure, surface requirements and quantity."}/></p></div></Reveal><section className="medical-light"><Reveal as="section" className="medical-shell medical-section"><p className="eyebrow"><SiteText value={"Component production"}/></p><h2><SiteText value={"From needle tubes to semi-finished assemblies"}/></h2><PhotoGroup items={seed.photos.filter(p=>p.group==='components')}/></Reveal></section><InquiryBand/></PageFrame>}

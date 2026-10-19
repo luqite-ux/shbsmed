@@ -12,8 +12,8 @@ export const company = {
   productionLines: "4 dedicated product lines plus 2 custom medical needle-component lines",
   monthlyCapacity: "approximately 150,000 units per month",
   standardLeadTime: "45 days for standard orders",
-  exportHistory: "Continuous exports to the United States for 10 years",
-  registrations: "FDA 510(k) clearance, EU CE marking, and China medical device registration",
+  exportHistory: "Russia, Central Asia, Southeast Asia, South America and Africa",
+  registrations: "Product-specific documentation is discussed for the intended market.",
 }
 
 export const capacityFacts: CapacityFact[] = [
@@ -30,7 +30,7 @@ export const capacityFacts: CapacityFact[] = [
   {
     label: { en: "Monthly capacity" },
     value: { en: "~150,000 units" },
-    helper: { en: "Across the disposable electrode and cannula product range." },
+    helper: { en: "Across the company’s medical needle products." },
   },
   {
     label: { en: "Standard lead time" },
@@ -67,13 +67,13 @@ export const faqItems: FaqItem[] = [
   {
     question: { en: "Which markets do you currently export to?" },
     answer: {
-      en: "We have exported continuously to the United States for 10 years and work with distribution and OEM partners across multiple international markets.",
+      en: "Our current target markets include Russia, Central Asia, Southeast Asia, South America and Africa.",
     },
   },
   {
     question: { en: "What certifications and registrations do you hold?" },
     answer: {
-      en: "Our products are manufactured under FDA 510(k) clearance, EU CE marking, and China medical device registration. Specific documentation is shared with qualified partners under the appropriate agreements.",
+      en: "Product-specific documentation can be discussed for the intended market and cooperation model.",
     },
   },
   {

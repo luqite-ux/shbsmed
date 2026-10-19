@@ -1,4 +1,12 @@
-import { PageFrame } from "@/components/page-frame";import { ProductCard } from "@/components/product-card";import { fetchProductsData } from "@/lib/products-db"
+import {pageMetadata} from '@/lib/site-content/metadata'
+import {SiteText,SiteImage} from '@/components/site-copy'
+import {PageFrame} from '@/components/page-frame'
+import {ProductSeries} from '@/components/medical-catalog'
+import {Reveal} from '@/components/reveal'
+import {InquiryBand} from '@/components/medical-sections'
+import seed from '@/lib/site-seed.json'
+import {ElectrodeOverview} from '@/components/electrode-overview'
+import {getMedicalProducts} from '@/lib/medical-products'
 export const revalidate=60
-export const metadata={title:"Products",description:"Browse 49 disposable RF electrode and RF cannula specifications from Brightstone Medical.",alternates:{canonical:"https://shbsmed.com/products"}}
-export default async function ProductsPage(){const{products}=await fetchProductsData();return <PageFrame eyebrow="Product catalog" title="Disposable RF electrodes and cannulas" description="Compare all 49 supplied specifications, then open a product to review its model, gauge, length, tip structure and MOQ."><section className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">{products.map(p=><ProductCard key={p.slug} product={p}/>)}</section></PageFrame>}
+export async function generateMetadata(){return pageMetadata("/products",{title:'RF Products for Pain Management',description:'Compare RF cannulas by tip structure and RF electrodes by configuration. View product images and complete specification tables.',alternates:{canonical:'https://shbsmed.com/products'}})}
+export default async function Products(){const products=await getMedicalProducts();return <PageFrame eyebrow="Products" title="RF products for pain management" description="Choose a product series. View the product, then compare the available model specifications."><Reveal as="section" className="medical-shell medical-section"><ProductSeries items={products}/></Reveal><section className="medical-light"><Reveal as="section" className="medical-shell medical-split"><SiteImage src={seed.neuron} alt="Illustration of nerve cells"/><div><p className="eyebrow"><SiteText value={"Application"}/></p><h2 className="text-3xl font-semibold"><SiteText value={"Designed for RF pain-management procedures"}/></h2><p className="medical-intro"><SiteText value={"RF cannulas and electrodes are used together with an RF generator for procedures involving thermocoagulation, neuromodulation or intervertebral disc tissue ablation. Product configuration and connection requirements must be reviewed for the intended use."}/></p></div></Reveal></section><ElectrodeOverview/><InquiryBand/></PageFrame>}

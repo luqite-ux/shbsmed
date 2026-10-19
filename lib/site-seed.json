@@ -1,0 +1,627 @@
+{
+  "products": [
+    {
+      "slug": "rf-electrodes",
+      "name": "Single-use RF Electrode",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/19ab6ac6478cdb929f26.jpg",
+      "tipImage": null,
+      "description": "Used with an RF cannula and an RF generator in pain-management procedures. Adapter cables support connections to different generator brands.",
+      "variants": [
+        {
+          "model": "RE2750-BM",
+          "gauge": "27G",
+          "length": "50 mm",
+          "activeTip": "",
+          "color": "Green",
+          "moq": "500pcs"
+        },
+        {
+          "model": "RE27100-BM",
+          "gauge": "27G",
+          "length": "100 mm",
+          "activeTip": "",
+          "color": "Blue",
+          "moq": "500pcs"
+        },
+        {
+          "model": "RE27150-BM",
+          "gauge": "27G",
+          "length": "150 mm",
+          "activeTip": "",
+          "color": "Yellow",
+          "moq": "500pcs"
+        },
+        {
+          "model": "RE27100B-BM",
+          "gauge": "27G",
+          "length": "100 mm",
+          "activeTip": "",
+          "color": "Blue",
+          "moq": "500pcs"
+        },
+        {
+          "model": "RE27150B-BM",
+          "gauge": "27G",
+          "length": "150 mm",
+          "activeTip": "",
+          "color": "Yellow",
+          "moq": "500pcs"
+        }
+      ]
+    },
+    {
+      "slug": "straight-sharp-rf-cannulas",
+      "name": "Straight Sharp RF Cannula",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/6f5369c20f4d2430d34f.jpg",
+      "tipImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/9175bef3862fb79af691.jpg",
+      "description": "The straight sharp tip is designed for puncture along a straight access path.",
+      "variants": [
+        {
+          "model": "RC22505S-BM",
+          "gauge": "22G",
+          "length": "50 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC22510S-BM",
+          "gauge": "22G",
+          "length": "50 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221005S-BM",
+          "gauge": "22G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221010S-BM",
+          "gauge": "22G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221505S-BM",
+          "gauge": "22G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221510S-BM",
+          "gauge": "22G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC20505S-BM",
+          "gauge": "20G",
+          "length": "50 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC20510S-BM",
+          "gauge": "20G",
+          "length": "50 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201005S-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201010S-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201505S-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201510S-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181005S-BM",
+          "gauge": "18G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181010S-BM",
+          "gauge": "18G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181505S-BM",
+          "gauge": "18G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181510S-BM",
+          "gauge": "18G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC161010S-BM",
+          "gauge": "16G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "White",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC161510S-BM",
+          "gauge": "16G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "White",
+          "moq": "3000pcs"
+        }
+      ]
+    },
+    {
+      "slug": "curved-sharp-rf-cannulas",
+      "name": "Curved Sharp RF Cannula",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/300048a012448d64a299.jpg",
+      "tipImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/564a826f0eeaffb057b8.jpg",
+      "description": "The curved sharp tip supports target access along curved or more complex paths.",
+      "variants": [
+        {
+          "model": "RC22505C-BM",
+          "gauge": "22G",
+          "length": "50 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC22510C-BM",
+          "gauge": "22G",
+          "length": "50 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221005C-BM",
+          "gauge": "22G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221010C-BM",
+          "gauge": "22G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221505C-BM",
+          "gauge": "22G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC221510C-BM",
+          "gauge": "22G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Black",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC20505C-BM",
+          "gauge": "20G",
+          "length": "50 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC20510C-BM",
+          "gauge": "20G",
+          "length": "50 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201005C-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201010C-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201505C-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC201510C-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181005C-BM",
+          "gauge": "18G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181010C-BM",
+          "gauge": "18G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181505C-BM",
+          "gauge": "18G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC181510C-BM",
+          "gauge": "18G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC161010C-BM",
+          "gauge": "16G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "White",
+          "moq": "3000pcs"
+        },
+        {
+          "model": "RC161510C-BM",
+          "gauge": "16G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "White",
+          "moq": "3000pcs"
+        }
+      ]
+    },
+    {
+      "slug": "curved-blunt-rf-cannulas",
+      "name": "Curved Blunt RF Cannula",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/03d956cfdc381d63ed09.jpg",
+      "tipImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/551a96c897320d6d56b8.jpg",
+      "description": "The curved blunt tip is designed for target access in areas with dense vessels or nerves.",
+      "variants": [
+        {
+          "model": "RC201005B-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC201010B-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC201505B-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "5 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC201510B-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        }
+      ]
+    },
+    {
+      "slug": "side-port-rf-cannulas",
+      "name": "Curved Sharp RF Cannula with Side Port",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/dde18b1658a875f3431d.jpg",
+      "tipImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/1ab24ce9b0774e195be2.jpg",
+      "description": "The side port allows the electrode tip to emerge beside the cannula tip in a Y-shaped configuration for procedures requiring a broader thermocoagulation area.",
+      "variants": [
+        {
+          "model": "RC201010Y-BM",
+          "gauge": "20G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC201510Y-BM",
+          "gauge": "20G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Yellow",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC181010Y-BM",
+          "gauge": "18G",
+          "length": "100 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "1000pcs"
+        },
+        {
+          "model": "RC181510Y-BM",
+          "gauge": "18G",
+          "length": "150 mm",
+          "activeTip": "10 mm",
+          "color": "Pink",
+          "moq": "1000pcs"
+        }
+      ]
+    }
+  ],
+  "odm": [
+    {
+      "name": "Brain Irrigation Needle",
+      "slug": "brain-irrigation-needle",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/0566a5247cad070a2816d27d793801d8e035fc6dbd00a6842d69abdadde40f33.jpg"
+    },
+    {
+      "name": "Epidural Treatment Needle",
+      "slug": "epidural-treatment-needle",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/2ea728cff84f3768511271c9fdb3f5fefad547f78d6536a6522aadf2db5a8f20.jpg"
+    },
+    {
+      "name": "Ultrasound-guided Puncture Needle",
+      "slug": "ultrasound-guided-puncture-needle",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/315e5e6c20a37dedd78da26e7852cd796a0dfdda5208d9b9847c658ccf2f56cc.jpg"
+    },
+    {
+      "name": "Huber Needle",
+      "slug": "huber-needle",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/245008edd6375a5e6dab364a9d69ba530c3b26a7fe7410798328da4d4df36e33.jpg"
+    },
+    {
+      "name": "PTC Needle",
+      "slug": "ptc-needle",
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/16ca6b4c4b05465ab1c718cafbe7c93fe655add777dbe8b6601f8ed3947e4208.jpg"
+    }
+  ],
+  "photos": [
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/75eb8db1a257129b8b92.jpg",
+      "title": "Company entrance",
+      "group": "company"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/489381f1bb4ef2280a16.jpg",
+      "title": "Engineering and business office",
+      "group": "company"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/84042b2b4d3f50dc77d8.jpg",
+      "title": "Stainless-steel tube storage",
+      "group": "materials"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/517228a133326f9fee4b.jpg",
+      "title": "Component storage",
+      "group": "materials"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/e0a8dfd384b00bfe8f7e.jpg",
+      "title": "Needle tubes during processing",
+      "group": "components"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/8fcdf248874d0007bb2c.jpg",
+      "title": "Semi-finished needle tubes",
+      "group": "components"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/fe70ec7b49497b19a20e.jpg",
+      "title": "Semi-finished needle assemblies",
+      "group": "components"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/47149137cb3053e55321.png",
+      "title": "Cleanroom production area",
+      "group": "production"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/56fe6919026f48858041.jpg",
+      "title": "Assembly workstations",
+      "group": "production"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/f1b51a388c50cd09456f.jpg",
+      "title": "Inspection instruments",
+      "group": "quality"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/ed1e5a04ee2030d5f788.jpg",
+      "title": "Dimensional inspection area",
+      "group": "quality"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/5e30b699f1692f86c962.jpg",
+      "title": "Automated printing equipment",
+      "group": "equipment"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/804ba3daa6ec67366622.jpg",
+      "title": "Finished-goods storage",
+      "group": "storage"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/22a3f008fcd8558f8ded.jpg",
+      "title": "Packed goods in the warehouse",
+      "group": "storage"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/8bb112f1450f5cda8d86.jpg",
+      "title": "Stock prepared for shipment",
+      "group": "storage"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/83d613c8573be1e517da.jpg",
+      "title": "Industry exhibition and product discussions",
+      "group": "exhibitions"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/66c3b96dca37ac8f1ede.jpg",
+      "title": "Meeting visitors at the exhibition",
+      "group": "exhibitions"
+    },
+    {
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/all-media/bf468db6c3362651be3e.jpg",
+      "title": "Brightstone Medical exhibition stand",
+      "group": "exhibitions"
+    }
+  ],
+  "videos": [
+    {
+      "src": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/videos/a2a53490171c46685a75.mp4",
+      "title": "Automated tube cutting",
+      "poster": "/images/manufacturing/automated-cutting-poster.jpg"
+    },
+    {
+      "src": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/shbsmed/videos/e4dc2474c3bbcd41172d.mp4",
+      "title": "Wire cutting",
+      "poster": "/images/manufacturing/wire-cutting-poster.jpg"
+    }
+  ],
+  "slides": [
+    {
+      "id": "design",
+      "heading": "Precision Needle Design & Development",
+      "description": "Component design, precision machining and technical documentation.",
+      "cta": "Explore Manufacturing",
+      "href": "/manufacturing",
+      "side": "right",
+      "theme": "light",
+      "focus": "50% 50%",
+      "safeArea": [
+        0.55,
+        0.12,
+        0.42,
+        0.7
+      ],
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/bea9d37c5733de3499f699152fd8918d4381e8337272a38a338fb91f3050b65e.png"
+    },
+    {
+      "id": "pain",
+      "heading": "RF Products for Pain Management",
+      "description": "RF cannulas and electrodes. Compare tip structures and specifications.",
+      "cta": "View Products",
+      "href": "/products",
+      "side": "right",
+      "theme": "light",
+      "focus": "50% 50%",
+      "safeArea": [
+        0.52,
+        0.03,
+        0.43,
+        0.46
+      ],
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/9ebd111f6f654157ad6053cd35b54549525d7bbf33f1ae379ddbf4e609cff8e9.png"
+    },
+    {
+      "id": "cooperation",
+      "heading": "OEM Manufacturing & ODM Development",
+      "description": "Private-label production and medical needle development.",
+      "cta": "Discuss Your Project",
+      "href": "/contact?type=ODM",
+      "side": "left",
+      "theme": "dark",
+      "focus": "50% 50%",
+      "safeArea": [
+        0.05,
+        0.1,
+        0.42,
+        0.7
+      ],
+      "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/fabb53b8e227e2cec026291c0289c0912f6b067e4afc2590255b6693be5a718b.png"
+    }
+  ],
+  "neuron": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/089dd213753fe774250b7897ab0268df76ba70edd8085181dda768aa774e2dcd.jpg",
+  "electrodeStructure": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/site-20261019/51a25e5a8562d997fadd55f050c93873f02cb7bd902d4967d3b04dd86af193af.jpeg"
+}
