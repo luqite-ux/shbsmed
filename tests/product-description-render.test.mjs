@@ -31,7 +31,7 @@ test('contract product adapter retains the requested-language description',async
  const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText
  const rows={product_categories:[{id:'c1',slug:'contract-components',name:'Components'}],products:[{slug:'part',category_slug:'contract-components',name:'Part',description_i18n:{en:'English description',zh:'中文说明'}}]}
  const db={from(table){const q={select(){return q},eq(){return q},order(){return q},then(resolve){return Promise.resolve({data:rows[table],error:null}).then(resolve)}};return q}}
- const modules={'server-only':{},react:{cache:fn=>fn},'@/lib/supabase':{getSupabaseClient:()=>db},'@/lib/catalog-model.mjs':catalog,'@/lib/locale':{currentLocale:async()=>'en'}}
+ const modules={'server-only':{},react:{cache:fn=>fn},'@/lib/supabase':{getSupabaseClient:()=>db},'@/lib/catalog-model.mjs':catalog,'@/lib/locale':{currentLocale:async()=>'en',siteLanguages:async()=>({defaultLocale:'en',locales:['en']})}}
  const module={exports:{}}
  vm.runInNewContext(js,{module,exports:module.exports,process:{env:{NEXT_PUBLIC_TENANT_ID:'test-tenant'}},require:n=>modules[n]})
  assert.equal((await module.exports.getContractComponents('zh'))[0].description,'中文说明')

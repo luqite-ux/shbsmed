@@ -1,13 +1,15 @@
 import 'server-only'
 import {cache} from 'react'
 import {getSupabaseClient} from '@/lib/supabase'
-import {localized,rfCategories,inCategoryBranch} from '@/lib/catalog-model.mjs'
-import {currentLocale} from '@/lib/locale'
+import {localized as localizeValue,rfCategories,inCategoryBranch} from '@/lib/catalog-model.mjs'
+import {currentLocale,siteLanguages} from '@/lib/locale'
 
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
  const locale=language||await currentLocale()
+ const {defaultLocale}=await siteLanguages()
+ const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)
  const db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
  if(!db||!tenant)throw new Error('Product service is not configured')
  const [{data:categories,error:categoryError},{data:products,error:productError}]=await Promise.all([
@@ -27,6 +29,8 @@ export const getMedicalProducts=cache(async(language?:string):Promise<MedicalPro
 })
 export const getOdmProducts=cache(async(language?:string)=>{
  const locale=language||await currentLocale()
+ const {defaultLocale}=await siteLanguages()
+ const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)
  const db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
  if(!db||!tenant)throw new Error('Product service is not configured')
  const {data,error}=await db.from('products').select('*').eq('tenant_id',tenant).eq('is_active',true).eq('category_slug','odm-products').order('sort_order')
@@ -35,6 +39,8 @@ export const getOdmProducts=cache(async(language?:string)=>{
 })
 export const getContractComponents=cache(async(language?:string)=>{
  const locale=language||await currentLocale(),db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
+ const {defaultLocale}=await siteLanguages()
+ const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)
  if(!db||!tenant)throw new Error('Component service is not configured')
  const[{data:categories,error:categoryError},{data:products,error:productError}]=await Promise.all([
   db.from('product_categories').select('*').eq('tenant_id',tenant).eq('is_active',true).order('sort_order'),

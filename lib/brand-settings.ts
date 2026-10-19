@@ -1,11 +1,12 @@
 import 'server-only'
 import {unstable_cache} from 'next/cache'
 import {getSupabaseClient} from '@/lib/supabase'
-import {localized} from '@/lib/catalog-model.mjs'
+import {localized as localizeValue} from '@/lib/catalog-model.mjs'
 import {company} from '@/lib/data/company'
 export const getBrandSettings=unstable_cache(async(locale='en')=>{
  const db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
- const {data}=db&&tenant?await db.from('tenants').select('logo_url,favicon_url,contact_email,contact_address_i18n,site_description_i18n,seo_title_i18n,seo_description_i18n,extra_settings').eq('id',tenant).single():{data:null}
+ const {data}=db&&tenant?await db.from('tenants').select('default_language,logo_url,favicon_url,contact_email,contact_address_i18n,site_description_i18n,seo_title_i18n,seo_description_i18n,extra_settings').eq('id',tenant).single():{data:null}
+ const localized=(value:unknown,requested:string)=>localizeValue(value,requested,data?.default_language||'en')
  return{
   brandName:company.brandName,legalNameEn:String(data?.extra_settings?.legal_name_en||company.legalNameEn).replace(/[.。;；:：!！?？\s]+$/u,''),
   logo:data?.logo_url||'/images/brand/logo.png',favicon:data?.favicon_url||'/favicon.svg',
