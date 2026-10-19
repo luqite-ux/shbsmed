@@ -9,5 +9,5 @@ export function MedicalCards({items,base='/products',portrait=false}:{items:Item
 }
 export function ProductSeries({items}:{items:Item[]}){
  const [selected,setSelected]=useState('all')
- return <><div className="series-tabs" aria-label="RF product series">{[{slug:'all',name:'All RF Products'},{slug:'cannulas',name:'RF Cannulas'},{slug:'rf-electrodes',name:'RF Electrodes'}].map(x=><button key={x.slug} aria-pressed={selected===x.slug} onClick={()=>setSelected(x.slug)}>{x.name}</button>)}</div><MedicalCards items={items.filter(x=>selected==='all'||(selected==='cannulas'?x.slug!=='rf-electrodes':x.slug===selected))}/></>
+ return <><div className="series-tabs" role="group" aria-label="RF product series">{[{slug:'all',name:'All RF Products'},{slug:'cannulas',name:'RF Cannulas'},{slug:'rf-electrodes',name:'RF Electrodes'}].map(x=><button key={x.slug} aria-pressed={selected===x.slug} onClick={()=>setSelected(x.slug)}>{x.name}</button>)}</div><MedicalCards items={items.filter(x=>selected==='all'||(selected==='cannulas'?x.slug!=='rf-electrodes':x.slug===selected))}/></>
 }
