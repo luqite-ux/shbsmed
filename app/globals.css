@@ -185,3 +185,18 @@
 @media(max-width:767px){.hero-copy-pain{inset:auto;width:100%}.hero-copy-pain h1{font-size:32px}}
 /* Desktop controls stay in image negative space, clear of needle connectors. */
 @media(min-width:768px){.hero-controls{top:12px;bottom:auto}}
+
+/* Match the supplied 1920 × 800 banners without letterboxing or cropping. */
+.hero-stage{aspect-ratio:2.4;min-height:0;max-height:none}
+@media(max-width:767px){
+  .hero-stage{aspect-ratio:auto;min-height:490px;padding-top:41.666667%}
+  .hero-image{aspect-ratio:2.4}
+}
+@media(min-width:768px) and (max-width:1099px){
+  .hero-stage{aspect-ratio:auto;padding-top:41.666667%}
+  .hero-image{height:auto;aspect-ratio:2.4;object-fit:contain}
+  .hero-copy,.hero-copy-pain{position:relative;inset:auto;width:100%;max-width:none;padding:28px 32px 78px}
+  .hero-copy h1,.hero-copy-pain h1{font-size:36px;max-width:650px}
+  .hero-description{font-size:16px;max-width:620px}
+  .hero-controls{top:auto;bottom:16px;right:32px}
+}
