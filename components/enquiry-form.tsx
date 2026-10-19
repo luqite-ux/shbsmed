@@ -35,7 +35,7 @@ export function EnquiryForm({
   }
 
   return (
-    <form action="/api/inquiries" method="post" encType="multipart/form-data" onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+    <form action="/api/inquiries" method="post" encType="multipart/form-data" onSubmit={handleSubmit} className="inquiry-form rounded-xl border border-border bg-card p-6 sm:p-8">
       <FieldGroup>
         <div className="grid gap-6 sm:grid-cols-2">
           <Field>
@@ -92,7 +92,7 @@ export function EnquiryForm({
         <InquiryCaptchaField refreshKey={refreshKey} />
 
         <Button disabled={pending} type="submit" size="lg" className="bg-brand-blue text-white hover:bg-brand-blue-deep">
-          {pending ? "Sending…" : "Send Enquiry"}
+          {pending ? "Sending…" : "Send Inquiry"}
         </Button>
         {notice && <p role={noticeKind==='error'?'alert':'status'} className={`rounded-md p-3 text-sm ${noticeKind==='error'?'bg-red-50 text-red-900':'bg-green-50 text-green-900'}`}>{notice}</p>}
       </FieldGroup>

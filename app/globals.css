@@ -139,6 +139,14 @@
 }
 
 @layer utilities {
+  /* Keep form controls distinguishable from their white surface (WCAG 3:1). */
+  .inquiry-form :is(input:not([type='hidden']), textarea, button[role='combobox'], button[type='button']) {
+    border-color: #64748b;
+  }
+  .inquiry-form :is(input, textarea, button):focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
   /* Viewport reveal: MOT-SHBS-04. Bounded, one-time, no fixed global timeout. */
   .reveal {
     opacity: 1;
