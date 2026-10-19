@@ -211,3 +211,20 @@
   .hero-description{font-size:16px;max-width:620px}
   .hero-controls{top:auto;bottom:16px;right:32px}
 }
+
+/* One continuous mobile campaign surface; keep every supplied product pixel. */
+@media(max-width:767px){
+  .medical-hero.hero-light{background:#f4f8fc}
+  .medical-hero.hero-dark{background:#031e34}
+  .hero-stage{min-height:0}
+  .hero-copy,.hero-dark .hero-copy{background:transparent;padding:22px 23px 86px}
+  .hero-copy .eyebrow{display:none}
+  .hero-copy h1{font-size:32px;max-width:340px;text-wrap:balance}
+  .hero-description{font-size:16px;line-height:1.55}
+  .hero-controls{left:16px;right:16px;bottom:12px;gap:8px;padding:0;background:transparent;border-radius:0;color:inherit}
+  .hero-controls>div{gap:0}
+  .hero-controls button{display:grid;place-items:center;min-width:44px;min-height:44px;padding:10px}
+  .hero-dark .hero-dot:after{background:#8eafc4}
+  .hero-dark .hero-dot.active:after{background:#e9f6ff}
+  .hero-controls button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+}
