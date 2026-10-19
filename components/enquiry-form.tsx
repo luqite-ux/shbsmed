@@ -37,7 +37,7 @@ export function EnquiryForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 sm:p-8">
+    <form action="/api/inquiries" method="post" encType="multipart/form-data" onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 sm:p-8">
       <FieldGroup>
         <div className="grid gap-6 sm:grid-cols-2">
           <Field>
