@@ -166,6 +166,8 @@
   }
 }
 
+.medical-card.component-photo .medical-card-image,.medical-grid .medical-card.portrait .medical-card-image{aspect-ratio:auto;background:transparent}
+.medical-card.component-photo .medical-card-image img,.medical-card.portrait .medical-card-image img{display:block;height:auto}
 .medical-shell{max-width:1280px;margin:auto;padding:76px 32px;color:#17384b}
 .medical-section{scroll-margin-top:140px}.medical-section h2{font-size:clamp(28px,3vw,42px);line-height:1.16;letter-spacing:-.035em;font-weight:600;max-width:780px}.medical-intro{max-width:680px;line-height:1.8;color:#4d6270;margin-top:18px}.eyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:650;margin-bottom:15px;color:#216b8a}
 .medical-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 21px;background:#124e70;color:white;font-size:14px;font-weight:600;border-radius:4px;margin-top:24px;transition:background .2s,transform .2s}.medical-button:hover{background:#0a354d;transform:translateY(-2px)}
