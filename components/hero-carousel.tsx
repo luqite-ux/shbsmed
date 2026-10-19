@@ -7,10 +7,11 @@ import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react
 import seed from "@/lib/site-seed.json"
 export function HeroCarousel({slides=seed.slides}:{slides?:typeof seed.slides}) {
  const [index,setIndex]=useState(0),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(true)
+ const [hovered,setHovered]=useState(false),[focused,setFocused]=useState(false)
  useEffect(()=>{const q=matchMedia('(prefers-reduced-motion: reduce)');setReduced(q.matches);const f=()=>setReduced(q.matches);q.addEventListener('change',f);return()=>q.removeEventListener('change',f)},[])
- useEffect(()=>{if(paused||reduced)return;const t=setInterval(()=>{if(!document.hidden)setIndex(i=>(i+1)%slides.length)},7000);return()=>clearInterval(t)},[paused,reduced,slides.length])
+ useEffect(()=>{if(paused||reduced||hovered||focused)return;const t=setInterval(()=>{if(!document.hidden)setIndex(i=>(i+1)%slides.length)},7000);return()=>clearInterval(t)},[paused,reduced,hovered,focused,slides.length])
  const active=slides[index]
- return <section aria-label="Brightstone Medical highlights" aria-roledescription="carousel" className={`medical-hero ${active.theme==='dark'?'hero-dark':'hero-light'}`} onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)} onFocus={()=>setPaused(true)}>
+ return <section aria-label="Brightstone Medical highlights" aria-roledescription="carousel" className={`medical-hero ${active.theme==='dark'?'hero-dark':'hero-light'}`} onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)} onFocus={()=>setFocused(true)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget))setFocused(false)}}>
   <div className="hero-stage">
    {slides.map((s,i)=><SiteImage key={s.id} src={s.image} alt="" aria-hidden={index!==i} fetchPriority={i===0?'high':'auto'} className={`hero-image ${index===i?'active':''}`} style={{objectPosition:s.focus}}/>) }
    <div key={active.id} className={`hero-copy hero-copy-${active.side} hero-copy-${active.id}`} data-slide-copy={active.id}>
