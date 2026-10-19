@@ -181,3 +181,5 @@
 .photo-grid .zoom-image{background:transparent}
 .hero-copy-pain{right:22%;width:26%;top:9%}.hero-copy-pain h1{font-size:clamp(28px,3.1vw,46px)}
 @media(max-width:767px){.hero-copy-pain{inset:auto;width:100%}.hero-copy-pain h1{font-size:32px}}
+/* Desktop controls stay in image negative space, clear of needle connectors. */
+@media(min-width:768px){.hero-controls{top:12px;bottom:auto}}
