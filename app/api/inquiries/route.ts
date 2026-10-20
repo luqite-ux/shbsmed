@@ -2,6 +2,7 @@ import { createClient } from "@supabase/supabase-js"
 import { createSupabaseCaptchaContextFromEnv, verifyCaptchaSubmission } from "@/lib/inquiry-captcha"
 import {after} from 'next/server'
 import {notifyPersistedInquiry} from '@/lib/inquiry-notify.mjs'
+import {buildInquirySubject} from '@/lib/inquiry-business.mjs'
 
 export async function POST(request: Request) {
   let body: Record<string,string>
@@ -18,9 +19,11 @@ export async function POST(request: Request) {
   const captcha=await verifyCaptchaSubmission({secret,scope:body.captchaScope,token:body.captchaToken,answer:body.captchaAnswer,...context})
   if(!captcha.ok)return Response.json({error:"The verification code is invalid or expired."},{status:400})
   if(['name','company','email','message'].some(k=>!body[k]?.trim())||!/^\S+@\S+\.\S+$/.test(body.email)||Object.entries({name:200,company:200,email:254,phone:80,subject:300,message:10000}).some(([key,max])=>(body[key]?.length||0)>max))return Response.json({error:'Please enter your name, company, valid email and message.'},{status:400})
+  let subject: string
+  try { subject=buildInquirySubject({inquiryType:body.inquiryType,subject:body.subject}) } catch { return Response.json({error:'Please select an inquiry type.'},{status:400}) }
   const db=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.SUPABASE_SERVICE_ROLE_KEY!,{auth:{persistSession:false}})
   const tenant=process.env.NEXT_PUBLIC_TENANT_ID!,message=body.message.trim()
-  const {data:saved,error}=await db.from("inquiries").insert({tenant_id:tenant,name:body.name.trim(),email:body.email.trim(),phone:body.phone?.trim()||null,company:body.company?.trim()||null,subject:body.subject?.trim()||"Website RFQ",message}).select('id').single()
+  const {data:saved,error}=await db.from("inquiries").insert({tenant_id:tenant,name:body.name.trim(),email:body.email.trim(),phone:body.phone?.trim()||null,company:body.company?.trim()||null,subject,message}).select('id').single()
   if(error)return Response.json({error:"Your inquiry could not be sent. Please contact us by email."},{status:500})
   after(async()=>{const delivered=await notifyPersistedInquiry({tenantId:tenant,inquiryId:saved.id,adminUrl:process.env.NEXT_PUBLIC_ADMIN_URL,secret:process.env.INQUIRY_NOTIFY_SECRET});if(!delivered)console.warn('Inquiry saved; notification was not confirmed.')})
   return Response.json({ok:true})

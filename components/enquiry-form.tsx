@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Field, FieldGroup, FieldLabel, FieldDescription } from "@/components/ui/field"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { InquiryCaptchaField } from "@/components/inquiry-captcha-field"
+import {inquiryTypes} from '@/lib/inquiry-business.mjs'
 
 type EnquiryProduct = {
   slug: string
@@ -15,9 +16,11 @@ type EnquiryProduct = {
 
 export function EnquiryForm({
   defaultProduct,
+  defaultType,
   products,
 }: {
   defaultProduct?: string
+  defaultType?: string
   products: EnquiryProduct[]
 }) {
   const [notice, setNotice] = useState("")
@@ -58,6 +61,15 @@ export function EnquiryForm({
             <Input id="phone" name="phone" type="tel" maxLength={80} autoComplete="tel" placeholder="Country code and phone number" />
           </Field>
         </div>
+
+        <Field>
+          <FieldLabel htmlFor="inquiryType">Inquiry type</FieldLabel>
+          <select id="inquiryType" name="inquiryType" required defaultValue={inquiryTypes.includes(defaultType || '') ? defaultType : ''}
+            className="h-11 w-full rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue">
+            <option value="" disabled>Select an inquiry type</option>
+            {inquiryTypes.map(type => <option key={type} value={type}>{type}</option>)}
+          </select>
+        </Field>
 
         <Field>
           <FieldLabel htmlFor="product">Product of interest</FieldLabel>

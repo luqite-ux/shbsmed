@@ -13,6 +13,7 @@ function load(file){
  const aliases={
   '@/components/localized-link':{default:({children,...props})=>React.createElement('a',props,children)},
   '@/components/reveal':{Reveal:({children})=>React.createElement('div',null,children)},
+  '@/components/site-copy':{SiteText:({value})=>value},
  }
  vm.runInNewContext(js,{module,exports:module.exports,require:name=>name==='@/components/medical-catalog'?load('medical-catalog'):aliases[name]||require(name)})
  return module.exports

@@ -29,6 +29,7 @@ const footerLinks = [
     links: [
       { href: "/contact", label: "Request a Quote" },
       { href: "/contact", label: "Contact Sales" },
+      { href: "/contact#downloads", label: "Downloads" },
     ],
   },
 ]
