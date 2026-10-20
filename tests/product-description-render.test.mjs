@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import {readFileSync} from 'node:fs'
 import {createRequire} from 'node:module'
 import vm from 'node:vm'
+import {loadAlias} from './tsx-fixture-loader.mjs'
 const require=createRequire(import.meta.url),ts=require('typescript'),React=require('react')
 const {renderToStaticMarkup}=require('react-dom/server')
 const catalog=await import('../lib/catalog-model.mjs')
@@ -23,7 +24,7 @@ async function renderDetail(route,description){
   '@/lib/site-content/metadata':{pageMetadata:()=>({})},
  }
  const module={exports:{}}
- vm.runInNewContext(js,{module,exports:module.exports,require:n=>n in modules?modules[n]:require(n)})
+ vm.runInNewContext(js,{module,exports:module.exports,require:n=>n in modules?modules[n]:loadAlias(n,modules)})
  return renderToStaticMarkup(await module.exports.default({params:Promise.resolve({slug:'test-needle'})}))
 }
 test('contract product adapter retains the requested-language description',async()=>{

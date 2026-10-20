@@ -33,7 +33,7 @@ export default async function Home(){
   <h2><SiteText value="Branded Products"/></h2><div className="framework-series-grid">
    <SeriesCard name="RF Cannulas" image={cannula.image} href="/products?series=cannulas"/>
    <SeriesCard name="RF Electrodes" image={electrode.image} href="/products?series=rf-electrodes"/>
-   <SeriesCard name="Anesthesia Series" image={frameworkMedia['anesthesia-historical']} href="#anesthesia-pending" note="Historical image — current models pending confirmation"/>
+   <SeriesCard name="Anesthesia Series" image={frameworkMedia['anesthesia-historical']} href="/products?series=anesthesia" note="Historical image — current models pending confirmation"/>
   </div><div id="anesthesia-pending" className="framework-pending"><SiteText value="Anesthesia series: current models and specifications pending confirmation."/></div>
  </Reveal>
  <Reveal as="section" className="medical-shell framework-section">

@@ -259,3 +259,7 @@
   .hero-dark .hero-dot.active:after{background:#e9f6ff}
   .hero-controls button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 }
+.framework-review-note{color:#775521;font-size:15px;line-height:1.7;margin-top:14px}
+.framework-review-panel{background:#fff9ef;border:1px solid #b69c68;border-radius:8px;padding:24px;color:#493820}
+.framework-review-panel h3{font-size:19px;font-weight:600}
+.medical-card>.framework-review-note{padding:0 20px 20px}

@@ -65,9 +65,7 @@ export function SiteFooter() {
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {brand.legalNameEn}. All rights reserved.</p>
           <div className="flex flex-col gap-1 sm:flex-row sm:gap-4">
-            <a href={`mailto:${brand.email}`} className="hover:text-white">
-              {brand.email}
-            </a>
+            <span><SiteText value="Business email pending confirmation"/></span>
             <span className="hidden sm:inline">·</span>
             <span>{brand.address}</span>
           </div>

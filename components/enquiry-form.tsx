@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Field, FieldGroup, FieldLabel, FieldDescription } from "@/components/ui/field"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { InquiryCaptchaField } from "@/components/inquiry-captcha-field"
 import {inquiryTypes} from '@/lib/inquiry-business.mjs'
 
@@ -33,7 +32,7 @@ export function EnquiryForm({
     const form=event.currentTarget
     setPending(true);setNotice("")
     const data=new FormData(form)
-    data.set('subject',products.find(p=>p.slug===data.get('product'))?.name||'Website RFQ')
+    data.set('subject',String(data.get('product')||'').trim()||'Website RFQ')
     try{const response=await fetch('/api/inquiries',{method:'POST',body:data});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to send inquiry.');form.reset();setNoticeKind('success');setNotice('Thank you. Your inquiry has been received.')}catch(error){setNoticeKind('error');setNotice(error instanceof Error?error.message:'Unable to send inquiry.')}finally{setRefreshKey(v=>v+1);setPending(false)}
   }
 
@@ -72,20 +71,8 @@ export function EnquiryForm({
         </Field>
 
         <Field>
-          <FieldLabel htmlFor="product">Product of interest</FieldLabel>
-          <Select name="product" defaultValue={defaultProduct}>
-            <SelectTrigger id="product" className="w-full">
-              <SelectValue placeholder="Select a product" />
-            </SelectTrigger>
-            <SelectContent>
-              {products.map((p) => (
-                <SelectItem key={p.slug} value={p.slug}>
-                  {p.name}
-                </SelectItem>
-              ))}
-              <SelectItem value="other">Other / not listed</SelectItem>
-            </SelectContent>
-          </Select>
+          <FieldLabel htmlFor="product">Product name or model</FieldLabel>
+          <Input id="product" name="product" maxLength={300} defaultValue={products.find(p=>p.slug===defaultProduct)?.name||defaultProduct||''} placeholder="Enter a product name or model" />
         </Field>
 
         <Field>

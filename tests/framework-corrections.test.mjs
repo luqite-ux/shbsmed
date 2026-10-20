@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import {createRequire} from 'node:module'
 import {readFileSync} from 'node:fs'
 import vm from 'node:vm'
+import {loadAlias} from './tsx-fixture-loader.mjs'
 const require=createRequire(import.meta.url),ts=require('typescript'),React=require('react')
 const {renderToStaticMarkup}=require('react-dom/server')
 function load(file){
@@ -14,7 +15,7 @@ function load(file){
   '@/components/reveal':{Reveal:({children})=>React.createElement('div',null,children)},
   '@/components/site-copy':{SiteText:({value})=>value},
  }
- vm.runInNewContext(js,{module,exports:module.exports,require:name=>name==='@/components/medical-catalog'?load('components/medical-catalog.tsx'):aliases[name]||require(name)})
+ vm.runInNewContext(js,{module,exports:module.exports,require:name=>name==='@/components/medical-catalog'?load('components/medical-catalog.tsx'):aliases[name]||loadAlias(name,aliases)})
  return module.exports
 }
 // Replacing application categories with manufacturing-process categories must fail.
