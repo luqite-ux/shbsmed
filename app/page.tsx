@@ -4,19 +4,60 @@ import Link from '@/components/localized-link'
 import {HeroCarousel} from '@/components/hero-carousel'
 import {SiteHeader} from '@/components/site-header'
 import {SiteFooter} from '@/components/site-footer'
-import {MedicalCards} from '@/components/medical-catalog'
 import {Reveal} from '@/components/reveal'
-import {Cooperation,BuyerFaq,InquiryBand} from '@/components/medical-sections'
 import seed from '@/lib/site-seed.json'
+import frameworkMedia from '@/lib/framework-home-media.json'
 import {getMedicalProducts,getOdmProducts} from '@/lib/medical-products'
 export const revalidate=60
-export async function generateMetadata(){return pageMetadata("/",{title:'Medical Needles, RF Cannulas & Electrodes',description:'Brightstone Medical manufactures medical needles, RF cannulas, RF electrodes, needle tubes and stylets. Explore products, ODM development and OEM production.',alternates:{canonical:'https://shbsmed.com/'}})}
-export default async function Home(){const products=await getMedicalProducts(),odm=await getOdmProducts();const featuredOdm=['brain-irrigation-needle','ultrasound-guided-puncture-needle','huber-needle'].flatMap(slug=>odm.filter(p=>p.slug===slug));return <SiteContentVersion><SiteHeader/><main><HeroCarousel/>
- <Reveal as="section" className="medical-shell medical-section"><div className="medical-split"><div><p className="eyebrow"><SiteText value={"About Brightstone Medical"}/></p><h2><SiteText value={"Focused on medical needles."}/><br/><SiteText value={"Built around your requirements."}/></h2><p className="medical-intro"><SiteText value={"Shanghai Brightstone Medical Technology Limited was founded in December 2015. We manufacture medical needles, RF electrodes and precision needle components. Our work focuses on product development, manufacturing technology and quality control."}/></p><div className="medical-facts"><div><strong><SiteText value="2015"/></strong><span><SiteText value={"Established in Shanghai"}/></span></div><div><strong><SiteText value={"2,000 m²"}/></strong><span><SiteText value={"Manufacturing facility"}/></span></div><div><strong><SiteText value="4 + 2"/></strong><span><SiteText value={"Product and custom-component lines"}/></span></div></div><Link className="medical-button" href="/manufacturing#company"><SiteText value={"Meet Brightstone Medical →"}/></Link></div><SiteImage src={seed.photos.find(p=>p.group==='company')!.image} alt="Brightstone Medical company entrance"/></div></Reveal>
- <section className="medical-light"><Reveal as="section" className="medical-shell medical-section"><p className="eyebrow"><SiteText value={"Branded products"}/></p><h2><SiteText value={"RF products for pain management"}/></h2><p className="medical-intro"><SiteText value={"Compare cannula tip structures and electrode configurations. Open a product to view its main image, tip detail and full specification table."}/></p><MedicalCards items={products}/><Link className="medical-button" href="/products"><SiteText value={"Browse Products →"}/></Link></Reveal></section>
- <Reveal as="section" className="medical-shell medical-section"><p className="eyebrow"><SiteText value={"ODM product development"}/></p><h2><SiteText value={"Medical needle products for your development program"}/></h2><p className="medical-intro"><SiteText value={"Explore finished needle designs, then discuss your requirements with our team."}/></p><MedicalCards items={featuredOdm} base="/odm-oem" portrait/><Link className="medical-button" href="/odm-oem"><SiteText value={"View ODM / OEM →"}/></Link></Reveal>
- <section className="medical-light"><Reveal as="section" className="medical-shell medical-section"><div className="medical-split"><SiteImage src={seed.photos.find(p=>p.group==='components')!.image} alt="Needle tubes during manufacturing"/><div><p className="eyebrow"><SiteText value={"Contract manufacturing"}/></p><h2><SiteText value={"Needle tubes, stylets and precision components"}/></h2><p className="medical-intro"><SiteText value={"Needle components for biopsy, percutaneous intervention, infusion, drainage and other medical-device applications. Send drawings or samples to discuss your component requirements."}/></p><Link className="medical-button" href="/contract-manufacturing"><SiteText value={"Explore Component Manufacturing →"}/></Link></div></div></Reveal></section>
- <Reveal as="section" className="medical-shell medical-section"><div className="medical-split"><div><p className="eyebrow"><SiteText value={"Manufacturing technology"}/></p><h2><SiteText value={"See the work behind the needle"}/></h2><p className="medical-intro"><SiteText value={"Explore tube cutting, wire cutting, semi-finished components and cleanroom assembly. Equipment supports selected processes; assembly is mainly manual."}/></p><Link className="medical-button" href="/manufacturing#processes"><SiteText value={"View Manufacturing Processes →"}/></Link></div><SiteImage src={seed.photos.find(p=>p.group==='equipment')!.image} alt="Brightstone Medical printing equipment"/></div></Reveal>
- <section className="medical-light"><Reveal as="section" className="medical-shell medical-section"><div className="medical-split"><SiteImage src={seed.photos.find(p=>p.group==='quality')!.image} alt="Inspection instruments in the Brightstone Medical inspection room"/><div><p className="eyebrow"><SiteText value={"Quality inspection"}/></p><h2><SiteText value={"Inspection resources for medical needle manufacturing"}/></h2><p className="medical-intro"><SiteText value={"Dedicated inspection rooms support product checks. Technical data, inspection reports and third-party inspection can be discussed for your product and order."}/></p><Link className="medical-button" href="/manufacturing#quality"><SiteText value={"View Quality Inspection →"}/></Link></div></div></Reveal></section>
- <Cooperation/><section className="medical-light"><BuyerFaq/></section><InquiryBand/>
- </main><SiteFooter/></SiteContentVersion>}
+export async function generateMetadata(){return pageMetadata("/",{title:'Medical Needles, RF Cannulas & Electrodes',description:'Brightstone Medical manufactures medical needles, RF cannulas, RF electrodes, needle tubes and stylets.',alternates:{canonical:'https://shbsmed.com/'}})}
+function SeriesCard({name,image,href,note,portrait=false}:{name:string;image:string;href:string;note?:string;portrait?:boolean}){
+ return <figure className={`framework-series-card ${portrait?'framework-portrait':''}`}><Link href={href}><div className="framework-series-image"><SiteImage src={image} alt={name}/></div><h3><SiteText value={name}/></h3></Link>{note&&<p className="framework-pending"><SiteText value={note}/></p>}</figure>
+}
+function Photo({image,label}:{image:string;label:string}){
+ return <figure><SiteImage src={image} alt={label}/><figcaption><SiteText value={label}/></figcaption></figure>
+}
+export default async function Home(){
+ const [products,odm]=await Promise.all([getMedicalProducts(),getOdmProducts()])
+ const cannula=products.find(p=>p.slug==='straight-sharp-rf-cannulas')!
+ const electrode=products.find(p=>p.slug==='rf-electrodes')!
+ const featuredOdm=['brain-irrigation-needle','ultrasound-guided-puncture-needle','huber-needle'].flatMap(slug=>odm.filter(p=>p.slug===slug))
+ return <SiteContentVersion><SiteHeader/><main className="framework-home"><HeroCarousel/>
+ <Reveal as="section" className="medical-shell framework-section">
+  <div className="framework-company">
+   <SiteImage className="framework-company-photo" src={seed.photos[0].image} alt="Brightstone Medical company entrance"/>
+   <div><h2><SiteText value="About Brightstone & Company Qualifications"/></h2><p><SiteText value="Shanghai Brightstone Medical Technology Limited"/></p><p><SiteText value="Medical needles, RF electrodes, needle tubes and stylets."/></p></div>
+   <aside className="framework-pending-panel"><h3><SiteText value="Company Qualifications"/></h3><p><SiteText value="Public version and scope pending confirmation"/></p></aside>
+  </div>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section">
+  <h2><SiteText value="Branded Products"/></h2><div className="framework-series-grid">
+   <SeriesCard name="RF Cannulas" image={cannula.image} href="/products?series=cannulas"/>
+   <SeriesCard name="RF Electrodes" image={electrode.image} href="/products?series=rf-electrodes"/>
+   <SeriesCard name="Anesthesia Series" image={frameworkMedia['anesthesia-historical']} href="#anesthesia-pending" note="Historical image — current models pending confirmation"/>
+  </div><div id="anesthesia-pending" className="framework-pending"><SiteText value="Anesthesia series: current models and specifications pending confirmation."/></div>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section">
+  <h2><SiteText value="ODM Products"/></h2><div className="framework-series-grid">{featuredOdm.map(p=><SeriesCard key={p.slug} name={p.name} image={p.image} href={`/odm-oem/${p.slug}`} portrait note={p.slug==='huber-needle'?'Category assignment pending confirmation':undefined}/>)}</div>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section">
+  <h2><SiteText value="Contract Manufacturing Components"/></h2><div className="framework-series-grid">
+   <SeriesCard name="Biopsy Components" image={frameworkMedia.biopsy} href="/contract-manufacturing?series=Biopsy"/>
+   <SeriesCard name="Interventional Components" image={frameworkMedia['interventional-reference']} href="/contract-manufacturing?series=Interventional" note="Framework reference image — category assignment pending confirmation"/>
+   <SeriesCard name="Anesthesia Components" image={frameworkMedia['anesthesia-components']} href="/contract-manufacturing?series=Anesthesia" note="Historical image — current models pending confirmation"/>
+  </div>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section">
+  <h2><SiteText value="Manufacturing Technology & Equipment"/></h2><div className="framework-photo-pair">
+   <Photo image={seed.photos.find(p=>p.group==='equipment')!.image} label="Processing equipment"/>
+   <Photo image={seed.photos.find(p=>p.group==='production')!.image} label="Production environment"/>
+  </div><p><SiteText value="Production is organized around needle structures and processing requirements. Equipment supports selected processes; assembly is mainly manual."/></p>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section">
+  <h2><SiteText value="Quality Inspection"/></h2><div className="framework-photo-pair">
+   <Photo image={seed.photos.filter(p=>p.group==='quality')[0].image} label="Inspection instruments"/>
+   <Photo image={seed.photos.filter(p=>p.group==='quality')[1].image} label="Inspection environment"/>
+  </div>
+ </Reveal>
+ <Reveal as="section" className="medical-shell framework-section"><div className="framework-inquiry"><h2><SiteText value="Tell us your product or manufacturing requirements"/></h2><p><SiteText value="Product purchase / ODM development / OEM private-label production / Component manufacturing"/></p><Link className="medical-button" href="/contact"><SiteText value="Contact & Orders →"/></Link></div></Reveal>
+ </main><SiteFooter/></SiteContentVersion>
+}

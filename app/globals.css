@@ -213,6 +213,37 @@
 }
 
 /* One continuous mobile campaign surface; keep every supplied product pixel. */
+.framework-home .framework-section{padding-top:36px;padding-bottom:36px;scroll-margin-top:100px}
+.framework-home h2{font-size:clamp(24px,2.5vw,32px);font-weight:600;color:#194c63;margin-bottom:24px}
+.framework-home p{line-height:1.7}
+.framework-company{display:grid;grid-template-columns:140px 1fr 280px;gap:32px;align-items:center}
+.framework-company-photo{width:140px;height:190px;object-fit:contain}
+.framework-pending-panel{padding:24px;border:1px solid #b69a64;border-radius:12px;background:#fffaf1;color:#725426}
+.framework-pending-panel h3{font-size:20px;font-weight:600;margin-bottom:12px}
+.framework-series-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.framework-series-card{text-align:center;min-width:0}
+.framework-series-image{height:240px;display:flex;justify-content:center;align-items:center;background:white}
+.framework-series-image img{width:100%;height:100%;object-fit:contain}
+.framework-portrait .framework-series-image{height:300px}
+.framework-series-card h3{font-size:20px;margin-top:16px;color:#193c50}
+.framework-series-card a{display:block}
+.framework-series-card a:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+.framework-pending{color:#775521;font-size:15px;margin-top:10px;scroll-margin-top:110px}
+.framework-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:20px}
+.framework-photo-pair img{width:100%;height:360px;object-fit:contain}
+.framework-photo-pair figcaption{font-size:18px;margin-top:12px}
+.framework-inquiry{padding:36px;background:#194c63;border-radius:12px;color:white}
+.framework-home .framework-inquiry h2{color:white}
+.framework-inquiry .medical-button{margin-top:20px;background:white;color:#194c63}
+@media(max-width:767px){
+ .framework-company{grid-template-columns:90px 1fr;gap:18px}
+ .framework-company-photo{width:90px;height:140px}
+ .framework-pending-panel{grid-column:1/-1}
+ .framework-series-grid{grid-template-columns:1fr;gap:28px}
+ .framework-photo-pair{grid-template-columns:1fr;gap:24px}
+ .framework-photo-pair img{height:280px}
+ .framework-inquiry{padding:24px}
+}
 @media(max-width:767px){
   .medical-hero.hero-light{background:#f4f8fc}
   .medical-hero.hero-dark{background:#031e34}

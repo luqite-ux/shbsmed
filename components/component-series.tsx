@@ -1,5 +1,5 @@
 "use client"
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import {MedicalCards} from '@/components/medical-catalog'
 import Link from '@/components/localized-link'
 import {SiteText} from '@/components/site-copy'
@@ -7,6 +7,7 @@ const applications=['Biopsy','Interventional','Anesthesia','Infusion','Other']
 const biopsyOrder=['bone-marrow-biopsy-components','cutting-biopsy-components','aspiration-biopsy-components']
 export function ComponentSeries({parts}:{parts:{slug:string;name:string;group:string;image:string;application?:string}[]}){
  const[selected,setSelected]=useState('Biopsy')
+ useEffect(()=>{const series=new URLSearchParams(window.location.search).get('series');if(series&&applications.includes(series))setSelected(series)},[])
  // Process examples are not evidence of a product's clinical application.
  const shown=parts.filter(p=>(p.application || (biopsyOrder.includes(p.slug)?'Biopsy':''))===selected)
    .sort((a,b)=>biopsyOrder.indexOf(a.slug)-biopsyOrder.indexOf(b.slug))

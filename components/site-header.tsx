@@ -17,7 +17,7 @@ const navLinks = [
   { href: "/contract-manufacturing", label: "Contract Manufacturing" },
   { href: "/manufacturing", label: "Manufacturing & Quality" },
   { href: "/news", label: "News" },
-  { href: "/contact", label: "Contact & Inquiries" },
+  { href: "/contact", label: "Contact & Orders" },
 ]
 
 export function SiteHeader() {
