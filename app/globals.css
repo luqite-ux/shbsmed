@@ -140,10 +140,10 @@
 
 @layer utilities {
   /* Keep form controls distinguishable from their white surface (WCAG 3:1). */
-  .inquiry-form :is(input:not([type='hidden']), textarea, button[role='combobox'], button[type='button']) {
+  .inquiry-form :is(input:not([type='hidden']), textarea, select, button[role='combobox'], button[type='button']) {
     border-color: #64748b;
   }
-  .inquiry-form :is(input, textarea, button):focus-visible {
+  .inquiry-form :is(input, textarea, select, button):focus-visible {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
   }
