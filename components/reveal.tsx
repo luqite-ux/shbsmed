@@ -7,7 +7,7 @@ interface RevealProps {
   children: ReactNode
   className?: string
   delay?: number
-  as?: "div" | "section" | "li"
+  as?: "div" | "section" | "li" | "figure"
 }
 
 // MOT-SHBS-04: one-time viewport reveal. No fixed/global timeout marks

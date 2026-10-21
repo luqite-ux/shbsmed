@@ -63,7 +63,7 @@ export function EnquiryForm({
 
         <Field>
           <FieldLabel htmlFor="inquiryType">Inquiry type</FieldLabel>
-          <select id="inquiryType" name="inquiryType" required defaultValue={inquiryTypes.includes(defaultType || '') ? defaultType : ''}
+          <select id="inquiryType" name="inquiryType" required defaultValue={defaultType==='ODM'?'OEM':inquiryTypes.includes(defaultType || '') ? defaultType : ''}
             className="h-11 w-full rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue">
             <option value="" disabled>Select an inquiry type</option>
             {inquiryTypes.map(type => <option key={type} value={type}>{type}</option>)}

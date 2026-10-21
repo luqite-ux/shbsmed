@@ -37,16 +37,6 @@ test('contract product adapter retains the requested-language description',async
  vm.runInNewContext(js,{module,exports:module.exports,process:{env:{NEXT_PUBLIC_TENANT_ID:'test-tenant'}},require:n=>modules[n]})
  assert.equal((await module.exports.getContractComponents('zh'))[0].description,'中文说明')
 })
-for(const route of ['odm-oem','contract-manufacturing']){
- test(`${route} renders a backend description as escaped visible text`,async()=>{
-  const html=await renderDetail(route,'Customer description <script>alert(1)</script>')
-  assert.ok(html.includes('Customer description &lt;script&gt;alert(1)&lt;/script&gt;'))
-  assert.ok(!html.includes('<script>alert(1)</script>'))
- })
- test(`${route} leaves an absent description empty without placeholder copy`,async()=>{
-  const html=await renderDetail(route,'')
-  assert.ok(!html.includes('undefined'))
-  assert.ok(!html.includes('description pending'))
-  assert.ok(html.includes('/contact?product=test-needle'))
- })
-}
+// October 21 explicitly defers OEM and component details. Adapter localization remains covered above;
+// current gallery redirects and absent-spec handling are exercised by inner-framework.test.mjs.
+

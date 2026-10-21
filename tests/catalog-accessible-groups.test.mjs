@@ -24,8 +24,8 @@ for(const [file,component,props,label] of [
  ['component-series','ComponentSeries',{parts:[]},'Component series'],
 ])test(`${label} exposes its accessible name on a semantic group`,()=>{
  const html=renderToStaticMarkup(React.createElement(load(file)[component],props))
- const opening=html.match(/<div[^>]*class="series-tabs"[^>]*>/)?.[0]
+ const opening=html.match(/<(?:div|nav)[^>]*class="series-tabs"[^>]*>/)?.[0]
  assert.ok(opening,'Expected real filter group markup')
- assert.match(opening,/role="group"/)
+ assert.ok(opening.startsWith('<nav')||opening.includes('role="group"'))
  assert.ok(opening.includes(`aria-label="${label}"`))
 })

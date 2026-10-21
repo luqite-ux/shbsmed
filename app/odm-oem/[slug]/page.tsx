@@ -1,14 +1,4 @@
-import {ProductSchema} from '@/components/product-schema'
-import {SiteText} from '@/components/site-copy'
-import {notFound} from 'next/navigation'
-import Link from '@/components/localized-link'
-import {PageFrame} from '@/components/page-frame'
-import {ZoomImage} from '@/components/medical-media'
-import {Reveal} from '@/components/reveal'
-import {getOdmProducts} from '@/lib/medical-products'
-import {pageMetadata} from '@/lib/site-content/metadata'
-import {PendingNote,PendingPanel} from '@/components/framework-pending'
-export const revalidate=60
-export const dynamicParams=true
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const{slug}=await params;const p=(await getOdmProducts()).find(p=>p.slug===slug);return p?pageMetadata(`/odm-oem/${p.slug}`,{title:p.name,description:`Discuss ${p.name.toLowerCase()} development with Brightstone Medical.`,openGraph:{images:[p.image]}}):{}}
-export default async function OdmDetail({params}:{params:Promise<{slug:string}>}){const{slug}=await params,p=(await getOdmProducts()).find(p=>p.slug===slug);if(!p)notFound();return <PageFrame eyebrow="ODM products" title={p.name} description="Product image and name for review. Category assignment, models and specifications remain pending confirmation."><Reveal as="section" className="medical-shell product-detail-grid"><ZoomImage src={p.image} alt={p.name}/><div><h2 className="text-3xl font-semibold">{p.name}</h2><PendingNote>Category assignment pending confirmation</PendingNote><h3 className="text-xl font-semibold mt-8"><SiteText value="Product introduction"/></h3>{p.description?<p className="medical-intro whitespace-pre-line">{p.description}</p>:<PendingNote>Product information pending confirmation.</PendingNote>}<h3 className="text-xl font-semibold mt-8"><SiteText value="Models & specifications"/></h3><PendingNote>Corresponding model and specification information pending confirmation.</PendingNote><Link className="medical-button mt-8" href={`/contact?product=${p.slug}&type=ODM`}><SiteText value={"Discuss This Product →"}/></Link><div className="mt-8"><PendingPanel title="Structure close-up">Separate close-up pending confirmation. Structural parameters are not inferred from the overall photograph.</PendingPanel></div><p className="mt-6"><Link href="/odm-oem" className="underline underline-offset-4"><SiteText value={"Back to ODM / OEM"}/></Link></p></div></Reveal><Reveal as="section" className="medical-shell medical-section grid gap-6 md:grid-cols-2"><PendingPanel title="Product features">Product-specific features and intended use pending confirmation.</PendingPanel><PendingPanel title="Specifications & customization scope">Model, dimensions and customization scope pending confirmation.</PendingPanel></Reveal><ProductSchema name={p.name} image={p.image} path={`/odm-oem/${p.slug}`}/></PageFrame>}
+import {permanentRedirect} from 'next/navigation'
+import {localizedPath} from '@/lib/locale'
+// October 21: supplied OEM photos are shown together; details are deferred.
+export default async function OemDetail(){return permanentRedirect(await localizedPath('/odm-oem'))}

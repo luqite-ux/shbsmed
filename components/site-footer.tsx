@@ -9,26 +9,27 @@ const footerLinks = [
   {
     heading: "Company",
     links: [
-      { href: "/manufacturing#company", label: "About Brightstone" },
-      { href: "/manufacturing", label: "Manufacturing & Quality" },
-      { href: "/odm-oem", label: "ODM / OEM" },
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About Us" },
+      { href: "/odm-oem", label: "OEM" },
+      { href: "/contract-manufacturing", label: "Component Manufacturing" },
       { href: "/news", label: "News" },
     ],
   },
   {
     heading: "Products",
     links: [
-      { href: "/products", label: "All Products" },
-      { href: "/products/rf-electrodes", label: "RF Electrodes" },
-      { href: "/products", label: "RF Cannulas" },
-      { href: "/contract-manufacturing", label: "Needle Components" },
+      { href: "/products", label: "Branded Products" },
+      { href: "/products?series=pain", label: "Pain Management Series" },
+      { href: "/products?series=spinal", label: "Spinal Anesthesia Series" },
+      { href: "/products?series=epidural", label: "Epidural Anesthesia Series" },
     ],
   },
   {
     heading: "Get in Touch",
     links: [
       { href: "/contact", label: "Request a Quote" },
-      { href: "/contact", label: "Contact Sales" },
+      { href: "/contact", label: "Contact Us" },
       { href: "/contact#downloads", label: "Downloads" },
     ],
   },
@@ -43,7 +44,7 @@ export function SiteFooter() {
           <div>
             <BrandLogo size="footer" className="[&_span:first-child]:text-white [&_span:last-child]:text-white/60" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
-              {brand.description}</p>
+              <SiteText value="Medical needle products, OEM finished products and needle-component manufacturing."/></p>
           </div>
 
           {footerLinks.map((group) => (

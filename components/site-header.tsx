@@ -12,12 +12,12 @@ import { cn } from "@/lib/utils"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/odm-oem", label: "ODM / OEM" },
-  { href: "/contract-manufacturing", label: "Contract Manufacturing" },
-  { href: "/manufacturing", label: "Manufacturing & Quality" },
+  { href: "/about", label: "About Us" },
+  { href: "/products", label: "Branded Products" },
+  { href: "/odm-oem", label: "OEM" },
+  { href: "/contract-manufacturing", label: "Component Manufacturing" },
   { href: "/news", label: "News" },
-  { href: "/contact", label: "Contact & Orders" },
+  { href: "/contact", label: "Contact Us" },
 ]
 
 export function SiteHeader() {
@@ -46,7 +46,7 @@ export function SiteHeader() {
           {navLinks.map((link) => {
             const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
             return (
-              <Link
+              link.href==='/products'?<details className="meeting-product-menu" key={link.href}><summary><SiteText value="Branded Products"/></summary><nav aria-label="Branded product series">{[{slug:'pain',name:'Pain Management Series'},{slug:'spinal',name:'Spinal Anesthesia Series'},{slug:'epidural',name:'Epidural Anesthesia Series'}].map(s=><Link key={s.slug} href={`/products?series=${s.slug}`}><SiteText value={s.name}/></Link>)}</nav></details>:<Link
                 key={link.href}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
@@ -90,7 +90,7 @@ export function SiteHeader() {
             {navLinks.map((link) => {
               const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
               return (
-                <Link
+                link.href==='/products'?<details key={link.href} className="meeting-mobile-products"><summary className="px-3 py-3 font-medium"><SiteText value="Branded Products"/></summary><nav aria-label="Mobile branded product series">{[{slug:'pain',name:'Pain Management Series'},{slug:'spinal',name:'Spinal Anesthesia Series'},{slug:'epidural',name:'Epidural Anesthesia Series'}].map(s=><Link key={s.slug} href={`/products?series=${s.slug}`} className="block px-6 py-3" onClick={()=>setOpen(false)}><SiteText value={s.name}/></Link>)}</nav></details>:<Link
                   key={link.href}
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
@@ -100,6 +100,7 @@ export function SiteHeader() {
                   )}
                 >
                   <SiteText value={link.label}/>
+                  
                 </Link>
               )
             })}

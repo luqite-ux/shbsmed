@@ -1,63 +1,25 @@
 import {pageMetadata} from '@/lib/site-content/metadata'
-import {SiteText,SiteImage,SiteContentVersion} from '@/components/site-copy'
+import {SiteText,SiteContentVersion,SiteImage} from '@/components/site-copy'
 import Link from '@/components/localized-link'
 import {HeroCarousel} from '@/components/hero-carousel'
 import {SiteHeader} from '@/components/site-header'
 import {SiteFooter} from '@/components/site-footer'
 import {Reveal} from '@/components/reveal'
-import seed from '@/lib/site-seed.json'
-import frameworkMedia from '@/lib/framework-home-media.json'
-import {getMedicalProducts,getOdmProducts} from '@/lib/medical-products'
+import {AboutContent,OemContent,ComponentContent} from '@/components/meeting-sections'
+import {getMedicalProducts,getOdmProducts,getContractComponents} from '@/lib/medical-products'
+import {historicalProducts} from '@/lib/framework-pending-products'
+import {getPublishedArticles} from '@/lib/articles-db'
+import {NewsList} from '@/components/news-list'
 export const revalidate=60
-export async function generateMetadata(){return pageMetadata("/",{title:'Medical Needles, RF Cannulas & Electrodes',description:'Brightstone Medical manufactures medical needles, RF cannulas, RF electrodes, needle tubes and stylets.',alternates:{canonical:'https://shbsmed.com/'}})}
-function SeriesCard({name,image,href,note,portrait=false}:{name:string;image:string;href:string;note?:string;portrait?:boolean}){
- return <figure className={`framework-series-card ${portrait?'framework-portrait':''}`}><Link href={href}><div className="framework-series-image"><SiteImage src={image} alt={name}/></div><h3><SiteText value={name}/></h3></Link>{note&&<p className="framework-pending"><SiteText value={note}/></p>}</figure>
-}
-function Photo({image,label}:{image:string;label:string}){
- return <figure><SiteImage src={image} alt={label}/><figcaption><SiteText value={label}/></figcaption></figure>
-}
+export async function generateMetadata(){return pageMetadata('/',{title:'Medical Needles, OEM & Needle Components',description:'Branded medical needles, OEM finished products and needle-component manufacturing from Brightstone Medical.'})}
 export default async function Home(){
- const [products,odm]=await Promise.all([getMedicalProducts(),getOdmProducts()])
- const cannula=products.find(p=>p.slug==='straight-sharp-rf-cannulas')!
- const electrode=products.find(p=>p.slug==='rf-electrodes')!
- const featuredOdm=['brain-irrigation-needle','ultrasound-guided-puncture-needle','huber-needle'].flatMap(slug=>odm.filter(p=>p.slug===slug))
+ const [products,oem,parts,articles]=await Promise.all([getMedicalProducts(),getOdmProducts(),getContractComponents(),getPublishedArticles()])
+ const groups=[{slug:'pain',name:'Pain Management Series',image:products.find(p=>p.slug==='rf-electrodes')?.image||''},...historicalProducts.map(p=>({slug:p.series,name:p.series==='spinal'?'Spinal Anesthesia Series':'Epidural Anesthesia Series',image:p.image}))]
  return <SiteContentVersion><SiteHeader/><main className="framework-home"><HeroCarousel/>
- <Reveal as="section" className="medical-shell framework-section">
-  <div className="framework-company">
-   <SiteImage className="framework-company-photo" src={seed.photos[0].image} alt="Brightstone Medical company entrance"/>
-   <div><h2><SiteText value="About Brightstone & Company Qualifications"/></h2><p><SiteText value="Shanghai Brightstone Medical Technology Limited"/></p><p><SiteText value="Medical needles, RF electrodes, needle tubes and stylets."/></p></div>
-   <aside className="framework-pending-panel"><h3><SiteText value="Company Qualifications"/></h3><p><SiteText value="Public version and scope pending confirmation"/></p></aside>
-  </div>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section">
-  <h2><SiteText value="Branded Products"/></h2><div className="framework-series-grid">
-   <SeriesCard name="RF Cannulas" image={cannula.image} href="/products?series=cannulas"/>
-   <SeriesCard name="RF Electrodes" image={electrode.image} href="/products?series=rf-electrodes"/>
-   <SeriesCard name="Anesthesia Series" image={frameworkMedia['anesthesia-historical']} href="/products?series=anesthesia" note="Historical image — current models pending confirmation"/>
-  </div><div id="anesthesia-pending" className="framework-pending"><SiteText value="Anesthesia series: current models and specifications pending confirmation."/></div>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section">
-  <h2><SiteText value="ODM Products"/></h2><div className="framework-series-grid">{featuredOdm.map(p=><SeriesCard key={p.slug} name={p.name} image={p.image} href={`/odm-oem/${p.slug}`} portrait note={p.slug==='huber-needle'?'Category assignment pending confirmation':undefined}/>)}</div>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section">
-  <h2><SiteText value="Contract Manufacturing Components"/></h2><div className="framework-series-grid">
-   <SeriesCard name="Biopsy Components" image={frameworkMedia.biopsy} href="/contract-manufacturing?series=Biopsy"/>
-   <SeriesCard name="Interventional Components" image={frameworkMedia['interventional-reference']} href="/contract-manufacturing?series=Interventional" note="Framework reference image — category assignment pending confirmation"/>
-   <SeriesCard name="Anesthesia Components" image={frameworkMedia['anesthesia-components']} href="/contract-manufacturing?series=Anesthesia" note="Historical image — current models pending confirmation"/>
-  </div>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section">
-  <h2><SiteText value="Manufacturing Technology & Equipment"/></h2><div className="framework-photo-pair">
-   <Photo image={seed.photos.find(p=>p.group==='equipment')!.image} label="Processing equipment"/>
-   <Photo image={seed.photos.find(p=>p.group==='production')!.image} label="Production environment"/>
-  </div><p><SiteText value="Production is organized around needle structures and processing requirements. Equipment supports selected processes; assembly is mainly manual."/></p>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section">
-  <h2><SiteText value="Quality Inspection"/></h2><div className="framework-photo-pair">
-   <Photo image={seed.photos.filter(p=>p.group==='quality')[0].image} label="Inspection instruments"/>
-   <Photo image={seed.photos.filter(p=>p.group==='quality')[1].image} label="Inspection environment"/>
-  </div>
- </Reveal>
- <Reveal as="section" className="medical-shell framework-section"><div className="framework-inquiry"><h2><SiteText value="Tell us your product or manufacturing requirements"/></h2><p><SiteText value="Product purchase / ODM development / OEM private-label production / Component manufacturing"/></p><Link className="medical-button" href="/contact"><SiteText value="Contact & Orders →"/></Link></div></Reveal>
+ <section className="medical-shell framework-section" data-business="about"><Reveal><h2><SiteText value="About Us"/></h2></Reveal><AboutContent/></section>
+ <section className="medical-shell framework-section" data-business="branded"><Reveal><h2><SiteText value="Branded Products"/></h2><p className="medical-intro"><SiteText value="Explore our pain management, spinal anesthesia and epidural anesthesia product series."/></p></Reveal><div className="framework-series-grid">{groups.map(g=><Reveal as="figure" className="framework-series-card" key={g.slug}><Link href={`/products?series=${g.slug}`}><div className="framework-series-image"><SiteImage src={g.image} alt={g.name}/></div><h3><SiteText value={g.name}/></h3></Link></Reveal>)}</div></section>
+ <section className="medical-shell framework-section" data-business="oem"><Reveal><h2><SiteText value="OEM"/></h2></Reveal><OemContent items={oem}/></section>
+ <section className="medical-shell framework-section" data-business="components"><Reveal><h2><SiteText value="Component Manufacturing"/></h2></Reveal><ComponentContent items={parts}/></section>
+ <section className="medical-shell framework-section" data-business="news"><Reveal><h2><SiteText value="News"/></h2></Reveal><NewsList articles={articles} compact/><Link className="medical-button mt-6" href="/news"><SiteText value="View News →"/></Link></section>
  </main><SiteFooter/></SiteContentVersion>
 }
