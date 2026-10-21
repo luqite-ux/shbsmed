@@ -31,8 +31,19 @@ test('home lets visitors read every business in meeting order without separate e
  const sections=[...html.matchAll(/data-business="([^"]+)"/g)].map(m=>m[1])
  assert.deepEqual(sections,['banner','about','branded','oem','components','news'])
  for(const p of seed.odm)assert.ok(html.includes(p.image))
+ for(const p of seed.products)assert.ok(html.includes(`href="/products/${p.slug}"`),'Home must show '+p.slug)
+ assert.ok(html.includes('href="/products/spinal-anesthesia-needle"'))
+ assert.ok(html.includes('href="/products/epidural-anesthesia-needle"'))
  assert.equal((html.match(/<video/g)||[]).length,2)
  assert.doesNotMatch(html,/Reusable RF Electrode|ODM Products/)
+})
+
+test('structural descriptions retain source facts without efficacy or clinical instructions',()=>{
+ const {productDescriptions,productStructures}=load('lib/meeting-product-copy.ts')
+ assert.match(productDescriptions['side-port-rf-cannulas'],/side port/)
+ assert.match(productStructures['side-port-rf-cannulas'].join(' '),/Y-shaped/)
+ assert.match(productStructures['rf-electrodes'].join(' '),/black insulated/)
+ assert.doesNotMatch(JSON.stringify(productStructures),/thermocoagulation|ablat|effective treatment|nerve modulation/i)
 })
 test('brand categories isolate five pain products and each anesthesia series server-side',async()=>{
  const renderSeries=series=>render('app/products/page.tsx',{searchParams:Promise.resolve({series})})
