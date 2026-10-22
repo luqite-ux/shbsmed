@@ -316,14 +316,14 @@
 .pain-product-groups>.medical-intro{max-width:none}
 .pain-product-groups h4{font-size:20px;font-weight:600;line-height:1.5;margin:24px 0 12px;color:#194c63}
 .pain-cannula-group{margin-top:36px}
-.pain-cannula-group .medical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pain-cannula-group .medical-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 .pain-electrode-group .medical-grid{grid-template-columns:1fr}
 .pain-electrode-group .medical-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-content:center}
 .pain-electrode-group .medical-card-image{grid-column:1;grid-row:1 / span 3;aspect-ratio:auto;height:300px}
 .pain-electrode-group .medical-card-text{align-self:end;margin-top:24px}
 .pain-electrode-group .medical-card-description{grid-column:2;margin-top:12px}
 .pain-electrode-group .medical-card-description:last-child{align-self:start;margin-bottom:24px}
-@media(max-width:767px){.pain-electrode-group .medical-card{grid-template-columns:1fr}.pain-electrode-group .medical-card-image{grid-row:auto;height:240px}.pain-electrode-group .medical-card-description{grid-column:1}.pain-cannula-group .medical-grid{grid-template-columns:1fr}}
+@media(max-width:767px){.pain-electrode-group .medical-card{grid-template-columns:1fr}.pain-electrode-group .medical-card-image{grid-row:auto;height:240px}.pain-electrode-group .medical-card-description{grid-column:1}.pain-cannula-group .medical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .series-tabs>a{display:inline-flex;align-items:center;min-height:44px;padding:12px 18px;border:1px solid #bfced5;border-radius:6px;color:#194c63;background:white}
 .series-tabs>a[aria-current=page]{background:#194c63;color:white}
 .series-tabs>a:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
