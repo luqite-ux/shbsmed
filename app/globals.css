@@ -333,6 +333,9 @@
 .zoom-icon{position:absolute;right:12px;bottom:12px;display:block;width:20px;height:20px;padding:0;margin:0;border:0;background:transparent;color:#164e6e;pointer-events:none;filter:drop-shadow(0 1px 1px white) drop-shadow(0 -1px 1px white)}
 .tip-inset .zoom-icon{display:none}
 /* Home/About editorial media rows: one shared title rail and media rail. */
+.manufacturing-section-copy{grid-column:1;grid-row:1;align-self:start}
+.meeting-about .manufacturing-section-copy h3{margin:0;font-size:24px;line-height:1.3}
+.manufacturing-section-copy p{margin-top:18px;font-size:15px;line-height:1.8;color:#4d6270}
 .meeting-about .equipment-showcase,.meeting-about .manufacturing-showcase{display:grid;grid-template-columns:minmax(210px,.75fr) minmax(0,2fr);column-gap:48px;row-gap:16px;align-items:start;padding-top:40px;margin-top:48px}
 .meeting-about .equipment-showcase>h3,.meeting-about .manufacturing-showcase>h3{grid-column:1;grid-row:1;margin:0;font-size:24px;line-height:1.3}
 .meeting-about .equipment-showcase>p{grid-column:1;grid-row:2;margin:0;font-size:15px;line-height:1.75}
