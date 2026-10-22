@@ -307,6 +307,7 @@
 .product-structure-photo .zoom-image>img{height:auto;width:100%;max-height:480px;object-fit:contain}
 .product-structure-photo figcaption{margin-top:14px;font-size:15px;color:#35576b}
 @media(max-width:767px){.product-structure-grid{grid-template-columns:1fr;gap:24px}.product-structure-photo .zoom-image>img{max-height:340px}}
+.pain-product-groups>.medical-intro{max-width:none}
 .pain-product-groups h4{font-size:20px;font-weight:600;line-height:1.5;margin:24px 0 12px;color:#194c63}
 .pain-cannula-group{margin-top:36px}
 .pain-cannula-group .medical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -335,7 +336,8 @@
 .meeting-about .equipment-showcase>p{grid-column:1;grid-row:2;margin:0;font-size:15px;line-height:1.75}
 .meeting-about .equipment-showcase .photo-grid,.meeting-about .manufacturing-video-pair{grid-column:2;grid-row:1 / span 2;width:100%;max-width:none;margin:0;gap:24px}
 .meeting-about .equipment-showcase .photo-pair-production{grid-template-columns:repeat(2,minmax(0,1fr))}
-.meeting-about .equipment-showcase .photo-pair-production img{max-height:460px;width:100%;object-fit:contain}
+.meeting-about .equipment-showcase .photo-pair-production figure{width:min(100%,345px);margin:0 auto}
+.meeting-about .equipment-showcase .photo-pair-production img{height:auto;max-height:none;width:100%;object-fit:contain}
 .meeting-about .equipment-showcase .photo-pair-inspection{grid-template-columns:minmax(0,1.3328125fr) minmax(0,.749707fr)}
 .meeting-about .manufacturing-video-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
 .meeting-about .manufacturing-video-pair figure{width:min(100%,258.75px);margin:0 auto}
@@ -358,9 +360,13 @@
  .meeting-about .equipment-showcase .photo-grid,.meeting-about .manufacturing-video-pair{grid-column:1;grid-row:2;max-width:none;grid-template-columns:1fr}
  .meeting-about .equipment-showcase>p{grid-column:1;grid-row:3}
  .meeting-about .equipment-showcase .photo-pair-production,.meeting-about .equipment-showcase .photo-pair-inspection{grid-template-columns:1fr}
- .meeting-about .equipment-showcase .photo-pair-production img{height:auto;max-height:400px;width:auto;max-width:100%}
+ .meeting-about .equipment-showcase .photo-pair-production figure{width:min(100%,300px)}
+ .meeting-about .equipment-showcase .photo-pair-inspection figure{width:min(100%,533px);margin:0 auto}
+ .meeting-about .equipment-showcase .photo-pair-inspection>div:nth-child(2) figure{width:min(100%,300px)}
+ .meeting-about .equipment-showcase .photo-grid .zoom-image{width:100%;margin:0}
+ .meeting-about .equipment-showcase .photo-grid img{height:auto;max-height:none;width:100%;max-width:100%}
  .meeting-about .manufacturing-video-pair .process-video{max-width:none;margin:0}
- .meeting-about .equipment-showcase .photo-grid figcaption,.meeting-about .manufacturing-video-pair figcaption{text-align:center}
+ .meeting-about .equipment-showcase .photo-grid figcaption,.meeting-about .manufacturing-video-pair figcaption{text-align:left}
  .meeting-about .manufacturing-video-pair figcaption{text-align:left;margin-top:12px}
  .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-card{grid-template-columns:1fr;gap:0}
  .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-card-image{grid-row:auto;grid-column:1;height:240px}
