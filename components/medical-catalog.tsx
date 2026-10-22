@@ -16,11 +16,11 @@ function PainProducts({items}:{items:Item[]}){
  return <div className="pain-product-groups">
   <p className="medical-intro"><SiteText value={rfMarketAccess}/></p>
   {painIntro.map(text=><p className="medical-intro" key={text}><SiteText value={text}/></p>)}
-  <div className="pain-electrode-group" data-pain-group="electrodes">
+  <div id="electrodes" className="pain-electrode-group scroll-mt-32" data-pain-group="electrodes">
    <h4><SiteText value="Single-use RF Electrodes"/></h4>
    <MedicalCards items={shown.filter(p=>p.slug==='rf-electrodes')}/>
   </div>
-  <div className="pain-cannula-group" data-pain-group="cannulas">
+  <div id="cannulas" className="pain-cannula-group scroll-mt-32" data-pain-group="cannulas">
    <h4><SiteText value="Single-use RF Cannulas — Four Tip Structures"/></h4>
    <MedicalCards items={shown.filter(p=>p.slug!=='rf-electrodes')}/>
   </div>

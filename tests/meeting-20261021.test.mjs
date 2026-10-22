@@ -28,10 +28,10 @@ export function load(file){
  return mod.exports
 }
 export const render=async(file,props)=>renderToStaticMarkup(await load(file).default(props)).replaceAll('&amp;','&')
-test('home lets visitors read every business in meeting order without separate equipment tail',async()=>{
+test('home follows the four-item review with manufacturing after information',async()=>{
  const html=await render('app/page.tsx')
  const sections=[...html.matchAll(/data-business="([^"]+)"/g)].map(m=>m[1])
- assert.deepEqual(sections,['banner','about','branded','oem','components','news'])
+ assert.deepEqual(sections,['banner','about','branded','oem','components','news','manufacturing'])
  for(const p of seed.odm)assert.ok(html.includes(p.image))
  for(const p of seed.products)assert.ok(html.includes(`href="/products/${p.slug}"`),'Home must show '+p.slug)
  assert.ok(html.includes('href="/products/spinal-anesthesia-needle"'))
@@ -48,7 +48,7 @@ test('structural descriptions retain source facts without efficacy or clinical i
  assert.doesNotMatch(JSON.stringify(productStructures),/thermocoagulation|ablat|effective treatment|nerve modulation/i)
 })
 test('brand categories isolate five pain products and each anesthesia series server-side',async()=>{
- const renderSeries=series=>render('app/products/page.tsx',{searchParams:Promise.resolve({series})})
+ const renderSeries=async series=>(await render('app/products/page.tsx',{searchParams:Promise.resolve({series})})).split('<main')[1].split('</main>')[0]
  const pain=await renderSeries('pain');assert.doesNotMatch(pain,/Reusable RF Electrode/)
  for(const p of seed.products)assert.ok(pain.includes(`href="/products/${p.slug}"`))
  const spinal=await renderSeries('spinal');assert.match(spinal,/href="\/products\/spinal-anesthesia-needle"/);assert.doesNotMatch(spinal,/href="\/products\/rf-electrodes"|href="\/products\/epidural-anesthesia-needle"/)

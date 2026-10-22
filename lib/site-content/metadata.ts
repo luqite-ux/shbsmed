@@ -13,7 +13,7 @@ export async function pageMetadata(path:string,fallback:Metadata,language?:strin
  const url=`https://shbsmed.com${await localizedPath(path,locale)}`
  // October 22: rename the listing without changing shared production content.
  if(path==='/news'){
-  const rename=(value:string)=>value.replace(/News/g,'Updates').replace(/news/g,'updates').replace(/新闻中心|新闻/g,'资讯')
+  const rename=(value:string)=>value.replace(/News|Updates/g,'Information').replace(/news|updates/g,'information').replace(/新闻中心|新闻/g,'资讯')
   if(typeof content.title==='string')content.title=rename(content.title)
   if(typeof content.description==='string')content.description=rename(content.description)
  }
