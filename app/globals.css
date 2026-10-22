@@ -268,6 +268,30 @@
 .meeting-about h3{font-size:clamp(20px,2vw,25px);font-weight:600;margin-bottom:18px;color:#194c63}
 .meeting-about p{max-width:75ch;line-height:1.7;margin-top:12px}
 .meeting-about-block{margin-top:36px}
+/* Scoped to the shared home/About equipment blocks; other galleries stay unchanged. */
+.equipment-showcase,.manufacturing-showcase{margin-top:56px;padding-top:32px;border-top:1px solid #cbdbe3}
+.equipment-showcase .photo-grid{grid-template-columns:minmax(0,1.3328125fr) minmax(0,.749707fr);gap:32px;max-width:950px;margin:28px auto 0;align-items:start}
+.equipment-showcase .photo-pair-production{grid-template-columns:minmax(0,1.9305857fr) minmax(0,.749707fr)}
+.equipment-showcase .photo-grid>div{min-width:0}
+.equipment-showcase .photo-grid figure{margin:0}
+.equipment-showcase .zoom-image{height:auto;background:transparent;border-radius:0}
+.equipment-showcase .photo-grid img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.equipment-showcase .zoom-label{position:absolute;bottom:12px;right:12px;margin:0;min-height:44px;padding:10px 12px;background:#fff;color:#164e6e;transition:background-color .2s,color .2s,transform .2s}
+.equipment-showcase .zoom-image:focus-visible{outline:3px solid #164e6e;outline-offset:5px}
+.equipment-showcase .photo-grid figcaption{margin-top:16px;font-size:16px;font-weight:500;line-height:1.5;color:#194c63}
+.equipment-showcase>p{margin-top:22px}
+.manufacturing-video-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;max-width:640px;margin:28px auto 0}
+.manufacturing-video-pair .process-video{height:auto;aspect-ratio:9 / 16;background:transparent}
+.manufacturing-video-pair figcaption{font-size:16px;line-height:1.5;color:#194c63}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.equipment-showcase .zoom-image:hover .zoom-label{background:#164e6e;color:white;transform:translateY(-2px)}}
+@media(max-width:767px){
+ .equipment-showcase,.manufacturing-showcase{margin-top:40px;padding-top:26px}
+ .equipment-showcase .photo-grid{grid-template-columns:1fr;gap:28px;margin-top:22px}
+ .equipment-showcase .zoom-image{height:auto;max-width:100%;width:fit-content;margin:0 auto}
+ .equipment-showcase .photo-grid img{width:auto;max-width:100%;height:auto;max-height:400px}
+ .equipment-showcase .photo-grid figcaption{text-align:center;font-size:15px;margin-top:12px}
+ .manufacturing-video-pair{grid-template-columns:1fr;max-width:290px;gap:30px;margin-top:22px}
+}
 .meeting-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:24px}
 .meeting-gallery figure{min-width:0}
 .meeting-gallery .zoom-image{width:100%;height:280px;background:white}
