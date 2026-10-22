@@ -16,7 +16,7 @@ const navLinks = [
   { href: "/products", label: "Branded Products" },
   { href: "/odm-oem", label: "OEM" },
   { href: "/contract-manufacturing", label: "Component Manufacturing" },
-  { href: "/news", label: "News" },
+  { href: "/news", label: "Updates" },
   { href: "/contact", label: "Contact Us" },
 ]
 

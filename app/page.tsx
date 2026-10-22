@@ -19,6 +19,6 @@ export default async function Home(){
  <section className="medical-shell framework-section" data-business="branded"><Reveal><h2><SiteText value="Branded Products"/></h2><p className="medical-intro"><SiteText value="Explore our pain management, spinal anesthesia and epidural anesthesia product series."/></p></Reveal><HomeProductSeries items={products}/></section>
  <section className="medical-shell framework-section" data-business="oem"><Reveal><h2><SiteText value="OEM"/></h2></Reveal><OemContent items={oem}/></section>
  <section className="medical-shell framework-section" data-business="components"><Reveal><h2><SiteText value="Component Manufacturing"/></h2></Reveal><ComponentContent items={parts}/></section>
- <section className="medical-shell framework-section" data-business="news"><Reveal><h2><SiteText value="News"/></h2></Reveal><NewsList articles={articles} compact/><Link className="medical-button mt-6" href="/news"><SiteText value="View News →"/></Link></section>
+ <section className="medical-shell framework-section" data-business="news"><Reveal><h2><SiteText value="Updates"/></h2></Reveal><NewsList articles={articles} compact/><Link className="medical-button mt-6" href="/news"><SiteText value="View Updates →"/></Link></section>
  </main><SiteFooter/></SiteContentVersion>
 }
