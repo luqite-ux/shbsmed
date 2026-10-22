@@ -379,6 +379,9 @@
 }
 @media(max-width:767px){.meeting-company{grid-template-columns:1fr;gap:24px;padding-top:4px}.meeting-company>img{max-height:none}.meeting-about .meeting-company h3{font-size:28px;margin-bottom:20px}.meeting-gallery{grid-template-columns:1fr;gap:28px}.meeting-gallery .zoom-image{height:280px}.meeting-gallery-portrait .zoom-image{height:380px}}
 /* Keep each caption within the actual image width, including mixed source ratios. */
+.component-processing-photo{width:min(100%,720px);margin:40px auto 0}
+.component-processing-photo .zoom-image,.component-processing-photo .zoom-image>img{width:100%;height:auto}
+.component-processing-photo figcaption{margin-top:14px;text-align:left;font-size:16px;line-height:1.6;color:#193c50}
 .component-production-photos{border-top:1px solid #cbdbe3;padding-top:28px}
 .component-production-photos .photo-grid,.framework-home [data-business="components"] .component-production-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none;margin:0;gap:32px}
 .component-production-photos .photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure{display:flex;align-items:center;gap:24px;width:100%;margin:0}

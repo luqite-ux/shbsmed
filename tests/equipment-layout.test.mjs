@@ -3,6 +3,15 @@ import assert from 'node:assert/strict'
 import {render} from './meeting-20261021.test.mjs'
 import {readFileSync} from 'node:fs'
 
+test('processing photograph appears only on the component page, replacing both old snapshots',async()=>{
+ const home=await render('app/page.tsx')
+ const page=await render('app/contract-manufacturing/page.tsx')
+ assert.ok(!home.includes('component-processing-photo'))
+ assert.equal((page.match(/class="component-processing-photo"/g)||[]).length,1)
+ assert.ok(page.includes('Needle tubes during processing'))
+ for(const html of [home,page])for(const old of ['Semi-finished needle tubes','Semi-finished needle assemblies'])assert.ok(!html.includes(old))
+})
+
 test('home and About use the same two uncropped photo pairs and portrait video layout',async()=>{
  for(const route of ['app/page.tsx','app/about/page.tsx']){
   const html=await render(route)
