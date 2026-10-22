@@ -322,7 +322,8 @@
 .meeting-about .equipment-showcase .photo-pair-production img{max-height:460px;width:100%;object-fit:contain}
 .meeting-about .equipment-showcase .photo-pair-inspection{grid-template-columns:minmax(0,1.3328125fr) minmax(0,.749707fr)}
 .meeting-about .manufacturing-video-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
-.meeting-about .manufacturing-video-pair .process-video{max-height:460px;width:100%;aspect-ratio:9 / 16}
+.meeting-about .manufacturing-video-pair figure{width:min(100%,258.75px);margin:0 auto}
+.meeting-about .manufacturing-video-pair .process-video{height:auto;max-height:none;width:100%;aspect-ratio:9 / 16}
 .meeting-about .equipment-showcase .photo-grid figcaption,.meeting-about .manufacturing-video-pair figcaption{text-align:left;font-size:15px;margin-top:14px}
 .framework-home [data-product-series]:not([data-product-series="pain"]){border-top:1px solid #cbdbe3;padding-top:32px;margin-top:40px}
 .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-grid{grid-template-columns:1fr;margin-top:20px}
@@ -342,8 +343,9 @@
  .meeting-about .equipment-showcase>p{grid-column:1;grid-row:3}
  .meeting-about .equipment-showcase .photo-pair-production,.meeting-about .equipment-showcase .photo-pair-inspection{grid-template-columns:1fr}
  .meeting-about .equipment-showcase .photo-pair-production img{height:auto;max-height:400px;width:auto;max-width:100%}
- .meeting-about .manufacturing-video-pair .process-video{max-width:260px;margin:auto}
+ .meeting-about .manufacturing-video-pair .process-video{max-width:none;margin:0}
  .meeting-about .equipment-showcase .photo-grid figcaption,.meeting-about .manufacturing-video-pair figcaption{text-align:center}
+ .meeting-about .manufacturing-video-pair figcaption{text-align:left;margin-top:12px}
  .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-card{grid-template-columns:1fr;gap:0}
  .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-card-image{grid-row:auto;grid-column:1;height:240px}
  .framework-home [data-product-series]:not([data-product-series="pain"]) .medical-card-text{grid-column:1;margin:20px 0 0;font-size:18px}
