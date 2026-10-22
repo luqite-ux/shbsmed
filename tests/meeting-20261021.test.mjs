@@ -54,6 +54,18 @@ test('brand categories isolate five pain products and each anesthesia series ser
  const spinal=await renderSeries('spinal');assert.match(spinal,/href="\/products\/spinal-anesthesia-needle"/);assert.doesNotMatch(spinal,/href="\/products\/rf-electrodes"|href="\/products\/epidural-anesthesia-needle"/)
  const epidural=await renderSeries('epidural');assert.match(epidural,/href="\/products\/epidural-anesthesia-needle"/);assert.doesNotMatch(epidural,/href="\/products\/spinal-anesthesia-needle"/)
 })
+test('home and pain category separate the electrode from exactly four cannula structures',async()=>{
+ for(const html of [await render('app/page.tsx'),await render('app/products/page.tsx',{searchParams:Promise.resolve({series:'pain'})})]){
+  const start=html.indexOf('data-pain-group="electrodes"'),end=html.indexOf('data-pain-group="cannulas"')
+  assert.ok(start>=0&&end>start,'Two ordered product groups must be present')
+  const first=html.slice(start,end)
+  assert.match(first,/href="\/products\/rf-electrodes"/)
+  assert.doesNotMatch(first,/href="\/products\/[^\"]*cannulas"/)
+  const second=html.slice(end).split('data-product-series="spinal"')[0]
+  assert.equal((second.match(/href="\/products\/[^\"]*cannulas"/g)||[]).length,4)
+  assert.doesNotMatch(second,/href="\/products\/rf-electrodes"/)
+ }
+})
 test('OEM shows all supplied finished products without premature detail links or repeated category questions',async()=>{
  const html=await render('app/odm-oem/page.tsx');for(const p of seed.odm)assert.ok(html.includes(p.image))
  assert.doesNotMatch(html,/href="\/odm-oem\/|Category assignment pending|ODM Products/)
