@@ -321,6 +321,8 @@
 .series-tabs>a{display:inline-flex;align-items:center;min-height:44px;padding:12px 18px;border:1px solid #bfced5;border-radius:6px;color:#194c63;background:white}
 .series-tabs>a[aria-current=page]{background:#194c63;color:white}
 .series-tabs>a:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.series-tabs+h2{margin-top:32px}
+@media(max-width:767px){.series-tabs+h2{margin-top:24px}}
 .meeting-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;margin-bottom:22px;color:#e3eef3}
 .meeting-breadcrumb a{text-decoration:underline;text-underline-offset:3px}
 .meeting-product-menu{position:relative}
