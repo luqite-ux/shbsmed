@@ -177,7 +177,7 @@
 .medical-card.component-photo .medical-card-image,.medical-grid .medical-card.portrait .medical-card-image{aspect-ratio:auto;background:transparent}
 .medical-card.component-photo .medical-card-image img,.medical-card.portrait .medical-card-image img{display:block;height:auto}
 .medical-shell{max-width:1280px;margin:auto;padding:76px 32px;color:#17384b}
-.medical-section{scroll-margin-top:140px}.medical-section h2{font-size:clamp(28px,3vw,42px);line-height:1.16;letter-spacing:-.035em;font-weight:600;max-width:780px}.medical-intro{max-width:680px;line-height:1.8;color:#4d6270;margin-top:18px}.eyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:650;margin-bottom:15px;color:#216b8a}
+.medical-section{scroll-margin-top:140px}.medical-section h2{font-size:clamp(28px,3vw,42px);line-height:1.16;letter-spacing:-.035em;font-weight:600;max-width:780px}.medical-intro{max-width:100%;line-height:1.8;color:#4d6270;margin-top:18px}.eyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:650;margin-bottom:15px;color:#216b8a}
 .medical-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 21px;background:#124e70;color:white;font-size:14px;font-weight:600;border-radius:4px;margin-top:24px;transition:background .2s,transform .2s}.medical-button:hover{background:#0a354d;transform:translateY(-2px)}
 .medical-hero{position:relative;background:#edf5fa;color:#17384b}.hero-stage{position:relative;aspect-ratio:2.65;min-height:460px;max-height:660px;overflow:hidden}.hero-image{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;opacity:0;transition:opacity .5s}.hero-image.active{opacity:1}.hero-copy{position:absolute;width:42%;top:18%;max-width:610px;animation:copy-in .5s ease-out}.hero-copy-right{right:5%}.hero-copy-left{left:6%}.hero-copy-pain{top:8%}.hero-copy h1{font-size:clamp(30px,3.5vw,56px);line-height:1.06;letter-spacing:-.04em;font-weight:600}.hero-description{font-size:clamp(14px,1.3vw,18px);line-height:1.6;margin-top:18px;max-width:450px}.hero-dark{color:white;background:#052841}.hero-dark .eyebrow{color:#b3e1f2}.hero-dark .medical-button{background:#f0f8fb;color:#124e70}.hero-controls{position:absolute;bottom:17px;right:4%;display:flex;gap:25px;align-items:center;padding:6px 10px;border-radius:6px;background:#ffffffed;color:#16435b}.hero-controls button{padding:7px;min-height:32px;min-width:32px}.hero-dot:after{content:'';display:block;height:6px;width:6px;background:#8296a3;border-radius:10px;transition:width .2s}.hero-dot.active:after{width:24px;background:#124e70}
 .medical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:34px}.medical-card{display:block;border-bottom:1px solid #cbdbe3;padding-bottom:22px;transition:transform .25s}.medical-card:hover{transform:translateY(-5px)}.medical-card-image{aspect-ratio:1;background:#fff;overflow:hidden}.medical-card-image img{width:100%;height:100%;object-fit:contain}.medical-card.portrait .medical-card-image{aspect-ratio:0.707;background:#bbdeea}.medical-card-text{display:flex;align-items:start;justify-content:space-between;gap:15px;margin-top:20px;font-weight:600;font-size:18px}.medical-card-text svg{flex-shrink:0}.medical-card-description{font-size:14px;line-height:1.65;color:#526875;margin-top:10px}.series-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.series-tabs button{padding:12px 17px;border:1px solid #c7d8e0;border-radius:4px;background:white;color:#264e66;font-weight:500;font-size:14px}.series-tabs button[aria-pressed=true]{background:#164e6e;color:white;border-color:#164e6e}
@@ -300,7 +300,7 @@
 .meeting-gallery .zoom-image{width:100%;height:280px;background:white}
 .meeting-gallery .zoom-image img{width:100%;height:100%;object-fit:contain}
 .meeting-gallery-portrait .zoom-image{height:380px}
-.meeting-gallery figcaption{font-size:18px;font-weight:500;text-align:center;margin-top:16px;color:#193c50}
+.meeting-gallery figcaption{font-size:18px;font-weight:500;text-align:left;margin-top:16px;color:#193c50}
 .product-structure-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:28px}
 .product-structure-photo{min-width:0;margin:0}
 .product-structure-photo .zoom-image{height:auto;background:transparent}
@@ -378,3 +378,24 @@
  .framework-home [data-business="components"] .photo-grid .zoom-label{right:4px;bottom:4px;padding:6px;font-size:10px}
 }
 @media(max-width:767px){.meeting-company{grid-template-columns:1fr;gap:24px;padding-top:4px}.meeting-company>img{max-height:none}.meeting-about .meeting-company h3{font-size:28px;margin-bottom:20px}.meeting-gallery{grid-template-columns:1fr;gap:28px}.meeting-gallery .zoom-image{height:280px}.meeting-gallery-portrait .zoom-image{height:380px}}
+/* Keep each caption within the actual image width, including mixed source ratios. */
+.component-production-photos{border-top:1px solid #cbdbe3;padding-top:28px}
+.component-production-photos .photo-grid,.framework-home [data-business="components"] .component-production-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none;margin:0;gap:32px}
+.component-production-photos .photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure{display:flex;align-items:center;gap:24px;width:100%;margin:0}
+.component-production-photos .photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure .zoom-image{flex:0 0 auto;width:min(55%,calc(280px * var(--photo-ratio,.7)));height:auto}
+.component-production-photos .photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure figcaption{flex:1;margin:0;font-size:16px;line-height:1.6;text-align:left}
+@media(max-width:767px){.component-production-photos .photo-grid,.framework-home [data-business="components"] .component-production-photos .photo-grid{grid-template-columns:1fr;gap:28px}}
+.meeting-gallery figure{width:min(100%,calc(280px * var(--photo-ratio,1)));margin-inline:auto}
+.meeting-gallery-portrait figure{width:min(100%,calc(380px * var(--photo-ratio,1)))}
+.meeting-gallery .zoom-image,.meeting-gallery-portrait .zoom-image{height:auto;width:100%}
+.meeting-gallery .zoom-image>img{width:100%;height:auto;object-fit:contain}
+.product-structure-photo{width:min(100%,calc(480px * var(--photo-ratio,1)));margin-inline:auto}
+.product-structure-photo .zoom-image>img{height:auto;max-height:none}
+.photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure{width:min(100%,calc(340px * var(--photo-ratio,1)));margin-inline:auto}
+.photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure .zoom-image{width:100%;height:auto;margin:0}
+.photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure figcaption{text-align:left}
+@media(max-width:767px){
+ .product-structure-photo{width:min(100%,calc(340px * var(--photo-ratio,1)))}
+ .photo-grid:not(.photo-pair-production):not(.photo-pair-inspection) figure{width:min(100%,calc(220px * var(--photo-ratio,1)))}
+}

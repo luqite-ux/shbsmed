@@ -4,7 +4,7 @@ import {SiteText,SiteImage,useSiteVideo} from '@/components/site-copy'
 import {useEffect,useRef,useState} from 'react'
 import {Dialog,DialogContent,DialogTitle,DialogTrigger} from '@/components/ui/dialog'
 export function ZoomImage({src,alt,className=''}:{src:string;alt:string;className?:string}){
- return <Dialog><DialogTrigger asChild><button type="button" className={`zoom-image ${className}`} aria-label={`Enlarge ${alt}`}><SiteImage src={src} alt={alt} loading="lazy"/></button></DialogTrigger><DialogContent className="max-w-[94vw] sm:max-w-5xl"><DialogTitle className="sr-only">{alt}</DialogTitle><SiteImage className="max-h-[82vh] w-full object-contain" src={src} alt={alt}/></DialogContent></Dialog>
+ return <Dialog><DialogTrigger asChild><button type="button" className={`zoom-image ${className}`} aria-label={`Enlarge ${alt}`}><SiteImage src={src} alt={alt} loading="lazy" onLoad={event=>{const image=event.currentTarget;if(image.naturalHeight)image.closest('figure')?.style.setProperty('--photo-ratio',String(image.naturalWidth/image.naturalHeight))}}/></button></DialogTrigger><DialogContent className="max-w-[94vw] sm:max-w-5xl"><DialogTitle className="sr-only">{alt}</DialogTitle><SiteImage className="max-h-[82vh] w-full object-contain" src={src} alt={alt}/></DialogContent></Dialog>
 }
 export function ProcessVideo({src,poster,title}:{src:string;poster:string;title:string}){
  const configured=useSiteVideo(src);src=configured?.src||src;poster=configured?.poster||poster;title=configured?.title||title
