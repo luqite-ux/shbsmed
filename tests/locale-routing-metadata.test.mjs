@@ -15,6 +15,20 @@ async function localeApi(config,path){
  const query={select(){return this},eq(){return this},async single(){return{data:config}}}
  return moduleAt('../lib/locale.ts',{'server-only':{},react:{cache:fn=>fn},'next/cache':{unstable_cache:fn=>fn},'next/headers':{headers:async()=>({get:()=>path})},'./supabase':{getSupabaseClient:()=>({from:()=>query})}})
 }
+
+test('updates listing replaces legacy CMS news metadata without changing article titles',async()=>{
+ const locale=await localeApi({default_language:'en',supported_languages:['en']},'/news')
+ const api=await moduleAt('../lib/site-content/metadata.ts',{
+  './site-content':{siteContentMetadata:async()=>({title:'News',description:'Explore news from Brightstone.'})},
+  '@/lib/locale':locale,'next/headers':{cookies:async()=>({has:()=>false})},
+  '@/lib/brand-settings':{getBrandSettings:async()=>({logo:'/logo.png',seoTitle:'Fallback',seoDescription:'Fallback'})},
+ })
+ const listing=await api.pageMetadata('/news',{})
+ assert.equal(listing.title,'Updates')
+ assert.equal(listing.openGraph.title,'Updates')
+ assert.equal(listing.twitter.description,'Explore updates from Brightstone.')
+ assert.equal((await api.pageMetadata('/news/customer-article',{})).title,'News')
+})
 test('single-language routes stay unprefixed and disabled locales are not selected',async()=>{
  const api=await localeApi({default_language:'en',supported_languages:['en']},'/fr/products')
  assert.equal(await api.currentLocale(),'en')

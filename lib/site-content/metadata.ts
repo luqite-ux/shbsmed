@@ -11,6 +11,12 @@ export async function pageMetadata(path:string,fallback:Metadata,language?:strin
   content={robots:{index:false,follow:false}}
  }
  const url=`https://shbsmed.com${await localizedPath(path,locale)}`
+ // October 22: rename the listing without changing shared production content.
+ if(path==='/news'){
+  const rename=(value:string)=>value.replace(/News/g,'Updates').replace(/news/g,'updates').replace(/新闻中心|新闻/g,'资讯')
+  if(typeof content.title==='string')content.title=rename(content.title)
+  if(typeof content.description==='string')content.description=rename(content.description)
+ }
  // October 21 preview keeps the existing route, but the public business is OEM.
  if(path==='/odm-oem'){
   if(typeof content.title==='string')content.title=content.title.replace(/ODM\s*\/\s*OEM|OEM\s*\/\s*ODM|ODM/gi,'OEM')
