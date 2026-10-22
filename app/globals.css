@@ -317,6 +317,10 @@
 .pain-product-groups h4{font-size:20px;font-weight:600;line-height:1.5;margin:24px 0 12px;color:#194c63}
 .pain-cannula-group{margin-top:36px}
 .pain-cannula-group .medical-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pain-cannula-group .medical-grid{row-gap:0}
+.pain-cannula-group .medical-grid>.reveal{display:grid;grid-template-rows:subgrid;grid-row:span 4;padding-bottom:24px;min-width:0}
+.pain-cannula-group .medical-card{display:grid;grid-template-rows:subgrid;grid-row:span 4;height:100%;min-width:0}
+.pain-cannula-group .medical-card-text{line-height:1.5}
 .pain-electrode-group .medical-grid{grid-template-columns:1fr}
 .pain-electrode-group .medical-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-content:center}
 .pain-electrode-group .medical-card-image{grid-column:1;grid-row:1 / span 3;aspect-ratio:auto;height:300px}
