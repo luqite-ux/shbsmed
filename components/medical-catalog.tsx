@@ -5,6 +5,7 @@ import {SiteText} from '@/components/site-copy'
 import {PendingNote} from '@/components/framework-pending'
 import {historicalProducts} from '@/lib/framework-pending-products'
 import {productSummaries} from '@/lib/meeting-product-copy'
+import {painIntro} from '@/lib/meeting-business-copy'
 type Item={slug:string;name:string;image:string;description?:string;variants?:unknown[];pending?:string}
 export const productSeries=[{slug:'pain',name:'Pain Management Series'},{slug:'spinal',name:'Spinal Anesthesia Series'},{slug:'epidural',name:'Epidural Anesthesia Series'}]
 export function MedicalCards({items,base='/products',portrait=false}:{items:Item[];base?:string;portrait?:boolean}){return <div className="medical-grid">{items.map((p,i)=><Reveal key={p.slug} delay={(i%3)*70}><Link className={`medical-card ${portrait?'portrait':''} ${base==='/contract-manufacturing'?'component-photo':''}`} href={`${base}/${p.slug}`}><div className="medical-card-image"><img src={p.image} alt={p.name} loading="lazy"/></div><div className="medical-card-text"><h3>{p.name}</h3><ArrowUpRight size={21}/></div>{p.variants&&<p className="medical-card-description">{p.variants.length} <SiteText value="models"/></p>}{p.description&&<p className="medical-card-description"><SiteText value={p.description}/></p>}{p.pending&&<PendingNote>{p.pending}</PendingNote>}</Link></Reveal>)}</div>}
@@ -14,6 +15,7 @@ function PainProducts({items}:{items:Item[]}){
  const shown=items.filter(p=>order.includes(p.slug)).sort((a,b)=>order.indexOf(a.slug)-order.indexOf(b.slug)).map(p=>({...p,description:productSummaries[p.slug]}))
  return <div className="pain-product-groups">
   <p className="medical-intro"><SiteText value={rfMarketAccess}/></p>
+  {painIntro.map(text=><p className="medical-intro" key={text}><SiteText value={text}/></p>)}
   <div className="pain-electrode-group" data-pain-group="electrodes">
    <h4><SiteText value="Single-use RF Electrodes"/></h4>
    <MedicalCards items={shown.filter(p=>p.slug==='rf-electrodes')}/>

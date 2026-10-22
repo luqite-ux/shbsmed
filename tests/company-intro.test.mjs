@@ -10,7 +10,7 @@ test('both pages show the large cleanroom once and a company heading with two fa
   assert.match(intro,/<h3>Shanghai Brightstone Medical Technology Limited<\/h3>/)
   assert.equal((intro.match(/<p>/g)||[]).length,2)
   assert.doesNotMatch(intro,/Company Introduction|company entrance/)
-  assert.equal((html.match(/src="[^"]*47149137cb3053e55321.png"/g)||[]).length,1)
+  assert.equal((html.match(/alt="Brightstone Medical cleanroom production area"/g)||[]).length,1)
   assert.match(html,/Assembly workstations/)
  }
 })
