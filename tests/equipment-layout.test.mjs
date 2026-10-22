@@ -8,7 +8,7 @@ test('home and About use the same two uncropped photo pairs and portrait video l
   const html=await render(route)
   assert.equal((html.match(/class="meeting-about-block equipment-showcase"/g)||[]).length,2)
   assert.match(html,/class="manufacturing-video-pair"/)
-  for(const caption of ['Cleanroom production area','Automated printing equipment','Inspection instruments','Dimensional inspection area'])assert.ok(html.includes(caption))
+  for(const caption of ['Assembly workstations','Automated printing equipment','Inspection instruments','Dimensional inspection area'])assert.ok(html.includes(caption))
   assert.equal((html.match(/<video/g)||[]).length,2)
  }
 })

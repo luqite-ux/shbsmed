@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import {readFileSync,existsSync} from 'node:fs'
 import {createRequire} from 'node:module'
 import vm from 'node:vm'
+import {copyKey} from '../lib/site-copy-key.mjs'
 const require=createRequire(import.meta.url),ts=require('typescript'),React=require('react')
 const {renderToStaticMarkup}=require('react-dom/server')
 const seed=JSON.parse(readFileSync(new URL('../lib/site-seed.json',import.meta.url)))
@@ -10,8 +11,9 @@ const parts=JSON.parse(readFileSync(new URL('../lib/contract-seed.json',import.m
 export function load(file){
  const mod={exports:{}},code=ts.transpileModule(readFileSync(new URL('../'+file,import.meta.url),'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText
  const aliases={
+ '@/lib/site-copy-key.mjs':{copyKey},
  '@/components/localized-link':{__esModule:true,default:({children,...p})=>React.createElement('a',p,children)},
- '@/components/site-copy':{SiteText:({value})=>value,SiteImage:p=>React.createElement('img',p),SiteContentVersion:({children})=>children,useSiteLanguage:()=>({locale:'en',defaultLocale:'en'}),useSiteBrand:()=>({description:'Medical needles',legalNameEn:'Shanghai Brightstone Medical Technology Limited',address:'Shanghai'})},
+ '@/components/site-copy':{SiteText:({value,paragraphs})=>paragraphs?value.split(/(?<=\.)\s+/).map((v,i)=>React.createElement('p',{key:i},v)):value,SiteImage:p=>React.createElement('img',p),SiteContentVersion:({children})=>children,useSiteLanguage:()=>({locale:'en',defaultLocale:'en'}),useSiteBrand:()=>({description:'Medical needles',legalNameEn:'Shanghai Brightstone Medical Technology Limited',address:'Shanghai'})},
  '@/components/brand-logo':{BrandLogo:()=>React.createElement('a',{href:'/'},'Brightstone')},
  '@/components/reveal':{Reveal:({as='section',children,delay,...p})=>React.createElement(as,p,children)},
  '@/components/medical-media':{ZoomImage:p=>React.createElement('img',p),ProcessVideo:p=>React.createElement('video',{src:p.src,controls:true})},
@@ -61,7 +63,7 @@ test('components show actual supplied parts without empty application-category t
  assert.doesNotMatch(html,/Interventional component requirements|aria-label="Component series"/)
 })
 test('About has ordered introduction qualifications equipment and both source videos',async()=>{
- const html=await render('app/about/page.tsx');assert.ok(html.indexOf('Company Introduction')<html.indexOf('Company & Product Qualifications'))
+ const html=await render('app/about/page.tsx');assert.ok(html.indexOf('Shanghai Brightstone Medical Technology Limited')<html.indexOf('Company & Product Qualifications'))
  assert.ok(html.indexOf('Company & Product Qualifications')<html.indexOf('Manufacturing Technology & Equipment'))
  assert.equal((html.match(/<video/g)||[]).length,2)
 })
