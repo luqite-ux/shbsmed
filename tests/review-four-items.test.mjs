@@ -8,9 +8,16 @@ test('review menus have three About entries, three information categories and pr
  assert.equal(news.label,'Information')
  assert.equal(news.children.map(x=>x.label).join('|'),'Industry Information|Corporate Information|Product Information')
  assert.equal(products.children.map(x=>x.children.length).join(','),'2,1,1')
- const html=await render('app/about/page.tsx')
- for(const item of about.children)assert.ok(html.includes('id="'+item.href.split('#')[1]+'"'))
+ assert.equal(about.children.map(x=>x.href).join('|'),'/about/company-introduction|/about/qualifications|/about/manufacturing-inspection')
+ for(const item of about.children){const html=await render('app'+item.href+'/page.tsx');assert.ok(html.includes('<main>'))}
  const home=await render('app/page.tsx')
- assert.ok(home.indexOf('data-business="news"')<home.indexOf('data-business="manufacturing"'))
- assert.equal((home.match(/id="manufacturing-inspection"/g)||[]).length,1)
+ assert.equal((home.match(/id="manufacturing-inspection"/g)||[]).length,0)
+})
+test('independent About pages do not repeat other sections or invent certificate images',async()=>{
+ const intro=(await render('app/about/company-introduction/page.tsx')).split('<main>')[1].split('</main>')[0]
+ assert.match(intro,/Founded in December 2015/)
+ assert.doesNotMatch(intro,/market-access certificates|<video/)
+ const qualifications=(await render('app/about/qualifications/page.tsx')).split('<main>')[1].split('</main>')[0]
+ assert.match(qualifications,/market-access certificates/)
+ assert.doesNotMatch(qualifications,/<img|<video|pending confirmation/)
 })

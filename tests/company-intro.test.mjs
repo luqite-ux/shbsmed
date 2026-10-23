@@ -11,7 +11,7 @@ test('both pages show the large cleanroom once and a company heading with two fa
   assert.equal((intro.match(/<p>/g)||[]).length,2)
   assert.doesNotMatch(intro,/Company Introduction|company entrance/)
   assert.equal((html.match(/alt="Brightstone Medical cleanroom production area"/g)||[]).length,1)
-  assert.match(html,/Assembly workstations/)
+  assert.doesNotMatch(html,/Assembly workstations/)
  }
 })
 test('paragraph formatting keeps the existing translated content key and all text',()=>{

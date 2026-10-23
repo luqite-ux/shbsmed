@@ -12,8 +12,8 @@ test('processing photograph appears only on the component page, replacing both o
  for(const html of [home,page])for(const old of ['Semi-finished needle tubes','Semi-finished needle assemblies'])assert.ok(!html.includes(old))
 })
 
-test('home and About use the same two uncropped photo pairs and portrait video layout',async()=>{
- for(const route of ['app/page.tsx','app/about/page.tsx']){
+test('dedicated manufacturing page retains uncropped photo pairs and portrait video layout',async()=>{
+ for(const route of ['app/about/manufacturing-inspection/page.tsx']){
   const html=await render(route)
   assert.equal((html.match(/class="meeting-about-block equipment-showcase"/g)||[]).length,2)
   assert.match(html,/class="manufacturing-video-pair"/)

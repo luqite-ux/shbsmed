@@ -11,8 +11,8 @@ test('banner actions lead to the three requested business pages',()=>{
 })
 test('updates page keeps three categories and an honest empty state',async()=>{
  const html=await render('app/news/page.tsx',{searchParams:Promise.resolve({category:'industry'})})
- for(const label of ['Industry Updates','Company Updates','Product Updates'])assert.ok(html.includes(label))
- assert.match(html,/No updates have been published in this category yet/)
+ for(const label of ['Industry Information','Corporate Information','Product Information'])assert.ok(html.includes(label))
+ assert.match(html,/No articles have been published in this category yet/)
  assert.doesNotMatch(html,/>News<|Industry News|Product News|Company News/)
  const {NewsList}=load('components/news-list.tsx')
  const articles=[{slug:'industry-test',category:'industry',title:'Industry item',publishedAt:'2026-10-22'},{slug:'company-test',category:'company',title:'Company item',publishedAt:'2026-10-22'}]

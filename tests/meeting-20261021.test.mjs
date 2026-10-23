@@ -28,15 +28,15 @@ export function load(file){
  return mod.exports
 }
 export const render=async(file,props)=>renderToStaticMarkup(await load(file).default(props)).replaceAll('&amp;','&')
-test('home follows the four-item review with manufacturing after information',async()=>{
+test('home ends with information under the October 23 review',async()=>{
  const html=await render('app/page.tsx')
  const sections=[...html.matchAll(/data-business="([^"]+)"/g)].map(m=>m[1])
- assert.deepEqual(sections,['banner','about','branded','oem','components','news','manufacturing'])
+ assert.deepEqual(sections,['banner','about','branded','oem','components','news'])
  for(const p of seed.odm)assert.ok(html.includes(p.image))
  for(const p of seed.products)assert.ok(html.includes(`href="/products/${p.slug}"`),'Home must show '+p.slug)
  assert.ok(html.includes('href="/products/spinal-anesthesia-needle"'))
  assert.ok(html.includes('href="/products/epidural-anesthesia-needle"'))
- assert.equal((html.match(/<video/g)||[]).length,2)
+ assert.equal((html.match(/<video/g)||[]).length,0)
  assert.doesNotMatch(html,/Reusable RF Electrode|ODM Products/)
 })
 
@@ -74,8 +74,8 @@ test('components show actual supplied parts without empty application-category t
  const html=await render('app/contract-manufacturing/page.tsx');for(const p of parts)assert.ok(html.includes(p.image))
  assert.doesNotMatch(html,/Interventional component requirements|aria-label="Component series"/)
 })
-test('About has ordered introduction qualifications equipment and both source videos',async()=>{
- const html=await render('app/about/page.tsx');assert.ok(html.indexOf('Shanghai Brightstone Medical Technology Limited')<html.indexOf('Company & Product Qualifications'))
- assert.ok(html.indexOf('Company & Product Qualifications')<html.indexOf('Manufacturing Technology & Equipment'))
+test('manufacturing page preserves equipment inspection and both source videos',async()=>{
+ const html=await render('app/about/manufacturing-inspection/page.tsx')
+ assert.ok(html.indexOf('Manufacturing Technology & Equipment')<html.indexOf('Quality Inspection Instruments'))
  assert.equal((html.match(/<video/g)||[]).length,2)
 })

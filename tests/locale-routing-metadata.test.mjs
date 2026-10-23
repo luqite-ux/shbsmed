@@ -24,9 +24,9 @@ test('updates listing replaces legacy CMS news metadata without changing article
   '@/lib/brand-settings':{getBrandSettings:async()=>({logo:'/logo.png',seoTitle:'Fallback',seoDescription:'Fallback'})},
  })
  const listing=await api.pageMetadata('/news',{})
- assert.equal(listing.title,'Updates')
- assert.equal(listing.openGraph.title,'Updates')
- assert.equal(listing.twitter.description,'Explore updates from Brightstone.')
+ assert.equal(listing.title,'Information')
+ assert.equal(listing.openGraph.title,'Information')
+ assert.equal(listing.twitter.description,'Explore information from Brightstone.')
  assert.equal((await api.pageMetadata('/news/customer-article',{})).title,'News')
 })
 test('single-language routes stay unprefixed and disabled locales are not selected',async()=>{

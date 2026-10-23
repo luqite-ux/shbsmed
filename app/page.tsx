@@ -5,7 +5,7 @@ import {HeroCarousel} from '@/components/hero-carousel'
 import {SiteHeader} from '@/components/site-header'
 import {SiteFooter} from '@/components/site-footer'
 import {Reveal} from '@/components/reveal'
-import {AboutContent,ManufacturingContent,OemContent,ComponentContent} from '@/components/meeting-sections'
+import {AboutContent,OemContent,ComponentContent} from '@/components/meeting-sections'
 import {getMedicalProducts,getOdmProducts,getContractComponents} from '@/lib/medical-products'
 import {HomeProductSeries} from '@/components/medical-catalog'
 import {getPublishedArticles} from '@/lib/articles-db'
@@ -20,6 +20,5 @@ export default async function Home(){
  <section className="medical-shell framework-section" data-business="oem"><Reveal><h2><SiteText value="OEM"/></h2></Reveal><OemContent items={oem}/></section>
  <section className="medical-shell framework-section" data-business="components"><Reveal><h2><SiteText value="Component Manufacturing"/></h2></Reveal><ComponentContent items={parts} showProductionPhoto={false}/></section>
  <section className="medical-shell framework-section" data-business="news"><Reveal><h2><SiteText value="Information"/></h2></Reveal><NewsList articles={articles} compact/><Link className="medical-button mt-6" href="/news"><SiteText value="View Information →"/></Link></section>
- <section className="medical-shell framework-section" data-business="manufacturing"><ManufacturingContent/></section>
  </main><SiteFooter/></SiteContentVersion>
 }

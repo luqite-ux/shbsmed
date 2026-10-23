@@ -9,9 +9,9 @@ type Entry={label:string;href:string;children?:Entry[]}
 export const navigation:Entry[]=[
  {label:'Home',href:'/'},
  {label:'About Us',href:'/about',children:[
-  {label:'Company Introduction',href:'/about#company-introduction'},
-  {label:'Qualifications',href:'/about#qualifications'},
-  {label:'Manufacturing Equipment & Inspection Instruments',href:'/about#manufacturing-inspection'},
+  {label:'Company Introduction',href:'/about/company-introduction'},
+  {label:'Qualifications',href:'/about/qualifications'},
+  {label:'Manufacturing Equipment & Inspection Instruments',href:'/about/manufacturing-inspection'},
  ]},
  {label:'Branded Products',href:'/products',children:[
   {label:'Pain Management Series',href:'/products?series=pain',children:[

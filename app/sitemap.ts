@@ -14,7 +14,7 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
  if(ce||pe||ae)throw new Error('Sitemap data service is unavailable')
  const {rfCategories}=await import('@/lib/catalog-model.mjs')
  const cats=categories||[],items=products||[]
- const routes=new Map<string,string|undefined>(['','/products','/odm-oem','/contract-manufacturing','/about','/news','/contact'].map(path=>[path,undefined]))
+ const routes=new Map<string,string|undefined>(['','/products','/odm-oem','/contract-manufacturing','/about/company-introduction','/about/qualifications','/about/manufacturing-inspection','/news','/contact'].map(path=>[path,undefined]))
  for(const c of rfCategories(cats))if(items.some(p=>p.category_slug===c.slug))routes.set(`/products/${c.slug}`,items.filter(p=>p.category_slug===c.slug).map(p=>p.updated_at).filter(Boolean).sort().at(-1))
  for(const a of articles||[])routes.set(`/news/${a.slug}`,a.updated_at||a.published_at)
  const result:MetadataRoute.Sitemap=[]

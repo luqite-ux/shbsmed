@@ -5,6 +5,9 @@ import Products,{generateMetadata as productsMetadata} from '@/app/products/page
 import Product,{generateMetadata as productMetadata} from '@/app/products/[slug]/page'
 import Odm,{generateMetadata as odmMetadata} from '@/app/odm-oem/page'
 import About,{generateMetadata as aboutMetadata} from '@/app/about/page'
+import CompanyIntroduction,{generateMetadata as companyMetadata} from '@/app/about/company-introduction/page'
+import Qualifications,{generateMetadata as qualificationsMetadata} from '@/app/about/qualifications/page'
+import ManufacturingInspection,{generateMetadata as manufacturingMetadata} from '@/app/about/manufacturing-inspection/page'
 import Contract,{generateMetadata as contractMetadata} from '@/app/contract-manufacturing/page'
 import News,{generateMetadata as newsMetadata} from '@/app/news/page'
 import Article,{generateMetadata as articleMetadata} from '@/app/news/[slug]/page'
@@ -28,6 +31,7 @@ export async function generateMetadata(props:Props):Promise<Metadata>{
  const r=await route(props);let metadata:Metadata={}
  if(r.page.length===0)metadata=await homeMetadata()
  else if(r.page.length===1){const generators:Record<string,()=>Promise<Metadata>>={products:productsMetadata,'odm-oem':odmMetadata,'contract-manufacturing':contractMetadata,about:aboutMetadata,news:newsMetadata,contact:contactMetadata};if(!generators[r.page[0]])notFound();metadata=await generators[r.page[0]]()}
+ else if(r.page[0]==='about'){const generators:Record<string,()=>Promise<Metadata>>={'company-introduction':companyMetadata,qualifications:qualificationsMetadata,'manufacturing-inspection':manufacturingMetadata};if(!generators[r.page[1]])notFound();metadata=await generators[r.page[1]]()}
  else{const generators:Record<string,({params}:{params:Promise<{slug:string}>})=>Promise<Metadata>>={products:productMetadata,news:articleMetadata};if(!generators[r.page[0]])notFound();metadata=await generators[r.page[0]]({params:r.slug})}
  return pageMetadata(r.path,metadata,r.locale)
 }
@@ -35,5 +39,6 @@ export default async function LocalizedPage(props:Props){
  const r=await route(props)
  if(!r.page.length)return <Home/>
  if(r.page.length===1){switch(r.page[0]){case'products':return <Products searchParams={props.searchParams}/>;case'odm-oem':return <Odm/>;case'contract-manufacturing':return <Contract/>;case'about':return <About/>;case'news':return <News searchParams={props.searchParams}/>;case'contact':return <Contact searchParams={props.searchParams}/>;default:notFound()}}
+ if(r.page[0]==='about'){switch(r.page[1]){case'company-introduction':return <CompanyIntroduction/>;case'qualifications':return <Qualifications/>;case'manufacturing-inspection':return <ManufacturingInspection/>;default:notFound()}}
  switch(r.page[0]){case'products':return <Product params={r.slug}/>;case'news':return <Article params={r.slug}/>;default:notFound()}
 }
