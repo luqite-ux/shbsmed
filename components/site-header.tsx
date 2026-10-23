@@ -43,7 +43,7 @@ function Entries({items,onNavigate,level=0}:{items:Entry[];onNavigate:()=>void;l
  const group=useId()
  return <>{items.map(item=>item.children?<details key={item.href} name={group} className={level===0?'review-nav-menu':'review-nav-submenu'}>
   <summary onClick={event=>closeSiblingMenus(event.currentTarget.parentElement as HTMLDetailsElement)}><SiteText value={item.label}/></summary>
-  <div className="review-nav-panel"><Link href={item.href} onClick={onNavigate}><SiteText value={item.label}/></Link><Entries items={item.children} onNavigate={onNavigate} level={level+1}/></div>
+  <div className="review-nav-panel">{item.href!=='/about'&&<Link href={item.href} onClick={onNavigate}><SiteText value={item.label}/></Link>}<Entries items={item.children} onNavigate={onNavigate} level={level+1}/></div>
  </details>:<Link key={item.href} href={item.href} onClick={onNavigate}><SiteText value={item.label}/></Link>)}</>
 }
 export function SiteHeader(){
