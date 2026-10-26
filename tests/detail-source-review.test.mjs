@@ -3,9 +3,9 @@ import assert from 'node:assert/strict'
 import {readFileSync} from 'node:fs'
 import {render} from './meeting-fixture.mjs'
 const seed=JSON.parse(readFileSync(new URL('../lib/site-seed.json',import.meta.url)))
-test('electrode detail includes the supplied anatomy photo and preserves compatibility source numbers',async()=>{
+test('electrode detail excludes the other configuration photo and preserves compatibility source numbers',async()=>{
  const html=await render('app/products/[slug]/page.tsx',{params:Promise.resolve({slug:'rf-electrodes'})})
- assert.ok(html.includes(seed.electrodeStructure),'Customer anatomy photograph must be visible')
+ assert.ok(!html.includes(seed.electrodeStructure),'Latest REQ24 permits only the current product and its own close-up')
  assert.match(html,/RC201010L-BM/)
  assert.match(html,/L-suffix.*Y-suffix/)
 })

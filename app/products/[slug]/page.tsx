@@ -10,8 +10,7 @@ import {getMedicalProducts} from '@/lib/medical-products'
 import {pageMetadata} from '@/lib/site-content/metadata'
 import {historicalProducts} from '@/lib/framework-pending-products'
 import {PendingPanel} from '@/components/framework-pending'
-import {productSummaries,productStructures} from '@/lib/meeting-product-copy'
-import seed from '@/lib/site-seed.json'
+import {productSummaries} from '@/lib/meeting-product-copy'
 export const dynamicParams=true
 export const revalidate=60
 async function find(slug:string){const p=(await getMedicalProducts()).find(p=>p.slug===slug||p.variants.some(v=>v.model.toLowerCase()===slug));return p?{...p,description:productSummaries[p.slug]||''}:undefined}
@@ -28,7 +27,7 @@ export default async function Detail({params}:{params:Promise<{slug:string}>}){
   <Reveal as="section" className="medical-shell product-detail-grid"><ZoomImage src={historical.image} alt={historical.name}/><div><PendingPanel title="Current product information">Historical image — current models, specifications, matching products and product details pending confirmation.</PendingPanel><Link className="medical-button mt-8" href={`/contact?product=${historical.slug}`}><SiteText value="Inquire About This Product →"/></Link><p className="mt-6"><Link href={`/products?series=${historical.series}`}><SiteText value="Back to product series →"/></Link></p></div></Reveal>
  </PageFrame>
  const p=await find(slug);if(!p)notFound()
- const electrode=p.slug==='rf-electrodes',structureImage=electrode?seed.electrodeStructure:p.tipImage
+ const electrode=p.slug==='rf-electrodes',structureImage=electrode?null:p.tipImage
  return <PageFrame eyebrow="Products" title={p.name} description="">
   <Reveal as="section" className="medical-shell product-detail-grid">
    <div className="product-stage integrated-product-gallery"><ZoomImage src={p.image} alt={p.name}/>{structureImage&&<div className="product-detail-inset"><ZoomImage src={structureImage} alt={`${p.name} detail`}/></div>}</div>
