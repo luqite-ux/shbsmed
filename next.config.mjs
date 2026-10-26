@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Bound build workers on memory-constrained delivery machines.
+  experimental: { cpus: 2 },
   typescript: {
     ignoreBuildErrors: false,
   },

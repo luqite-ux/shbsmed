@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {render} from './meeting-20261021.test.mjs'
+import {render} from './meeting-fixture.mjs'
 test('anesthesia details do not invent missing specifications',async()=>{
  const html=await render('app/products/[slug]/page.tsx',{params:Promise.resolve({slug:'epidural-anesthesia-needle'})})
  assert.match(html,/pending confirmation/);assert.doesNotMatch(html,/<table/)

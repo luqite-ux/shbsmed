@@ -1,5 +1,6 @@
 import type {Metadata} from 'next'
 import {notFound,permanentRedirect} from 'next/navigation'
+import Search,{generateMetadata as searchMetadata} from '@/app/search/page'
 import Home,{generateMetadata as homeMetadata} from '@/app/page'
 import Products,{generateMetadata as productsMetadata} from '@/app/products/page'
 import Product,{generateMetadata as productMetadata} from '@/app/products/[slug]/page'
@@ -16,7 +17,7 @@ import {siteLanguages} from '@/lib/locale'
 import {pageMetadata} from '@/lib/site-content/metadata'
 export const dynamicParams=true
 export const revalidate=60
-type Props={params:Promise<{locale:string;page?:string[]}>;searchParams:Promise<{product?:string;type?:string;series?:string;category?:string}>}
+type Props={params:Promise<{locale:string;page?:string[]}>;searchParams:Promise<{product?:string;type?:string;series?:string;category?:string;q?:string}>}
 async function route(props:Props){
  const {locale,page=[]}=await props.params,config=await siteLanguages()
  if(!config.locales.includes(locale))notFound()
@@ -30,7 +31,7 @@ async function route(props:Props){
 export async function generateMetadata(props:Props):Promise<Metadata>{
  const r=await route(props);let metadata:Metadata={}
  if(r.page.length===0)metadata=await homeMetadata()
- else if(r.page.length===1){const generators:Record<string,()=>Promise<Metadata>>={products:productsMetadata,'odm-oem':odmMetadata,'contract-manufacturing':contractMetadata,about:aboutMetadata,news:newsMetadata,contact:contactMetadata};if(!generators[r.page[0]])notFound();metadata=await generators[r.page[0]]()}
+ else if(r.page.length===1){const generators:Record<string,()=>Promise<Metadata>>={search:searchMetadata,products:productsMetadata,'odm-oem':odmMetadata,'contract-manufacturing':contractMetadata,about:aboutMetadata,news:newsMetadata,contact:contactMetadata};if(!generators[r.page[0]])notFound();metadata=await generators[r.page[0]]()}
  else if(r.page[0]==='about'){const generators:Record<string,()=>Promise<Metadata>>={'company-introduction':companyMetadata,qualifications:qualificationsMetadata,'manufacturing-inspection':manufacturingMetadata};if(!generators[r.page[1]])notFound();metadata=await generators[r.page[1]]()}
  else{const generators:Record<string,({params}:{params:Promise<{slug:string}>})=>Promise<Metadata>>={products:productMetadata,news:articleMetadata};if(!generators[r.page[0]])notFound();metadata=await generators[r.page[0]]({params:r.slug})}
  return pageMetadata(r.path,metadata,r.locale)
@@ -38,7 +39,7 @@ export async function generateMetadata(props:Props):Promise<Metadata>{
 export default async function LocalizedPage(props:Props){
  const r=await route(props)
  if(!r.page.length)return <Home/>
- if(r.page.length===1){switch(r.page[0]){case'products':return <Products searchParams={props.searchParams}/>;case'odm-oem':return <Odm/>;case'contract-manufacturing':return <Contract/>;case'about':return <About/>;case'news':return <News searchParams={props.searchParams}/>;case'contact':return <Contact searchParams={props.searchParams}/>;default:notFound()}}
+ if(r.page.length===1){switch(r.page[0]){case'search':return <Search searchParams={props.searchParams}/>;case'products':return <Products searchParams={props.searchParams}/>;case'odm-oem':return <Odm searchParams={props.searchParams}/>;case'contract-manufacturing':return <Contract searchParams={props.searchParams}/>;case'about':return <About/>;case'news':return <News searchParams={props.searchParams}/>;case'contact':return <Contact searchParams={props.searchParams}/>;default:notFound()}}
  if(r.page[0]==='about'){switch(r.page[1]){case'company-introduction':return <CompanyIntroduction/>;case'qualifications':return <Qualifications/>;case'manufacturing-inspection':return <ManufacturingInspection/>;default:notFound()}}
  switch(r.page[0]){case'products':return <Product params={r.slug}/>;case'news':return <Article params={r.slug}/>;default:notFound()}
 }

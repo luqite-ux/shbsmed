@@ -9,14 +9,14 @@ const {renderToStaticMarkup}=require('react-dom/server')
 function load(file){
  const filename=new URL(`../${file}`,import.meta.url)
  const js=ts.transpileModule(readFileSync(filename,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText
- const module={exports:{}}
+ const loadedModule={exports:{}}
  const aliases={
   '@/components/localized-link':{default:({children,...props})=>React.createElement('a',props,children)},
   '@/components/reveal':{Reveal:({children})=>React.createElement('div',null,children)},
   '@/components/site-copy':{SiteText:({value})=>value},
  }
- vm.runInNewContext(js,{module,exports:module.exports,require:name=>name==='@/components/medical-catalog'?load('components/medical-catalog.tsx'):aliases[name]||loadAlias(name,aliases)})
- return module.exports
+ vm.runInNewContext(js,{module:loadedModule,exports:loadedModule.exports,require:name=>name==='@/components/medical-catalog'?load('components/medical-catalog.tsx'):aliases[name]||loadAlias(name,aliases)})
+ return loadedModule.exports
 }
 // Replacing application categories with manufacturing-process categories must fail.
 test('component navigation retains all five application categories without assigning unverified products',()=>{

@@ -1,24 +1,13 @@
 "use client"
-
-import {SiteText,SiteImage} from '@/components/site-copy'
-import Link from '@/components/localized-link'
-import { useEffect, useState } from "react"
-import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
-import seed from "@/lib/site-seed.json"
-export function HeroCarousel({slides=seed.slides}:{slides?:typeof seed.slides}) {
- const [index,setIndex]=useState(0),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(true)
- const [hovered,setHovered]=useState(false),[focused,setFocused]=useState(false)
+import {useEffect,useState} from 'react'
+import {ChevronLeft,ChevronRight,Pause,Play} from 'lucide-react'
+import {SiteText} from '@/components/site-copy'
+import banners from '@/lib/feedback-banners.json'
+export const BANNER_INTERVAL_MS=14000
+export function HeroCarousel({slides=banners}:{slides?:typeof banners}){
+ const [index,setIndex]=useState(0),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(true),[hovered,setHovered]=useState(false),[focused,setFocused]=useState(false)
  useEffect(()=>{const q=matchMedia('(prefers-reduced-motion: reduce)');setReduced(q.matches);const f=()=>setReduced(q.matches);q.addEventListener('change',f);return()=>q.removeEventListener('change',f)},[])
- useEffect(()=>{if(paused||reduced||hovered||focused)return;const t=setInterval(()=>{if(!document.hidden)setIndex(i=>(i+1)%slides.length)},7000);return()=>clearInterval(t)},[paused,reduced,hovered,focused,slides.length])
- const active=slides[index]
- return <section aria-label="Brightstone Medical highlights" aria-roledescription="carousel" className={`medical-hero ${active.theme==='dark'?'hero-dark':'hero-light'}`} onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)} onFocus={()=>setFocused(true)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget))setFocused(false)}}>
-  <div className="hero-stage">
-   {slides.map((s,i)=><SiteImage key={s.id} src={s.image} alt="" aria-hidden={index!==i} fetchPriority={i===0?'high':'auto'} className={`hero-image ${index===i?'active':''}`} style={{objectPosition:s.focus}}/>) }
-   <div key={active.id} className={`hero-copy hero-copy-${active.side} hero-copy-${active.id}`} data-slide-copy={active.id}>
-    <p className="eyebrow"><SiteText value={"Brightstone Medical"}/></p><h1><SiteText value={active.heading}/></h1><p className="hero-description"><SiteText value={active.description}/></p>
-    <Link className="medical-button" href={active.href}><SiteText value={active.cta}/><ArrowRight size={17}/></Link>
-   </div>
-  </div>
-  <div className="hero-controls"><div className="flex items-center gap-2">{slides.map((s,i)=><button key={s.id} onClick={()=>{setIndex(i);setPaused(true)}} aria-label={`Show Banner ${i+1}`} aria-current={index===i?'true':undefined} className={`hero-dot ${index===i?'active':''}`}/>)}</div><div className="flex gap-1"><button aria-label="Previous Banner" onClick={()=>{setIndex(i=>(i+slides.length-1)%slides.length);setPaused(true)}}><ChevronLeft size={18}/></button><button aria-label={paused?'Play Banners':'Pause Banners'} onClick={()=>setPaused(p=>!p)}>{paused?<Play size={17}/>:<Pause size={17}/>}</button><button aria-label="Next Banner" onClick={()=>{setIndex(i=>(i+1)%slides.length);setPaused(true)}}><ChevronRight size={18}/></button></div></div>
- </section>
+ useEffect(()=>{if(paused||reduced||hovered||focused||slides.length<2)return;const t=setInterval(()=>{if(!document.hidden)setIndex(i=>(i+1)%slides.length)},BANNER_INTERVAL_MS);return()=>clearInterval(t)},[paused,reduced,hovered,focused,slides.length])
+ const move=(step:number)=>{setIndex(i=>(i+step+slides.length)%slides.length);setPaused(true)}
+ return <section aria-label="Brightstone Medical highlights" aria-roledescription="carousel" className="feedback-hero" onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)} onFocus={()=>setFocused(true)} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setFocused(false)}}><div className="feedback-hero-stage">{slides.map((slide,i)=><div key={slide.id} className={`feedback-slide feedback-slide-${slide.id} ${i===index?'active':''}`} aria-hidden={i!==index} data-banner={i+1}><img className="banner-with-copy" src={slide.id==='brand'?slide.mobileImage:slide.image} alt={slide.id==='brand'?'':slide.heading} fetchPriority={i===0?'high':'auto'}/><img className="banner-mobile-art" src={slide.mobileImage} alt=""/><div className="banner-mobile-copy">{i===0?<h1><SiteText value={slide.heading}/></h1>:<p><SiteText value={slide.heading}/></p>}</div></div>)}</div><button className="banner-side banner-previous" type="button" aria-label="Previous Banner" onClick={()=>move(-1)}><ChevronLeft/></button><button className="banner-side banner-next" type="button" aria-label="Next Banner" onClick={()=>move(1)}><ChevronRight/></button><div className="banner-bottom"><span aria-live="polite">{index+1} / {slides.length}</span><button type="button" aria-label={paused?'Play Banners':'Pause Banners'} onClick={()=>setPaused(p=>!p)}>{paused?<Play size={16}/>:<Pause size={16}/>}</button></div></section>
 }

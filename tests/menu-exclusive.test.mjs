@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {load} from './meeting-20261021.test.mjs'
+import {load} from './meeting-fixture.mjs'
 
 test('opening a menu closes only its siblings, preserving the parent menu',()=>{
  const {closeSiblingMenus}=load('components/site-header.tsx')

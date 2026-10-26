@@ -5,7 +5,7 @@ export const company = {
   legalNameZh: "上海明石医疗科技有限公司",
   brandName: "Brightstone Medical",
   founded: "December 2015",
-  address: "Building 1, Floor 3, No. 78 Kangtai Road, Zhujiajiao Town, Qingpu District, Shanghai, China",
+  address: "Building 1, No. 78 Kangtai Road, Zhujiajiao Town, Qingpu District, Shanghai, China",
   domain: "shbsmed.com",
   email: "info@shbsmed.com",
   facilityArea: "2,000 sqm",

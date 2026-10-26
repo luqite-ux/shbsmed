@@ -1,0 +1,20 @@
+[
+  {
+    "id": "brand",
+    "heading": "Every self-developed product upholds our brand commitment to compliance and quality",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/c230608822dcf35bd39da093d49d9b05c5779e571c34ba2d0c9ec7f2f370ce60.webp",
+    "mobileImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/4e23574b5a827f575d753b3dc4a09e18c2aba010e354743a0d2c93e5aaeb76e5.webp"
+  },
+  {
+    "id": "oem",
+    "heading": "Every OEM project empowers partners with proven technology and production lines",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/0d0a524580ab2761f66eaf99cf15dd2e73f30b59b4c05a176de595827785bb18.webp",
+    "mobileImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/9aef7eaccf95f53c86fce85f9117e0e78030542b123ec53de1bf99c58275621c.webp"
+  },
+  {
+    "id": "components",
+    "heading": "Every batch of core component manufacturing brings your functional and quality vision to life",
+    "image": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/c01fc8e58357b0fb72fe3f971b9f9ab4fc7bb8dfbd734c70e6dc600d43884e5a.webp",
+    "mobileImage": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/fd8a0387-ffb2-4cf1-87d3-be3a3a15810b/feedback-20261026/329f6797d600dcdbfc5a9aeaef901921d477be6e57e63fc63759a8b747819a06.webp"
+  }
+]

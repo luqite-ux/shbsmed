@@ -23,9 +23,9 @@ async function renderDetail(route,description){
   '@/lib/medical-products':{getOdmProducts:async()=>[product],getContractComponents:async()=>[product]},
   '@/lib/site-content/metadata':{pageMetadata:()=>({})},
  }
- const module={exports:{}}
- vm.runInNewContext(js,{module,exports:module.exports,require:n=>n in modules?modules[n]:loadAlias(n,modules)})
- return renderToStaticMarkup(await module.exports.default({params:Promise.resolve({slug:'test-needle'})}))
+ const loadedModule={exports:{}}
+ vm.runInNewContext(js,{module:loadedModule,exports:loadedModule.exports,require:n=>n in modules?modules[n]:loadAlias(n,modules)})
+ return renderToStaticMarkup(await loadedModule.exports.default({params:Promise.resolve({slug:'test-needle'})}))
 }
 test('contract product adapter retains the requested-language description',async()=>{
  const source=readFileSync(new URL('../lib/medical-products.ts',import.meta.url),'utf8')
@@ -33,9 +33,9 @@ test('contract product adapter retains the requested-language description',async
  const rows={product_categories:[{id:'c1',slug:'contract-components',name:'Components'}],products:[{slug:'part',category_slug:'contract-components',name:'Part',description_i18n:{en:'English description',zh:'中文说明'}}]}
  const db={from(table){const q={select(){return q},eq(){return q},order(){return q},then(resolve){return Promise.resolve({data:rows[table],error:null}).then(resolve)}};return q}}
  const modules={'server-only':{},react:{cache:fn=>fn},'@/lib/supabase':{getSupabaseClient:()=>db},'@/lib/catalog-model.mjs':catalog,'@/lib/locale':{currentLocale:async()=>'en',siteLanguages:async()=>({defaultLocale:'en',locales:['en']})}}
- const module={exports:{}}
- vm.runInNewContext(js,{module,exports:module.exports,process:{env:{NEXT_PUBLIC_TENANT_ID:'test-tenant'}},require:n=>modules[n]})
- assert.equal((await module.exports.getContractComponents('zh'))[0].description,'中文说明')
+ const loadedModule={exports:{}}
+ vm.runInNewContext(js,{module:loadedModule,exports:loadedModule.exports,process:{env:{NEXT_PUBLIC_TENANT_ID:'test-tenant'}},require:n=>modules[n]})
+ assert.equal((await loadedModule.exports.getContractComponents('zh'))[0].description,'中文说明')
 })
 // October 21 explicitly defers OEM and component details. Adapter localization remains covered above;
 // current gallery redirects and absent-spec handling are exercised by inner-framework.test.mjs.

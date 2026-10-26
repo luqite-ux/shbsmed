@@ -1,21 +1,21 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {render} from './meeting-20261021.test.mjs'
+import {render} from './meeting-fixture.mjs'
 import {readFileSync} from 'node:fs'
 
-test('processing photograph appears only on the component page, replacing both old snapshots',async()=>{
+test('component page follows the latest series-only presentation',async()=>{
  const home=await render('app/page.tsx')
  const page=await render('app/contract-manufacturing/page.tsx')
  assert.ok(!home.includes('component-processing-photo'))
- assert.equal((page.match(/class="component-processing-photo"/g)||[]).length,1)
- assert.ok(page.includes('Needle tubes during processing'))
+ assert.equal((page.match(/class="component-processing-photo"/g)||[]).length,0)
+ assert.ok(page.includes('Core Component Manufacturing'))
  for(const html of [home,page])for(const old of ['Semi-finished needle tubes','Semi-finished needle assemblies'])assert.ok(!html.includes(old))
 })
 
 test('dedicated manufacturing page retains uncropped photo pairs and portrait video layout',async()=>{
  for(const route of ['app/about/manufacturing-inspection/page.tsx']){
   const html=await render(route)
-  assert.equal((html.match(/class="meeting-about-block equipment-showcase"/g)||[]).length,2)
+  assert.equal((html.match(/class="meeting-about-block equipment-showcase feedback-equipment"/g)||[]).length,2)
   assert.match(html,/class="manufacturing-video-pair"/)
   for(const caption of ['Assembly workstations','Automated printing equipment','Inspection instruments','Dimensional inspection area'])assert.ok(html.includes(caption))
   assert.equal((html.match(/<video/g)||[]).length,2)

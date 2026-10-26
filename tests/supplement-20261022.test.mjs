@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFileSync} from 'node:fs'
-import {render,load} from './meeting-20261021.test.mjs'
+import {render,load} from './meeting-fixture.mjs'
 import React from 'react'
 import {renderToStaticMarkup} from 'react-dom/server'
 test('banner actions lead to the three requested business pages',()=>{

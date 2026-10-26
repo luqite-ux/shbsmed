@@ -29,21 +29,12 @@ export default async function Detail({params}:{params:Promise<{slug:string}>}){
  </PageFrame>
  const p=await find(slug);if(!p)notFound()
  const electrode=p.slug==='rf-electrodes',structureImage=electrode?seed.electrodeStructure:p.tipImage
- return <PageFrame eyebrow="Products / Pain Management" title={p.name} description={p.description}>
+ return <PageFrame eyebrow="Products" title={p.name} description="">
   <Reveal as="section" className="medical-shell product-detail-grid">
-   <div className="product-stage"><ZoomImage src={p.image} alt={p.name}/></div>
+   <div className="product-stage integrated-product-gallery"><ZoomImage src={p.image} alt={p.name}/>{structureImage&&<div className="product-detail-inset"><ZoomImage src={structureImage} alt={`${p.name} detail`}/></div>}</div>
    <div><p className="eyebrow"><SiteText value="Product overview"/></p><h2 className="text-3xl font-semibold"><SiteText value={electrode?'RF electrode configurations':'Tip structure and dimensions'}/></h2>
     <p className="medical-intro"><SiteText value={p.description}/></p>
     <Link className="medical-button" href={`/contact?product=${p.slug}`}><SiteText value="Inquire About This Product →"/></Link>
-   </div>
-  </Reveal>
-  <Reveal as="section" className="medical-shell medical-section product-structure-section">
-   <h2><SiteText value="Structure & Configuration"/></h2>
-   <div className="product-structure-grid">
-    {structureImage&&<figure className="product-structure-photo"><ZoomImage src={structureImage} alt={electrode?'RF electrode working end and connection end':`${p.name} tip structure`}/><figcaption><SiteText value={electrode?'Working end and connection end':'Tip structure'}/></figcaption></figure>}
-    <div><ul className="list-disc space-y-3 pl-5 leading-relaxed">{(productStructures[p.slug]||[]).map(text=><li key={text}><SiteText value={text}/></li>)}</ul>
-     {p.slug==='side-port-rf-cannulas'&&<PendingPanel title="Compatibility confirmation">{compatibilityNote}</PendingPanel>}
-    </div>
    </div>
   </Reveal>
   <section className="medical-light"><Reveal as="section" className="medical-shell medical-section">
@@ -52,7 +43,7 @@ export default async function Detail({params}:{params:Promise<{slug:string}>}){
     <tbody>{p.variants.map(v=><tr key={v.model} id={v.model.toLowerCase()}><td>{v.model}</td><td>{v.gauge}</td><td>{v.length}</td>{!electrode&&<td>{v.activeTip}</td>}<td>{v.color}</td><td>{v.moq}</td></tr>)}</tbody>
    </table></div>
    {electrode&&<div className="medical-copy-panel"><h3><SiteText value="Electrode and cannula compatibility"/></h3><p><SiteText value="RE2750-BM, RE27100-BM and RE27150-BM are used with RF cannulas of the same effective length."/></p><p><SiteText value="RE27100B-BM: RC201010L-BM or RC181010L-BM only."/><br/><SiteText value="RE27150B-BM: RC201510L-BM or RC181510L-BM only."/></p><PendingPanel title="Compatibility confirmation">{compatibilityNote}</PendingPanel></div>}
-   <p className="mt-8"><Link href="/products?series=pain"><SiteText value="Back to product series →"/></Link></p>
+   <p className="mt-8"><Link href={`/products?series=${electrode?'electrode-sets':'cannulas'}`}><SiteText value="Back to product series →"/></Link></p>
   </Reveal></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'Product',name:p.name,description:p.description,image:p.image,url:`https://shbsmed.com/products/${p.slug}`,manufacturer:{'@id':'https://shbsmed.com/#organization'}})}}/>
  </PageFrame>

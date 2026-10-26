@@ -1,14 +1,14 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {render,load} from './meeting-20261021.test.mjs'
+import {render,load} from './meeting-fixture.mjs'
 import {createRequire} from 'node:module'
 const require=createRequire(import.meta.url),React=require('react'),{renderToStaticMarkup}=require('react-dom/server')
-test('both pages show the large cleanroom once and a company heading with two factual paragraphs',async()=>{
+test('both pages show the large cleanroom once and three latest factual paragraphs without a repeated company heading',async()=>{
  for(const page of ['app/page.tsx','app/about/page.tsx']){
-  const html=await render(page),intro=html.match(/class="meeting-company"[\s\S]*?<\/section>/)?.[0]
+  const html=await render(page),intro=html.match(/class="meeting-company feedback-company"[\s\S]*?<\/section>/)?.[0]
   assert.ok(intro)
-  assert.match(intro,/<h3>Shanghai Brightstone Medical Technology Limited<\/h3>/)
-  assert.equal((intro.match(/<p>/g)||[]).length,2)
+  assert.doesNotMatch(intro,/<h3/);assert.match(intro,/20/);assert.match(intro,/10/)
+  assert.equal((intro.match(/<p>/g)||[]).length,3)
   assert.doesNotMatch(intro,/Company Introduction|company entrance/)
   assert.equal((html.match(/alt="Brightstone Medical cleanroom production area"/g)||[]).length,1)
   assert.doesNotMatch(html,/Assembly workstations/)

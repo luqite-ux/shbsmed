@@ -10,14 +10,14 @@ const {renderToStaticMarkup}=require('react-dom/server')
 function load(file){
  const source=readFileSync(new URL(`../components/${file}.tsx`,import.meta.url),'utf8')
  const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText
- const module={exports:{}}
+ const loadedModule={exports:{}}
  const aliases={
   '@/components/localized-link':{__esModule:true,default:({children,...props})=>React.createElement('a',props,children)},
   '@/components/reveal':{Reveal:({children})=>React.createElement('div',null,children)},
   '@/components/site-copy':{SiteText:({value})=>value},
  }
- vm.runInNewContext(js,{module,exports:module.exports,require:name=>name==='@/components/medical-catalog'?load('medical-catalog'):aliases[name]||loadAlias(name,aliases)})
- return module.exports
+ vm.runInNewContext(js,{module:loadedModule,exports:loadedModule.exports,require:name=>name==='@/components/medical-catalog'?load('medical-catalog'):aliases[name]||loadAlias(name,aliases)})
+ return loadedModule.exports
 }
 for(const [file,component,props,label] of [
  ['medical-catalog','ProductSeries',{items:[]},'Product series'],

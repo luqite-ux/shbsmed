@@ -1,0 +1,6 @@
+// Latest customer feedback, requirement 14, including its IP paragraph.
+export const companyIntroduction = [
+ 'From the outset, our company has focused on medical device research, development and manufacturing to high standards. We have developed a range of medical puncture instruments and electrodes, including single-use RF electrodes, RF cannulas, spinal needles and epidural needles. We have established a medical device quality management system that meets Chinese and US regulatory requirements and ISO 13485, and have obtained market-access documentation for the United States (FDA), the European Union (CE) and China (NMPA).',
+ 'Guided by our commitment to quality, innovation and excellence, we have obtained nearly 20 invention or utility model patents and 10 software copyrights relating to new products, process technologies and equipment in recent years.',
+ 'We are committed to helping relieve patients’ pain and serving colleagues across the global medical industry. Alongside compliant, high-quality branded products, we offer OEM and custom component manufacturing solutions, drawing on decades of specialist expertise and the mature production lines established since our company was founded.',
+]
