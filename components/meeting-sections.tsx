@@ -1,7 +1,7 @@
 import {SiteText,SiteImage} from '@/components/site-copy'
 import {Reveal} from '@/components/reveal'
 import {ZoomImage,ProcessVideo} from '@/components/medical-media'
-import {PhotoGroup} from '@/components/medical-sections'
+import {QualificationGallery,AttachmentPhotoGallery} from '@/components/attachment-galleries'
 import seed from '@/lib/site-seed.json'
 import {processVideoIntro} from '@/lib/meeting-business-copy'
 import {companyIntroduction} from '@/lib/feedback-company-copy'
@@ -12,12 +12,12 @@ export function AboutContent({includeManufacturing=true,section}:{includeManufac
  {section!=='qualifications'&&<>
  <div id="company-introduction" className="scroll-mt-32"><Reveal className="meeting-company feedback-company"><SiteImage src={seed.photos.find(p=>p.title==='Cleanroom production area')!.image} alt="Brightstone Medical cleanroom production area" width={890} height={461}/><div className="meeting-company-copy">{companyIntroduction.map(text=><p key={text}><SiteText value={text}/></p>)}</div></Reveal></div>
  </>}
- {section!=='company'&&<div id="qualifications" className="scroll-mt-32"><Reveal className="meeting-about-block"><h3><SiteText value="Company & Product Qualifications"/></h3></Reveal></div>}
+ {section!=='company'&&<div id="qualifications" className="scroll-mt-32"><Reveal className="meeting-about-block"><h3><SiteText value="Company & Product Qualifications"/></h3><QualificationGallery/></Reveal></div>}
  {includeManufacturing&&!section&&<ManufacturingContent/>}
  </div>}
 export function ManufacturingContent(){return <div id="manufacturing-inspection" className="meeting-about scroll-mt-32">
- <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Manufacturing Technology & Equipment"/></h3><PhotoGroup captions={false} layout="production" items={seed.photos.filter(p=>p.group==='equipment'||p.title==='Assembly workstations')}/></Reveal>
- <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Quality Inspection Instruments"/></h3><PhotoGroup captions={false} layout="inspection" items={seed.photos.filter(p=>p.group==='quality')}/></Reveal>
+ <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Manufacturing Technology & Equipment"/></h3><AttachmentPhotoGallery group="manufacturing"/></Reveal>
+ <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Quality Inspection Instruments"/></h3><AttachmentPhotoGallery group="inspection"/></Reveal>
  <Reveal className="meeting-about-block manufacturing-showcase"><div className="manufacturing-section-copy"><h3><SiteText value="Manufacturing Videos"/></h3><p><SiteText value={processVideoIntro}/></p></div><div className="manufacturing-video-pair">{seed.videos.map((v,i)=><Reveal key={v.src} delay={i*90}><ProcessVideo {...v}/></Reveal>)}</div></Reveal>
  </div>}
 
