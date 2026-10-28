@@ -4,7 +4,7 @@ import {SiteText} from '@/components/site-copy'
 import assets from '@/lib/customer-attachments.json'
 
 export function QualificationGallery(){return <div className="attachment-certificates">{assets.certificates.map(item=><Reveal as="figure" key={item.order}>
- <ZoomImage src={item.image} alt={item.title}/>
+ <ZoomImage src={item.image} alt={item.title} quarterTurn={item.order===2}/>
  <figcaption><SiteText value={item.title}/></figcaption>
  <a href={item.document} target="_blank" rel="noopener noreferrer" className="attachment-document"><SiteText value="View original document"/></a>
  </Reveal>)}</div>}
