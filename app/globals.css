@@ -529,4 +529,10 @@
 .attachment-document{display:inline-block;margin-top:8px;padding-block:6px;color:#194c63;text-decoration:underline;text-underline-offset:4px;font-size:14px}
 .attachment-photos .zoom-image{display:block;width:100%;height:auto;background:transparent}
 .attachment-photos .zoom-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.medical-card-image:has(img[src$='/4.1.webp']){background:#bbdce6}
+.medical-card-image:has(img[src$='/4.2.webp']){background:#c0d7e0}
+.medical-card-image:has(img[src$='/5.1.webp']){background:#bfd7e1}
+.medical-card-image:has(img[src$='/5.2.webp']){background:#c4dbe5}
+.medical-card-image:has(img[src$='/5.3.webp']){background:#bed6df}
+.medical-card-image:has(img[src$='/5.4.webp']){background:#b0d7e3}
 @media(max-width:767px){.attachment-certificates,.attachment-photos{grid-template-columns:1fr;gap:28px}.attachment-certificates .zoom-image{height:390px}}

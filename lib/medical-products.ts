@@ -3,10 +3,12 @@ import {cache} from 'react'
 import {getSupabaseClient} from '@/lib/supabase'
 import {localized as localizeValue,rfCategories,inCategoryBranch} from '@/lib/catalog-model.mjs'
 import {currentLocale,siteLanguages} from '@/lib/locale'
+import previewProducts from '@/lib/customer-preview-products.json'
 
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
+ if(process.env.VERCEL_ENV==='preview')return previewProducts.map(p=>({slug:p.slug,name:p.name,image:`/images/client-products-20261102/${p.id}.webp`,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:p.rows.map((r,i)=>({model:r[0]||`pending-${i}`,gauge:p.id==='4.1'?r[3]:p.id==='4.2'?r[3]:r[3],length:p.id==='4.1'?r[5]:p.id==='4.2'?r[4]:r[4],activeTip:p.id==='4.1'?r[6]:p.id==='4.2'?'':r[5],color:'',moq:''}))}))
  const locale=language||await currentLocale()
  const {defaultLocale}=await siteLanguages()
  const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)

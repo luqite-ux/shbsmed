@@ -11,9 +11,11 @@ import {pageMetadata} from '@/lib/site-content/metadata'
 import {historicalProducts} from '@/lib/framework-pending-products'
 import {PendingPanel} from '@/components/framework-pending'
 import {productSummaries} from '@/lib/meeting-product-copy'
+import previewProducts from '@/lib/customer-preview-products.json'
+import {previewDescriptions} from '@/lib/customer-preview-copy'
 export const dynamicParams=true
 export const revalidate=60
-async function find(slug:string){const p=(await getMedicalProducts()).find(p=>p.slug===slug||p.variants.some(v=>v.model.toLowerCase()===slug));return p?{...p,description:productSummaries[p.slug]||''}:undefined}
+async function find(slug:string){const p=(await getMedicalProducts()).find(p=>p.slug===slug||p.variants.some(v=>v.model.toLowerCase()===slug));const preview=previewProducts.find(x=>x.slug===p?.slug);return p?{...p,description:process.env.VERCEL_ENV==='preview'&&preview?previewDescriptions[preview.id].join(' '):productSummaries[p.slug]||''}:undefined}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const slug=(await params).slug,historical=historicalProducts.find(p=>p.slug===slug)
  if(historical)return pageMetadata(`/products/${slug}`,{title:historical.name,description:'Historical product image. Current models and specifications pending confirmation.',robots:{index:false,follow:true}})
@@ -27,6 +29,8 @@ export default async function Detail({params}:{params:Promise<{slug:string}>}){
   <Reveal as="section" className="medical-shell product-detail-grid"><ZoomImage src={historical.image} alt={historical.name}/><div><PendingPanel title="Current product information">Historical image — current models, specifications, matching products and product details pending confirmation.</PendingPanel><Link className="medical-button mt-8" href={`/contact?product=${historical.slug}`}><SiteText value="Inquire About This Product →"/></Link><p className="mt-6"><Link href={`/products?series=${historical.series}`}><SiteText value="Back to product series →"/></Link></p></div></Reveal>
  </PageFrame>
  const p=await find(slug);if(!p)notFound()
+ const preview=process.env.VERCEL_ENV==='preview'?previewProducts.find(x=>x.slug===p.slug):undefined
+ if(preview)return <PageFrame eyebrow="Products" title={p.name} description=""><Reveal as="section" className="medical-shell product-detail-grid"><div className="product-stage integrated-product-gallery"><ZoomImage src={(preview.id.startsWith("5.")&&preview.detail)||p.image} alt={p.name}/></div><div><h2 className="text-3xl font-semibold">{p.name}</h2>{previewDescriptions[preview.id].map((line,i)=><p className="medical-intro" key={i}>{line}</p>)}<Link className="medical-button" href={`/contact?product=${p.slug}`}><SiteText value="Inquire About This Product →"/></Link></div></Reveal><section className="medical-light"><Reveal as="section" className="medical-shell medical-section"><h2>Product specifications</h2><div className="spec-scroll" tabIndex={0} aria-label="Product specifications"><table className="medical-specs"><thead><tr>{(preview.id==='4.1'?['Combination part number','Electrode part number','Cannula part number','Electrode diameter','Cannula diameter','Working length (mm)','Active tip length (mm)','Tip structure']:preview.id==='4.2'?['Electrode part number','Electrode model','Electrode specification','Electrode diameter','Compatible cannula length (mm)']:['Cannula part number','Cannula model','Specification','Cannula diameter','Nominal working length (mm)','Active tip length (mm)']).map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{preview.rows.map((r,i)=><tr key={i}>{r.map((value,j)=><td key={j}>{({'待确认':'Pending confirmation','直尖形':'Straight sharp','弯尖形':'Curved sharp','弯钝形':'Curved blunt','侧孔弯尖形':'Curved sharp with side port'} as Record<string,string>)[value]||value}</td>)}</tr>)}</tbody></table></div>{preview.id==='4.1'&&<p>Three combination part numbers are pending confirmation.</p>}</Reveal></section></PageFrame>
  const electrode=p.slug==='rf-electrodes',structureImage=electrode?null:p.tipImage
  return <PageFrame eyebrow="Products" title={p.name} description="">
   <Reveal as="section" className="medical-shell product-detail-grid">
