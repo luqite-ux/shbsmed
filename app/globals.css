@@ -535,8 +535,8 @@
 .medical-card-image:has(img[src$='/5.2.webp']){background:#c4dbe5}
 .medical-card-image:has(img[src$='/5.3.webp']){background:#bed6df}
 .medical-card-image:has(img[src$='/5.4.webp']){background:#b0d7e3}
-.feedback-product-grid .medical-card-image:has(img[src*='/client-products-20261102/']){height:auto;aspect-ratio:auto}
-.feedback-product-grid .medical-card-image img[src*='/client-products-20261102/']{display:block;width:100%;height:auto}
+.feedback-product-grid .medical-card-image:has(img[src*='/client-products-20261102']){height:auto;aspect-ratio:auto}
+.feedback-product-grid .medical-card-image img[src*='/client-products-20261102']{display:block;width:100%;height:auto}
 .product-stage.integrated-product-gallery.customer-product-stage{height:auto;background:transparent;padding:0}
 .product-stage.integrated-product-gallery.customer-product-stage>.zoom-image{display:block;width:100%;height:auto;aspect-ratio:auto}
 .product-stage.integrated-product-gallery.customer-product-stage img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
