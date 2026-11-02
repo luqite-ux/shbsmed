@@ -3,7 +3,7 @@ Original files are retained. Protected subject pixels are copied verbatim; no
 geometry transform, generative fill, sharpening, or product color adjustment.
 """
 from pathlib import Path
-import hashlib,json
+import hashlib,json,sys
 import numpy as np
 from PIL import Image,ImageDraw,ImageOps,ImageFilter
 
@@ -21,7 +21,9 @@ boxes={
  '5.4':[(.650,.617,.879,.782)]
 }
 lines={'4.1':[((.395,.061),(.668,.384),.007)],'4.2':[((.356,.085),(.689,.503),.004)],'5.4':[((.128,.247),(.668,.631),.008)]}
-records=[];files=sorted(src.glob('*.webp'))+sorted(src.glob('5.*-detail.jpeg'))
+files=sorted(src.glob('*.webp'))+sorted(src.glob('5.*-detail.jpeg'))
+selected=set(sys.argv[1:]);records=[]
+if selected:records=[r for r in json.loads((evidence/'pixel-verification.json').read_text()) if Path(r['source']).name not in selected]
 def hull(points):
  points=sorted(set(points))
  def cross(o,a,b):return (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0])
@@ -48,6 +50,7 @@ def largest_component(region):
  return best
 sheet=Image.new('RGB',(1500,1100),'white');draw=ImageDraw.Draw(sheet)
 for index,p in enumerate(files):
+ if selected and p.name not in selected:continue
  im=Image.open(p).convert('RGB');a=np.array(im);f=a.astype(float);h,w=a.shape[:2];key=p.stem[:3]
  # Blue/cyan backdrop; white cables, metal, black shafts, markings and colored
  # hubs are excluded by chroma. Manual keep-outs additionally cover clear hubs.
@@ -69,7 +72,10 @@ for index,p in enumerate(files):
    if len(xx)>2:d.polygon(hull(list(zip((xx+left).tolist(),(yy+top).tolist()))),fill=255)
  for (x0,y0),(x1,y1),width in lines.get(key,[]):d.line((int(x0*w),int(y0*h),int(x1*w),int(y1*h)),fill=255,width=max(3,int(width*w)))
  # Preserve the white technical inset and the actual enlarged needle pixels.
- # White technical inset is already excluded by its neutral chroma.
+ # Protect all pixels of the source technical inset, including blue reflections
+ # in the enlarged steel tip that could otherwise resemble the backdrop.
+ if '-detail' in p.stem and key=='5.1':d.rectangle((int(.765*w),int(.147*h),int(.921*w),int(.402*h)),fill=255)
+ if '-detail' in p.stem and key=='5.2':d.polygon([(int(x*w),int(y*h)) for x,y in [(.762,.307),(.886,.134),(.908,.163),(.786,.337)]],fill=255)
  keep=(np.array(protected)>0)|(~bg)
  keep=np.array(Image.fromarray((keep*255).astype('uint8')).filter(ImageFilter.MaxFilter(3)))>0
  # Feather on BACKGROUND side only: every protected pixel remains unchanged.
@@ -89,4 +95,6 @@ for index,p in enumerate(files):
  thumb=ImageOps.contain(Image.fromarray(result),(480,320));x=index%3*500;y=index//3*365;sheet.paste(thumb,(x,y+30));draw.text((x+8,y+5),p.name,fill='black')
  records.append({'source':str(p),'output':str(dest),'dimensions':[w,h],'sourceSha256':hashlib.sha256(p.read_bytes()).hexdigest(),'outputSha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'protectedPixels':int(keep.sum()),'protectedChangedPixels':int(np.any(decoded[keep]!=a[keep],axis=1).sum()),'backgroundMedianRGB':np.median(decoded[sample],axis=0).tolist(),'method':'background-only deterministic color transform, lossless WebP; geometry unchanged'})
  print(p.name,'protected changed = 0',flush=True)
-sheet.save(evidence/'unified-contact.jpg');(evidence/'pixel-verification.json').write_text(json.dumps(records,indent=2),encoding='utf-8')
+for index,p in enumerate(files):
+ im=Image.open(out/(p.stem+'.webp'));thumb=ImageOps.contain(im,(480,320));x=index%3*500;y=index//3*365;sheet.paste(thumb,(x,y+30));draw.text((x+8,y+5),p.name,fill='black')
+sheet.save(evidence/'unified-contact.jpg');(evidence/'pixel-verification.json').write_text(json.dumps(sorted(records,key=lambda r:r['source']),indent=2),encoding='utf-8')
