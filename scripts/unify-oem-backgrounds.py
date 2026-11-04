@@ -40,8 +40,14 @@ for idx,p in enumerate(sorted(src.iterdir())):
   reference=np.median(f[int(.02*h):int(.1*h),int(.4*w):int(.6*w)].reshape(-1,3),axis=0)
   keep=np.max(np.abs(f-reference),axis=2)>7
  keep=np.array(Image.fromarray((keep*255).astype('uint8')).filter(ImageFilter.MaxFilter(3)))>0
+ # Supplied Sprotte images include a thin green canvas border, not product.
+ # No product reaches any canvas edge; normalize this background-only frame.
+ if p.stem.startswith('sprotte'):
+  edge=max(3,int(min(w,h)*.002));keep[:edge,:]=False;keep[-edge:,:]=False;keep[:,:edge]=False;keep[:,-edge:]=False
  blur=np.array(Image.fromarray(((~keep)*255).astype('uint8')).filter(ImageFilter.GaussianBlur(max(3,w/400))),dtype='float32')/255
  alpha=np.clip((blur-.5)*2,0,1);alpha[keep]=0;alpha=alpha*alpha*(3-2*alpha)
+ if p.stem.startswith('sprotte'):
+  alpha[:edge,:]=1;alpha[-edge:,:]=1;alpha[:,:edge]=1;alpha[:,-edge:]=1
  sample=alpha>.999;lum=f[:,:,0]*.2126+f[:,:,1]*.7152+f[:,:,2]*.0722
  offset=lum-float(np.median(lum[sample]));result=a.copy()
  for c,target in enumerate([187,214,225]):result[:,:,c]=np.rint(f[:,:,c]*(1-alpha)+np.clip(target+offset,0,255)*alpha).astype('uint8')
