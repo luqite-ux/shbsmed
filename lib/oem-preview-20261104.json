@@ -2,7 +2,7 @@
   {
     "slug": "quincke-spinal-needle",
     "name": "Single-use Spinal Needle（Quincke Tip）",
-    "image": "/images/oem-20261104/quincke-spinal-needle.webp",
+    "image": "/images/oem-20261104/quincke-spinal-needle.jpg",
     "detail": "/images/oem-20261104/quincke-spinal-needle-detail.webp",
     "description": [
       "针尖锋利，穿刺阻力小。",
@@ -131,7 +131,7 @@
   {
     "slug": "sprotte-spinal-needle",
     "name": "Single-use Spinal Needle(Sprotte Tip)",
-    "image": "/images/oem-20261104/sprotte-spinal-needle.webp",
+    "image": "/images/oem-20261104/sprotte-spinal-needle.jpg",
     "detail": "/images/oem-20261104/sprotte-spinal-needle-detail.webp",
     "description": [
       "子弹头式针尖大大降低术后头疼(PDPH)的发生率。",
@@ -256,7 +256,7 @@
   {
     "slug": "epidural-needle",
     "name": "Single-use Epidural Needle （Tuohy Tip）",
-    "image": "/images/oem-20261104/epidural-needle.webp",
+    "image": "/images/oem-20261104/epidural-needle.jpg",
     "detail": "/images/oem-20261104/epidural-needle-detail.webp",
     "description": [
       "勺型的针头便于硬膜外导管的置入。",
@@ -426,7 +426,7 @@
   {
     "slug": "combined-spinal-epidural-needle",
     "name": "Combined Spinal-Epidural Needle (CSE)",
-    "image": "/images/oem-20261104/combined-spinal-epidural-needle.webp",
+    "image": "/images/oem-20261104/combined-spinal-epidural-needle.jpg",
     "detail": "/images/oem-20261104/combined-spinal-epidural-needle-detail.webp",
     "description": [
       "融合了硬膜外针和无损伤腰椎针各自的优点，具有麻醉效果确切、肌松良好、用药  量少、基本无术后头疼（PDPH)发生等优点。",
