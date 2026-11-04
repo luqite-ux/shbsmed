@@ -4,6 +4,7 @@ import {getSupabaseClient} from '@/lib/supabase'
 import {localized as localizeValue,rfCategories,inCategoryBranch} from '@/lib/catalog-model.mjs'
 import {currentLocale,siteLanguages} from '@/lib/locale'
 import previewProducts from '@/lib/customer-preview-products.json'
+import oemPreview from '@/lib/oem-preview-20261104.json'
 
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
@@ -37,7 +38,8 @@ export const getOdmProducts=cache(async(language?:string)=>{
  if(!db||!tenant)throw new Error('Product service is not configured')
  const {data,error}=await db.from('products').select('*').eq('tenant_id',tenant).eq('is_active',true).eq('category_slug','odm-products').order('sort_order')
  if(error)throw new Error('Product service is unavailable')
- return (data||[]).map(p=>({slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||''}))
+ const existing=(data||[]).map(p=>({slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||''}))
+ return process.env.VERCEL_ENV==='preview'?[...oemPreview.map(p=>({...p,description:p.description.join(' ')})),...existing.filter(p=>!/epidural|spinal|anesthesia/.test(p.slug))]:existing
 })
 export const getContractComponents=cache(async(language?:string)=>{
  const locale=language||await currentLocale(),db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID

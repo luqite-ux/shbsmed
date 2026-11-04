@@ -1,0 +1,491 @@
+[
+  {
+    "slug": "quincke-spinal-needle",
+    "name": "Single-use Spinal Needle（Quincke Tip）",
+    "image": "/images/oem-20261104/quincke-spinal-needle.webp",
+    "detail": "/images/oem-20261104/quincke-spinal-needle-detail.webp",
+    "description": [
+      "针尖锋利，穿刺阻力小。",
+      "全透明针座便于观察有无脑脊液回流。",
+      "6:100鲁尔锁合锥孔与配套医用器械连接紧密可靠无泄漏。",
+      "适配的衬芯避免人体组织嵌入。",
+      "一次性使用脊髓针（昆克头部）的品号、型号规格及对应参数详见附表。"
+    ],
+    "headers": [
+      "P/N",
+      "Guage (mm)",
+      "Length (mm)"
+    ],
+    "rows": [
+      [
+        "SQ2765-BM",
+        "27G (0.40)",
+        "65"
+      ],
+      [
+        "(SQ2790-BM",
+        "27G (0.40)",
+        "90"
+      ],
+      [
+        "SQ27125-BM",
+        "27G (0.40)",
+        "125"
+      ],
+      [
+        "SQ265-BM",
+        "26G (0.45)",
+        "65"
+      ],
+      [
+        "SQ2690-BM",
+        "26G (0.45)",
+        "90"
+      ],
+      [
+        "SQ26125-BM",
+        "26G (0.45)",
+        "125"
+      ],
+      [
+        "SQ2565-BM",
+        "25G (0.50)",
+        "65"
+      ],
+      [
+        "SQ2590-BM",
+        "25G (0.50)",
+        "90"
+      ],
+      [
+        "SQ25125-BM",
+        "25G (0.50)",
+        "125"
+      ],
+      [
+        "SQ2365-BM",
+        "23G (0.60)",
+        "65"
+      ],
+      [
+        "SQ2390-BM",
+        "23G (0.60)",
+        "90"
+      ],
+      [
+        "SQ23125-BM",
+        "23G (0.60)",
+        "125"
+      ],
+      [
+        "SQ2265-BM",
+        "22G (0.70)",
+        "65"
+      ],
+      [
+        "SQ2290-BM",
+        "22G (0.70)",
+        "90"
+      ],
+      [
+        "SQ22125-BM",
+        "22G (0.70)",
+        "125"
+      ],
+      [
+        "SQ2065-BM",
+        "20G (0.90)",
+        "65"
+      ],
+      [
+        "SQ2090-BM",
+        "20G (0.90)",
+        "90"
+      ],
+      [
+        "SQ20125-BM",
+        "20G (0.90)",
+        "125"
+      ],
+      [
+        "SQ1865-BM",
+        "18G (1.20)",
+        "65"
+      ],
+      [
+        "SQ1890-BM",
+        "18G (1.20)",
+        "90"
+      ],
+      [
+        "SQ18125-BM",
+        "18G (1.20)",
+        "125"
+      ]
+    ],
+    "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2. Color code complies with regulations of ISO9006.",
+    "application": "anesthesia"
+  },
+  {
+    "slug": "sprotte-spinal-needle",
+    "name": "Single-use Spinal Needle(Sprotte Tip)",
+    "image": "/images/oem-20261104/sprotte-spinal-needle.webp",
+    "detail": "/images/oem-20261104/sprotte-spinal-needle-detail.webp",
+    "description": [
+      "子弹头式针尖大大降低术后头疼(PDPH)的发生率。",
+      "靠前的月牙状侧孔确保药液足量进入蛛网膜下腔。",
+      "全透明针座便于观察有无脑脊液回流。",
+      "6:100鲁尔锁合锥孔与配套医用器械连接紧密可靠无泄漏。",
+      "适配的衬芯避免人体组织嵌入。",
+      "需要时可选配对应的引导针。",
+      "一次性使用脊髓针（斯普罗特头部）的品号、型号规格及对应参数详见附表。"
+    ],
+    "headers": [
+      "Spinal needle P/N",
+      "Guage (mm)",
+      "Length (mm)",
+      "Introducer needle P/N",
+      "Guage (mm)",
+      "Length (mm)"
+    ],
+    "rows": [
+      [
+        "SS2765-BM",
+        "27G (0.40)",
+        "65",
+        "IN2218-BM",
+        "22G (0.70)",
+        "18"
+      ],
+      [
+        "SS2790-BM",
+        "27G (0.40)",
+        "90",
+        "IN2225-BM",
+        "22G (0.70)",
+        "25"
+      ],
+      [
+        "SS27125-BM",
+        "27G (0.40)",
+        "125",
+        "IN2230-BM",
+        "22G (0.70)",
+        "30"
+      ],
+      [
+        "SS2665-BM",
+        "26G (0.45)",
+        "65",
+        "IN2018-BM",
+        "20G (0.90)",
+        "18"
+      ],
+      [
+        "SS2690-BM",
+        "26G (0.45)",
+        "90",
+        "IN2025-BM",
+        "20G (0.90)",
+        "25"
+      ],
+      [
+        "SS26125-BM",
+        "26G (0.45)",
+        "125",
+        "IN2030-BM",
+        "20G (0.90)",
+        "30"
+      ],
+      [
+        "SS2565-BM",
+        "25G (0.50)",
+        "65",
+        "IN1918-BM",
+        "19G (1.10)",
+        "18"
+      ],
+      [
+        "SS2590-BM",
+        "25G (0.50)",
+        "90",
+        "IN1925-BM",
+        "19G (1.10)",
+        "25"
+      ],
+      [
+        "SS25125-BM",
+        "25G (0.50)",
+        "125",
+        "IN1930-BM",
+        "19G (1.10)",
+        "30"
+      ],
+      [
+        "SS2265-BM",
+        "22G (0.70)",
+        "65",
+        "IN2218-BM",
+        "19G (1.10)",
+        "18"
+      ],
+      [
+        "SS2290-BM",
+        "22G (0.70)",
+        "90",
+        "IN2225-BM",
+        "19G (1.10)",
+        "25"
+      ],
+      [
+        "SS22125-BM",
+        "22G (0.70)",
+        "125",
+        "IN2230-BM",
+        "19G (1.10)",
+        "30"
+      ]
+    ],
+    "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2.  Color code complies with regulations of ISO9006.",
+    "application": "anesthesia"
+  },
+  {
+    "slug": "epidural-needle",
+    "name": "Single-use Epidural Needle （Tuohy Tip）",
+    "image": "/images/oem-20261104/epidural-needle.webp",
+    "detail": "/images/oem-20261104/epidural-needle-detail.webp",
+    "description": [
+      "勺型的针头便于硬膜外导管的置入。",
+      "厘米刻度提供了进针深度的参考",
+      "金属衬芯提高了整体刚性。",
+      "固定针翼或可拆翼提供临床不同的操作应用。",
+      "适配的衬芯避免人体组织嵌入。",
+      "一次性使用硬膜外针分固定翼和可拆翼二种，其品号和尺寸参数详见附表："
+    ],
+    "headers": [
+      "P/N",
+      "Guage (mm)",
+      "Length (mm)",
+      "Airfoil"
+    ],
+    "rows": [
+      [
+        "ET2590-BM",
+        "25G (0.5)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET25125-BM",
+        "25G (0.5)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET2290-BM",
+        "22G (0.7)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET22125-BM",
+        "22G (0.7)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET2090-BM",
+        "20G (0.9)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET20125-BM",
+        "20G (0.9)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET1890-BM",
+        "18G (1.2)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET18125-BM",
+        "18G (1.2)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET1790-BM",
+        "17G (1.4)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET17125-BM",
+        "17G (1.4)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET1690-BM",
+        "16G (1.6)",
+        "90",
+        "Fixed Wing"
+      ],
+      [
+        "ET16125-BM",
+        "16G (1.6)",
+        "125",
+        "Fixed Wing"
+      ],
+      [
+        "ET2590-D-BM",
+        "25G (0.5)",
+        "90",
+        "Detachable Wing"
+      ],
+      [
+        "ET25125-D-BM",
+        "25G (0.5)",
+        "125",
+        "Detachable Wing"
+      ],
+      [
+        "ET2290-D-BM",
+        "22G (0.7)",
+        "90",
+        "Detachable Wing"
+      ],
+      [
+        "ET22125-D-BM",
+        "22G (0.7)",
+        "125",
+        "Detachable Wing"
+      ],
+      [
+        "ET2090-D-BM",
+        "20G (0.9)",
+        "90",
+        "Detachable Wing"
+      ],
+      [
+        "ET20125-D-BM",
+        "20G (0.9)",
+        "125",
+        "Detachable Wing"
+      ],
+      [
+        "ET1890-D-BM",
+        "18G (1.2)",
+        "90",
+        "Detachable Wing"
+      ],
+      [
+        "ET18125-D-BM",
+        "18G (1.2)",
+        "125",
+        "Detachable Wing"
+      ],
+      [
+        "ET1790-D-BM",
+        "17G (1.4)",
+        "90",
+        "Detachable Wing"
+      ],
+      [
+        "ET17125-D-BM",
+        "17G (1.4)",
+        "125",
+        "Detachable Wing"
+      ],
+      [
+        "ET1690-D-BM",
+        "16G (1.6)",
+        "80",
+        "Detachable Wing"
+      ],
+      [
+        "ET16125-D-BM",
+        "16G (1.6)",
+        "125",
+        "Detachable Wing"
+      ]
+    ],
+    "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2. Color code complies with regulations of ISO9006.",
+    "application": "anesthesia"
+  },
+  {
+    "slug": "combined-spinal-epidural-needle",
+    "name": "Combined Spinal-Epidural Needle (CSE)",
+    "image": "/images/oem-20261104/combined-spinal-epidural-needle.webp",
+    "detail": "/images/oem-20261104/combined-spinal-epidural-needle-detail.webp",
+    "description": [
+      "融合了硬膜外针和无损伤腰椎针各自的优点，具有麻醉效果确切、肌松良好、用药  量少、基本无术后头疼（PDPH)发生等优点。",
+      "可根据临床需要在脊椎麻醉后进行硬膜外麻醉和/或术后镇痛。",
+      "联合麻醉套针的品号及尺寸参数见附表："
+    ],
+    "headers": [
+      "Spinal needle P/N",
+      "Guage (mm)",
+      "Length (mm)",
+      "Epidural needle P/N",
+      "Guage (mm)",
+      "Length (mm)"
+    ],
+    "rows": [
+      [
+        "SS-27113-BM",
+        "27G（0.40）",
+        "125",
+        "ET1890-BM",
+        "18G (1.2)",
+        "90"
+      ],
+      [
+        "SS-27160-BM",
+        "27G（0.40）",
+        "160",
+        "ET18125-BM",
+        "18G (1.2)",
+        "125"
+      ],
+      [
+        "SS-26113BM",
+        "26G（0.45）",
+        "125",
+        "ET1790-BM",
+        "18G (1.2)",
+        "90"
+      ],
+      [
+        "SS-26160-BM",
+        "26G（0.45）",
+        "160",
+        "ET17125-BM",
+        "18G (1.2)",
+        "125"
+      ],
+      [
+        "SS-25113-BM",
+        "25G（0.50）",
+        "125",
+        "ET1690-BM",
+        "18G (1.2)",
+        "90"
+      ],
+      [
+        "SS-25160-BM",
+        "25G（0.50）",
+        "160",
+        "ET16125-BM",
+        "18G (1.2)",
+        "125"
+      ]
+    ],
+    "note": "",
+    "application": "anesthesia"
+  }
+]
