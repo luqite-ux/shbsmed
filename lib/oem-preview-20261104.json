@@ -124,7 +124,9 @@
       ]
     ],
     "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2. Color code complies with regulations of ISO9006.",
-    "application": "anesthesia"
+    "application": "anesthesia",
+    "width": 5690,
+    "height": 3929
   },
   {
     "slug": "sprotte-spinal-needle",
@@ -247,7 +249,9 @@
       ]
     ],
     "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2.  Color code complies with regulations of ISO9006.",
-    "application": "anesthesia"
+    "application": "anesthesia",
+    "width": 3506,
+    "height": 2482
   },
   {
     "slug": "epidural-needle",
@@ -415,7 +419,9 @@
       ]
     ],
     "note": "Note:： 1.  Custom sizes and design are available upon request.   \n2. Color code complies with regulations of ISO9006.",
-    "application": "anesthesia"
+    "application": "anesthesia",
+    "width": 5379,
+    "height": 3829
   },
   {
     "slug": "combined-spinal-epidural-needle",
@@ -486,6 +492,8 @@
       ]
     ],
     "note": "",
-    "application": "anesthesia"
+    "application": "anesthesia",
+    "width": 3511,
+    "height": 2491
   }
 ]
