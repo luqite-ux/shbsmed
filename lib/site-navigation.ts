@@ -4,10 +4,6 @@ export const oemSeries=[{slug:'anesthesia',name:'Anesthesia Needle Series'},{slu
 export const componentSeries=[
  {slug:'bone-marrow',name:'Bone Marrow Biopsy Series'},
  {slug:'visceral',name:'Visceral Biopsy Series'},
- {slug:'anesthesia',name:'Anesthesia Series'},
- {slug:'interventional',name:'Interventional Therapy Series'},
- {slug:'infusion-drainage',name:'Infusion & Drainage Series'},
- {slug:'aesthetic',name:'Aesthetic Series'},
  {slug:'ultrasound',name:'Ultrasound Guidance Solutions'},
  {slug:'tip',name:'Tip Structure Solutions'},
  {slug:'end',name:'End Structure Solutions'},
