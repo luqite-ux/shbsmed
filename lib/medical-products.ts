@@ -1,3 +1,4 @@
+import {additionalComponents} from '@/lib/feedback-20261109'
 import 'server-only'
 import {cache} from 'react'
 import {getSupabaseClient} from '@/lib/supabase'
@@ -9,7 +10,7 @@ import oemPreview from '@/lib/oem-preview-20261104.json'
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
- if(process.env.VERCEL_ENV==='preview')return previewProducts.map(p=>({slug:p.slug,name:p.name,image:`/images/client-products-20261102-unified/${p.id}.webp`,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:p.rows.map((r,i)=>({model:r[0]||`pending-${i}`,gauge:p.id==='4.1'?r[3]:p.id==='4.2'?r[3]:r[3],length:p.id==='4.1'?r[5]:p.id==='4.2'?r[4]:r[4],activeTip:p.id==='4.1'?r[6]:p.id==='4.2'?'':r[5],color:'',moq:''}))}))
+ if(process.env.VERCEL_ENV==='preview')return [...oemPreview.map(p=>({slug:p.slug,name:p.name,image:p.image,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:[]})),...previewProducts.map(p=>({slug:p.slug,name:p.name,image:`/images/feedback-20261109/rf-${p.id}-card.webp`,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:p.rows.map((r,i)=>({model:r[0]||`pending-${i}`,gauge:p.id==='4.1'?r[3]:p.id==='4.2'?r[3]:r[3],length:p.id==='4.1'?r[5]:p.id==='4.2'?r[4]:r[4],activeTip:p.id==='4.1'?r[6]:p.id==='4.2'?'':r[5],color:'',moq:''}))}))]
  const locale=language||await currentLocale()
  const {defaultLocale}=await siteLanguages()
  const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)
@@ -39,7 +40,7 @@ export const getOdmProducts=cache(async(language?:string)=>{
  const {data,error}=await db.from('products').select('*').eq('tenant_id',tenant).eq('is_active',true).eq('category_slug','odm-products').order('sort_order')
  if(error)throw new Error('Product service is unavailable')
  const existing=(data||[]).map(p=>({slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||''}))
- return process.env.VERCEL_ENV==='preview'?[...oemPreview.map(p=>({...p,description:p.description.join(' ')})),...existing.filter(p=>!/epidural|spinal|anesthesia/.test(p.slug))]:existing
+ return process.env.VERCEL_ENV==='preview'?existing.filter(p=>!/epidural|spinal|anesthesia/.test(p.slug)):existing
 })
 export const getContractComponents=cache(async(language?:string)=>{
  const locale=language||await currentLocale(),db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
@@ -52,5 +53,6 @@ export const getContractComponents=cache(async(language?:string)=>{
  ])
  if(categoryError||productError)throw new Error('Component service is unavailable')
  const groups=(categories||[]).filter(c=>inCategoryBranch(c,categories||[],'contract-components'))
- return (products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||'',group:localized(group.name_i18n,locale)||group.name,application:typeof p.extra_data?.application_category==='string'?p.extra_data.application_category:undefined}})
+ const existing=(products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||'',group:localized(group.name_i18n,locale)||group.name,application:typeof p.extra_data?.application_category==='string'?p.extra_data.application_category:undefined}})
+ return process.env.VERCEL_ENV==='preview'?[...existing.map(p=>({...p,name:(p.application==='bone-marrow'||/bone.marrow/i.test(p.name))&&!p.name.includes('(Type I)')?p.name+' (Type I)':p.name})),...additionalComponents]:existing
 })

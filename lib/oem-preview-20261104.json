@@ -2,8 +2,8 @@
   {
     "slug": "quincke-spinal-needle",
     "name": "Single-use Spinal Needle（Quincke Tip）",
-    "image": "/images/oem-20261104-unified/quincke-spinal-needle.webp",
-    "detail": "/images/oem-20261104-unified/quincke-spinal-needle-detail.webp",
+    "image": "/images/feedback-20261109/oem-quincke-spinal-needle-card.webp",
+    "detail": "/images/feedback-20261109/oem-quincke-spinal-needle-detail.webp",
     "description": [
       "针尖锋利，穿刺阻力小。",
       "全透明针座便于观察有无脑脊液回流。",
@@ -131,8 +131,8 @@
   {
     "slug": "sprotte-spinal-needle",
     "name": "Single-use Spinal Needle(Sprotte Tip)",
-    "image": "/images/oem-20261104-unified/sprotte-spinal-needle.webp",
-    "detail": "/images/oem-20261104-unified/sprotte-spinal-needle-detail.webp",
+    "image": "/images/feedback-20261109/oem-sprotte-spinal-needle-card.webp",
+    "detail": "/images/feedback-20261109/oem-sprotte-spinal-needle-detail.webp",
     "description": [
       "子弹头式针尖大大降低术后头疼(PDPH)的发生率。",
       "靠前的月牙状侧孔确保药液足量进入蛛网膜下腔。",
@@ -256,8 +256,8 @@
   {
     "slug": "epidural-needle",
     "name": "Single-use Epidural Needle （Tuohy Tip）",
-    "image": "/images/oem-20261104-unified/epidural-needle.webp",
-    "detail": "/images/oem-20261104-unified/epidural-needle-detail.webp",
+    "image": "/images/feedback-20261109/oem-epidural-needle-card.webp",
+    "detail": "/images/feedback-20261109/oem-epidural-needle-detail.webp",
     "description": [
       "勺型的针头便于硬膜外导管的置入。",
       "厘米刻度提供了进针深度的参考",
@@ -426,8 +426,8 @@
   {
     "slug": "combined-spinal-epidural-needle",
     "name": "Combined Spinal-Epidural Needle (CSE)",
-    "image": "/images/oem-20261104-unified/combined-spinal-epidural-needle.webp",
-    "detail": "/images/oem-20261104-unified/combined-spinal-epidural-needle-detail.webp",
+    "image": "/images/feedback-20261109/oem-combined-spinal-epidural-needle-card.webp",
+    "detail": "/images/feedback-20261109/oem-combined-spinal-epidural-needle-detail.webp",
     "description": [
       "融合了硬膜外针和无损伤腰椎针各自的优点，具有麻醉效果确切、肌松良好、用药  量少、基本无术后头疼（PDPH)发生等优点。",
       "可根据临床需要在脊椎麻醉后进行硬膜外麻醉和/或术后镇痛。",

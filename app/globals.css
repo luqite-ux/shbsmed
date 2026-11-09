@@ -551,3 +551,10 @@
 .oem-detail-photo .zoom-image{display:block;width:100%;height:auto;background:transparent;aspect-ratio:auto}
 @media(max-width:767px){.company-highlights,.oem-new-gallery{grid-template-columns:1fr}.company-highlights{gap:36px}}
 @media(max-width:767px){.attachment-certificates,.attachment-photos{grid-template-columns:1fr;gap:28px}.attachment-certificates .zoom-image{height:390px}}
+
+/* Customer feedback 261106: equal image stages, full products, left captions. */
+.feedback-product-grid .medical-card-image:has(img){height:280px;aspect-ratio:auto;background:#bbd6e1}
+.feedback-product-grid .medical-card-image img{display:block;width:100%;height:100%;object-fit:contain}
+.feedback-series-section .meeting-gallery figcaption{text-align:left}
+.product-feature{position:relative;padding-left:1.2em}
+.product-feature:before{content:'•';position:absolute;left:0;color:#173e53}
