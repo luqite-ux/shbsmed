@@ -503,6 +503,8 @@
 .feedback-series-section .meeting-gallery .zoom-image{height:280px;width:100%}
 .feedback-series-section .meeting-gallery-portrait .zoom-image{height:380px}
 .feedback-series-section .meeting-gallery .zoom-image>img{width:100%;height:100%;object-fit:contain}
+#bone-marrow .meeting-gallery .zoom-image{height:auto;aspect-ratio:3/2;background:transparent}
+#bone-marrow .meeting-gallery .zoom-image>img{position:absolute;inset:0 auto auto 0;width:auto;max-width:100%;height:100%;object-fit:contain}
 
 /* The supplied logo includes white margins: size the visible mark, not just its canvas. */
 .feedback-header .brand-symbol{width:120px;height:108px;max-width:none}
