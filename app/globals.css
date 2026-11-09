@@ -558,4 +558,4 @@
 .feedback-series-section .meeting-gallery figcaption{text-align:left}
 .feedback-series-section .meeting-gallery .zoom-image>img{object-position:left center}
 .product-feature{position:relative;padding-left:1.2em}
-.product-feature:before{content:'•';position:absolute;left:0;color:#173e53}
+.product-feature:before{content:attr(data-feature-marker);position:absolute;left:0;color:#173e53}
