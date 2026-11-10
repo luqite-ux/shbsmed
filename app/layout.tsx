@@ -6,6 +6,7 @@ import {getWebsiteCopy} from '@/lib/site-content/copy'
 import {cookies} from 'next/headers'
 import {currentLocale} from '@/lib/locale'
 import {getBrandSettings} from '@/lib/brand-settings'
+import {PageBackButton} from '@/components/page-back-button'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -41,7 +42,7 @@ export default async function RootLayout({
       <body className="font-sans antialiased">
         {preview&&<aside className="bg-amber-100 px-6 py-3 text-amber-950"><span>Website preview — not published</span><form className="ml-4 inline" action="/api/site-content/exit-preview" method="post"><button className="underline" type="submit">Exit preview</button></form></aside>}
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://shbsmed.com/#organization",name:brand.legalNameEn,url:"https://shbsmed.com",email:brand.email,logo:new URL(brand.logo,'https://shbsmed.com').href,address:brand.address},{"@type":"WebSite","@id":"https://shbsmed.com/#website",url:"https://shbsmed.com",name:brand.brandName,publisher:{"@id":"https://shbsmed.com/#organization"}}]}).replace(/</g,'\\u003c')}} />
-        <SiteCopyProvider value={copy}>{children}</SiteCopyProvider>
+        <SiteCopyProvider value={copy}>{children}<PageBackButton/></SiteCopyProvider>
       </body>
     </html>
   )
