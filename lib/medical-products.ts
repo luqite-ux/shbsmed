@@ -40,7 +40,9 @@ export const getOdmProducts=cache(async(language?:string)=>{
  const {data,error}=await db.from('products').select('*').eq('tenant_id',tenant).eq('is_active',true).eq('category_slug','odm-products').order('sort_order')
  if(error)throw new Error('Product service is unavailable')
  const existing=(data||[]).map(p=>({slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||''}))
- return process.env.VERCEL_ENV==='preview'?existing.filter(p=>!/epidural|spinal|anesthesia/.test(p.slug)):existing
+ if(process.env.VERCEL_ENV!=='preview')return existing
+ const order=new Map(['ptc-needle','huber-needle','ultrasound-guided-puncture-needle','brain-irrigation-needle'].map((slug,index)=>[slug,index]))
+ return existing.filter(p=>!/epidural|spinal|anesthesia/.test(p.slug)).sort((a,b)=>(order.get(a.slug)??order.size)-(order.get(b.slug)??order.size))
 })
 export const getContractComponents=cache(async(language?:string)=>{
  const locale=language||await currentLocale(),db=getSupabaseClient(),tenant=process.env.NEXT_PUBLIC_TENANT_ID
@@ -54,5 +56,6 @@ export const getContractComponents=cache(async(language?:string)=>{
  if(categoryError||productError)throw new Error('Component service is unavailable')
  const groups=(categories||[]).filter(c=>inCategoryBranch(c,categories||[],'contract-components'))
  const existing=(products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||'',group:localized(group.name_i18n,locale)||group.name,application:typeof p.extra_data?.application_category==='string'?p.extra_data.application_category:undefined}})
- return process.env.VERCEL_ENV==='preview'?[...existing.map(p=>({...p,name:(p.application==='bone-marrow'||/bone.marrow/i.test(p.name))&&!p.name.includes('(Type I)')?p.name+' (Type I)':p.name})),...additionalComponents]:existing
+ const refined=new Set(['triangular-echogenic-surface','mesh-echogenic-surface','matte-echogenic-surface','back-hole-tip','pencil-point','ball-tip-side-hole','flared-end','reduced-end','knurled-end'])
+ return process.env.VERCEL_ENV==='preview'?[...existing.map(p=>({...p,image:refined.has(p.slug)?`/images/feedback-20261112/${p.slug}.webp`:p.image,name:(p.application==='bone-marrow'||/bone.marrow/i.test(p.name))&&!p.name.includes('(Type I)')?p.name+' (Type I)':p.name})),...additionalComponents]:existing
 })
