@@ -12,11 +12,11 @@ export function BrandLogo({ className, size = "default" }: { className?: string;
       aria-label={`${brand.brandName} — go to homepage`}
     >
       <Image
-        src={brand.logo}
+        src={size === 'footer' ? '/images/brand/footer-logo-white.png' : brand.logo}
         alt={`${brand.brandName} logo`}
         width={72}
         height={72}
-        className="brand-symbol shrink-0 object-contain"
+        className={`brand-symbol shrink-0 object-contain ${size === 'footer' ? 'bg-[#0e587f] p-3' : ''}`}
       />
       <span className="brand-name font-semibold leading-tight">{brand.brandName}</span>
     </Link>
