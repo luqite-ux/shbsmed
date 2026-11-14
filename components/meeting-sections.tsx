@@ -13,7 +13,7 @@ import oemPreview from '@/lib/oem-preview-20261104.json'
 
 export function AboutContent({includeManufacturing=true,section}:{includeManufacturing?:boolean;section?:'company'|'qualifications'}){return <div className="meeting-about">
  {section!=='qualifications'&&<>
- {process.env.VERCEL_ENV==='preview'&&<CompanyHighlights/>}
+ {(['preview','production'].includes(process.env.VERCEL_ENV ?? ''))&&<CompanyHighlights/>}
  <div id="company-introduction" className="scroll-mt-32"><Reveal className="meeting-company feedback-company"><SiteImage src={seed.photos.find(p=>p.title==='Cleanroom production area')!.image} alt="Brightstone Medical cleanroom production area" width={890} height={461}/><div className="meeting-company-copy">{companyIntroduction.filter(text=>!text.startsWith('Guided by our commitment')).map(text=><p key={text}><SiteText value={text}/></p>)}</div></Reveal></div>
  </>}
  {section!=='company'&&<div id="qualifications" className="scroll-mt-32"><Reveal className="meeting-about-block"><h3><SiteText value="Company & Product Qualifications"/></h3><QualificationGallery/></Reveal></div>}
@@ -25,7 +25,7 @@ export function ManufacturingContent(){return <div id="manufacturing-inspection"
  <Reveal className="meeting-about-block manufacturing-showcase"><div className="manufacturing-section-copy"><h3><SiteText value="Manufacturing Videos"/></h3><p><SiteText value={processVideoIntro}/></p></div><div className="manufacturing-video-pair">{seed.videos.map((v,i)=><Reveal key={v.src} delay={i*90}><ProcessVideo {...v}/></Reveal>)}</div></Reveal>
  </div>}
 
-export function NamedGallery({items,portrait=false}:{items:{slug:string;name:string;image:string}[];portrait?:boolean}){const supplied=portrait&&process.env.VERCEL_ENV==='preview'&&items.some(p=>oemPreview.some(o=>o.slug===p.slug));return <div className={supplied?'oem-new-gallery':`meeting-gallery ${portrait?'meeting-gallery-portrait':''}`}>{items.map(item=><Reveal as="figure" key={item.slug} id={item.slug}>{supplied?<Link href={`/odm-oem/${item.slug}`}><SiteImage src={item.image} alt={item.name} loading="lazy" width={oemPreview.find(p=>p.slug===item.slug)?.width} height={oemPreview.find(p=>p.slug===item.slug)?.height}/><figcaption>{item.name}</figcaption></Link>:<><ZoomImage src={item.image} alt={item.name}/><figcaption><SiteText value={item.name}/></figcaption></>}</Reveal>)}</div>}
+export function NamedGallery({items,portrait=false}:{items:{slug:string;name:string;image:string}[];portrait?:boolean}){const supplied=portrait&&(['preview','production'].includes(process.env.VERCEL_ENV ?? ''))&&items.some(p=>oemPreview.some(o=>o.slug===p.slug));return <div className={supplied?'oem-new-gallery':`meeting-gallery ${portrait?'meeting-gallery-portrait':''}`}>{items.map(item=><Reveal as="figure" key={item.slug} id={item.slug}>{supplied?<Link href={`/odm-oem/${item.slug}`}><SiteImage src={item.image} alt={item.name} loading="lazy" width={oemPreview.find(p=>p.slug===item.slug)?.width} height={oemPreview.find(p=>p.slug===item.slug)?.height}/><figcaption>{item.name}</figcaption></Link>:<><ZoomImage src={item.image} alt={item.name}/><figcaption><SiteText value={item.name}/></figcaption></>}</Reveal>)}</div>}
 
 type GalleryItem={slug:string;name:string;image:string;application?:string;group?:string}
 function SeriesGallery({items,series,base,selected,classify}:{items:GalleryItem[];series:{slug:string;name:string}[];base:string;selected?:string;classify:(item:GalleryItem)=>string|undefined}){

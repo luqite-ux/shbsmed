@@ -23,7 +23,7 @@ async function route(props:Props){
  const {locale,page=[]}=await props.params,config=await siteLanguages()
  if(!config.locales.includes(locale))notFound()
  if(page[0]==='manufacturing')permanentRedirect(`/${locale}/about`)
- if(page.length===2&&(page[0]==='contract-manufacturing'||(page[0]==='odm-oem'&&process.env.VERCEL_ENV!=='preview')))permanentRedirect(`/${locale}/${page[0]}`)
+ if(page.length===2&&(page[0]==='contract-manufacturing'||(page[0]==='odm-oem'&&(!['preview','production'].includes(process.env.VERCEL_ENV ?? '')))))permanentRedirect(`/${locale}/${page[0]}`)
  const path='/'+page.join('/')
  if(locale===config.defaultLocale){const query=new URLSearchParams(Object.entries(await props.searchParams||{}).filter((entry):entry is [string,string]=>typeof entry[1]==='string')).toString();permanentRedirect(path+(query?'?'+query:''))}
  if(page.length>2)notFound()

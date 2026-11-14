@@ -14,7 +14,7 @@ export const dynamicParams=true
 export const revalidate=60
 export async function generateMetadata({params}:Props){const {slug}=await params;const p=products.find(p=>p.slug===slug);return p? pageMetadata('/odm-oem/'+slug,{title:p.name,description:oemCopy[slug][0]}):{}}
 export default async function OemDetail({params}:Props){
- if(process.env.VERCEL_ENV!=='preview')permanentRedirect(await localizedPath('/odm-oem'))
+ if((!['preview','production'].includes(process.env.VERCEL_ENV ?? '')))permanentRedirect(await localizedPath('/odm-oem'))
  const {slug}=await params,p=products.find(p=>p.slug===slug);if(!p)notFound()
  return permanentRedirect(await localizedPath('/products/'+slug))
 }

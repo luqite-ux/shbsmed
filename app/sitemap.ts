@@ -17,7 +17,7 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
  const routes=new Map<string,string|undefined>(['','/products','/odm-oem','/contract-manufacturing','/about/company-introduction','/about/qualifications','/about/manufacturing-inspection','/news','/contact'].map(path=>[path,undefined]))
  for(const c of rfCategories(cats))if(items.some(p=>p.category_slug===c.slug))routes.set(`/products/${c.slug}`,items.filter(p=>p.category_slug===c.slug).map(p=>p.updated_at).filter(Boolean).sort().at(-1))
  for(const a of articles||[])routes.set(`/news/${a.slug}`,a.updated_at||a.published_at)
- if(process.env.VERCEL_ENV==='preview'){const {getMedicalProducts}=await import('@/lib/medical-products');const {feedbackArticles}=await import('@/lib/feedback-20261109');for(const p of await getMedicalProducts())routes.set('/products/'+p.slug,undefined);for(const a of feedbackArticles)routes.set('/news/'+a.slug,a.updatedAt)}
+ if((['preview','production'].includes(process.env.VERCEL_ENV ?? ''))){const {getMedicalProducts}=await import('@/lib/medical-products');const {feedbackArticles}=await import('@/lib/feedback-20261109');for(const p of await getMedicalProducts())routes.set('/products/'+p.slug,undefined);for(const a of feedbackArticles)routes.set('/news/'+a.slug,a.updatedAt)}
  const result:MetadataRoute.Sitemap=[]
  for(const[path,modified]of routes){
   const languages=Object.fromEntries(await Promise.all(config.locales.map(async(locale:string)=>[locale,`https://shbsmed.com${await localizedPath(path||'/',locale)}`])))
