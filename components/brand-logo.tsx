@@ -17,7 +17,7 @@ export function BrandLogo({ className, size = "default" }: { className?: string;
         width={72}
         height={72}
         unoptimized={size === 'footer'}
-        className={`brand-symbol shrink-0 object-contain ${size === 'footer' ? 'bg-[#0e587f] p-3' : ''}`}
+        className={`brand-symbol shrink-0 object-contain ${size === 'footer' ? 'bg-transparent p-3' : ''}`}
       />
       <span className="brand-name font-semibold leading-tight">{brand.brandName}</span>
     </Link>
