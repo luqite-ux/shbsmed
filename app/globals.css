@@ -437,7 +437,7 @@
 .header-tool:hover{background:#edf4f7}
 .mobile-menu-toggle{display:none}
 .compact-page-heading .meeting-breadcrumb{margin-bottom:8px}
-@media(max-width:767px){.compact-page-heading h1{max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.18}}
+@media(max-width:767px){.compact-page-heading h1{width:calc(100vw - 2rem);max-width:calc(100vw - 2rem);white-space:normal;overflow-wrap:anywhere;line-height:1.18}}
 .feedback-footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
 .feedback-footer .brand-lockup{color:white}
 .feedback-footer nav ul{display:grid;grid-template-columns:1fr;gap:4px}
