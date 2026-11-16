@@ -529,8 +529,10 @@
 .quarter-turn-dialog img{width:100%;height:100%;object-fit:contain;transform:rotate(-90deg)}
 .attachment-certificates figcaption{margin-top:14px;font-size:16px;line-height:1.5;color:#194c63;font-weight:600}
 .attachment-document{display:inline-block;margin-top:8px;padding-block:6px;color:#194c63;text-decoration:underline;text-underline-offset:4px;font-size:14px}
-.attachment-photos .zoom-image{display:block;width:100%;height:auto;background:transparent}
-.attachment-photos .zoom-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.attachment-photos{align-items:stretch}
+.attachment-photos figure{display:flex;min-height:100%}
+.attachment-photos .zoom-image{display:block;width:100%;height:auto;aspect-ratio:4/3;background:#edf5f8}
+.attachment-photos .zoom-image img{display:block;width:100%;height:100%;max-height:none;object-fit:contain}
 .medical-card-image:has(img[src$='/4.1.webp']){background:#bbdce6}
 .medical-card-image:has(img[src$='/4.2.webp']){background:#c0d7e0}
 .medical-card-image:has(img[src$='/5.1.webp']){background:#bfd7e1}
@@ -552,7 +554,7 @@
 .oem-new-gallery figcaption{padding:16px 0;font-size:20px;font-weight:600;color:#173e53}
 .oem-detail-photo .zoom-image{display:block;width:100%;height:auto;background:transparent;aspect-ratio:auto}
 @media(max-width:767px){.company-highlights,.oem-new-gallery{grid-template-columns:1fr}.company-highlights{gap:36px}}
-@media(max-width:767px){.attachment-certificates,.attachment-photos{grid-template-columns:1fr;gap:28px}.attachment-certificates .zoom-image{height:390px}}
+@media(max-width:767px){.attachment-certificates,.attachment-photos{grid-template-columns:1fr;gap:28px}.attachment-certificates .zoom-image{height:390px}.attachment-photos .zoom-image{aspect-ratio:4/3}}
 
 /* Customer feedback 261106: equal image stages, full products, left captions. */
 .feedback-product-grid .medical-card-image:has(img){height:280px;aspect-ratio:auto;background:#bbd6e1}

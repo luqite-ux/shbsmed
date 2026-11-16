@@ -1,13 +1,11 @@
 import {SiteText,SiteImage} from '@/components/site-copy'
 import {Reveal} from '@/components/reveal'
-import {ZoomImage,ProcessVideo} from '@/components/medical-media'
+import {ZoomImage} from '@/components/medical-media'
 import {QualificationGallery,AttachmentPhotoGallery} from '@/components/attachment-galleries'
 import seed from '@/lib/site-seed.json'
-import {processVideoIntro} from '@/lib/meeting-business-copy'
 import {companyIntroduction} from '@/lib/feedback-company-copy'
 import {oemSeries,componentSeries} from '@/lib/site-navigation'
 import Link from '@/components/localized-link'
-import {SupplementText} from '@/components/customer-supplement-copy'
 import {CompanyHighlights} from '@/components/company-highlights'
 import oemPreview from '@/lib/oem-preview-20261104.json'
 
@@ -22,7 +20,6 @@ export function AboutContent({includeManufacturing=true,section}:{includeManufac
 export function ManufacturingContent(){return <div id="manufacturing-inspection" className="meeting-about scroll-mt-32">
  <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Manufacturing Technology & Equipment"/></h3><AttachmentPhotoGallery group="manufacturing"/></Reveal>
  <Reveal className="meeting-about-block equipment-showcase feedback-equipment"><h3><SiteText value="Quality Inspection Instruments"/></h3><AttachmentPhotoGallery group="inspection"/></Reveal>
- <Reveal className="meeting-about-block manufacturing-showcase"><div className="manufacturing-section-copy"><h3><SiteText value="Manufacturing Videos"/></h3><p><SiteText value={processVideoIntro}/></p></div><div className="manufacturing-video-pair">{seed.videos.map((v,i)=><Reveal key={v.src} delay={i*90}><ProcessVideo {...v}/></Reveal>)}</div></Reveal>
  </div>}
 
 export function NamedGallery({items,portrait=false}:{items:{slug:string;name:string;image:string}[];portrait?:boolean}){const supplied=portrait&&(['preview','production'].includes(process.env.VERCEL_ENV ?? ''))&&items.some(p=>oemPreview.some(o=>o.slug===p.slug));return <div className={supplied?'oem-new-gallery':`meeting-gallery ${portrait?'meeting-gallery-portrait':''}`}>{items.map(item=><Reveal as="figure" key={item.slug} id={item.slug}>{supplied?<Link href={`/odm-oem/${item.slug}`}><SiteImage src={item.image} alt={item.name} loading="lazy" width={oemPreview.find(p=>p.slug===item.slug)?.width} height={oemPreview.find(p=>p.slug===item.slug)?.height}/><figcaption>{item.name}</figcaption></Link>:<><ZoomImage src={item.image} alt={item.name}/><figcaption><SiteText value={item.name}/></figcaption></>}</Reveal>)}</div>}

@@ -3,6 +3,7 @@ import {PageFrame} from '@/components/page-frame'
 import {ProductSeries} from '@/components/medical-catalog'
 import {Reveal} from '@/components/reveal'
 import {getMedicalProducts} from '@/lib/medical-products'
+import {brandedSeries} from '@/lib/site-navigation'
 export const revalidate=60
 export async function generateMetadata(){return pageMetadata('/products',{title:'Branded Medical Needle Products',description:'RF Pain Therapy Series and Neuraxial Anesthesia Series.'})}
-export default async function Products({searchParams}:{searchParams?:Promise<{series?:string}>}){const [products,query]=await Promise.all([getMedicalProducts(),searchParams||Promise.resolve({series:undefined})]);return <PageFrame eyebrow="Branded Products" title="Branded Medical Needle Products" description=""><Reveal as="section" className="medical-shell medical-section"><ProductSeries items={products} selected={query.series}/></Reveal></PageFrame>}
+export default async function Products({searchParams}:{searchParams?:Promise<{series?:string}>}){const [products,query]=await Promise.all([getMedicalProducts(),searchParams||Promise.resolve({series:undefined})]);const selected=brandedSeries.find(series=>series.slug===query.series);return <PageFrame eyebrow="Branded Products" title={selected?.name||"Branded Medical Needle Products"} description=""><Reveal as="section" className="medical-shell medical-section"><ProductSeries items={products} selected={query.series}/></Reveal></PageFrame>}
