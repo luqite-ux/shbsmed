@@ -14,7 +14,7 @@ function articleCategory(article:any):string|undefined{
   if(scoped==='company'||scoped==='corporate')return 'company'
   if(scoped==='industry'||scoped==='product')return scoped
  }
- return keys.includes('news')?'industry':undefined
+ return 'industry'
 }
 export async function getPublishedArticles(language?:string):Promise<Article[]>{
  const locale=language||await currentLocale()
