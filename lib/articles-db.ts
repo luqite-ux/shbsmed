@@ -16,6 +16,16 @@ function articleCategory(article:any):string|undefined{
  }
  return 'industry'
 }
+function sortByNewest(articles:Article[]):Article[]{
+ return articles.slice().sort((left,right)=>{
+  const leftTime=Date.parse(left.publishedAt)
+  const rightTime=Date.parse(right.publishedAt)
+  if(Number.isNaN(leftTime)&&Number.isNaN(rightTime))return 0
+  if(Number.isNaN(leftTime))return 1
+  if(Number.isNaN(rightTime))return -1
+  return rightTime-leftTime
+ })
+}
 export async function getPublishedArticles(language?:string):Promise<Article[]>{
  const locale=language||await currentLocale()
  const {defaultLocale}=await siteLanguages()
@@ -25,6 +35,7 @@ export async function getPublishedArticles(language?:string):Promise<Article[]>{
  const {data,error}=await db.from('articles').select('*').eq('tenant_id',tenant).eq('is_published',true).order('sort_order').order('published_at',{ascending:false,nullsFirst:false}).order('id')
  if(error)throw new Error('Updates service is unavailable')
  const existing=(data||[]).map((a:any)=>({slug:a.slug,category:articleCategory(a),title:localized(a.title_i18n,locale)||a.title_en||a.title||'',excerpt:localized(a.excerpt_i18n,locale)||a.excerpt_en||a.excerpt||'',content:sanitizeHtml(localized(a.content_i18n,locale)||a.content_en||a.content||'',{allowedTags:sanitizeHtml.defaults.allowedTags.concat(['img']),allowedAttributes:{...sanitizeHtml.defaults.allowedAttributes,img:['src','alt','width','height','loading']},allowedSchemes:['https','mailto','tel'],allowProtocolRelative:false}),publishedAt:a.published_at||a.created_at,updatedAt:a.updated_at||a.published_at||a.created_at,image:a.featured_image||undefined}))
- return (['preview','production'].includes(process.env.VERCEL_ENV ?? ''))?[...feedbackArticles,...existing.filter((a:Article)=>!feedbackArticles.some(p=>p.slug===a.slug))]:existing
+ const merged=(['preview','production'].includes(process.env.VERCEL_ENV ?? ''))?[...feedbackArticles,...existing.filter((a:Article)=>!feedbackArticles.some(p=>p.slug===a.slug))]:existing
+ return sortByNewest(merged)
 }
 export async function getArticleBySlug(slug:string,language?:string){return (await getPublishedArticles(language)).find(a=>a.slug===slug)}
