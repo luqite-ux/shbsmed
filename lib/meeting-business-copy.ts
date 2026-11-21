@@ -18,6 +18,9 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Every self-developed product upholds our brand commitment to compliance and quality':'每一款自主产品，都承载着我们对合规与品质的承诺',
+ 'Every OEM project empowers partners with proven technology and production lines':'每一个 OEM 项目，都以成熟技术与产线能力助力合作伙伴',
+ 'Every batch of custom accessories brings your functional and quality vision to life':'每一批定制配件，都让您的功能与品质设想落地',
  'Home':'首页','About Us':'关于我们','Branded Products':'品牌产品','OEM':'OEM 成品代工','Custom Accessories':'配件定制','Contact Us':'联系我们',
  'RF Pain Therapy Series':'射频疼痛治疗系列','Neuraxial Anesthesia Series':'椎管内麻醉系列','Interventional Therapy Series':'介入治疗系列',
  'Bone Marrow Biopsy Series':'骨髓活检系列','Visceral Biopsy Series':'内脏活检系列','Ultrasound Guidance Solutions':'超声引导系列','Tip Structure Solutions':'针尖结构系列','End Structure Solutions':'管端结构系列',
