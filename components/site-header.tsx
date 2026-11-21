@@ -44,7 +44,7 @@ export function SiteHeader(){
  return <header ref={headerRef} className="feedback-header sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
  <div className="feedback-header-row">
  <BrandLogo/><nav aria-label="Primary" className="review-navigation desktop-navigation"><Entries items={navigation} onNavigate={close}/></nav>
- <div className="header-tools"><Link href="/search" aria-label="Search" className="header-tool"><Search size={21}/></Link><select aria-label="Language" value={locale} onChange={e=>changeLanguage(e.target.value)}>{(locales||[locale]).map(language=><option key={language} value={language}>{language.toUpperCase()}</option>)}</select>
+ <div className="header-tools"><Link href="/search" aria-label={locale.startsWith('zh')?'搜索':'Search'} className="header-tool"><Search size={21}/></Link><select aria-label={locale.startsWith('zh')?'语言':'Language'} value={locale} onChange={e=>changeLanguage(e.target.value)}>{(locales||[locale]).map(language=><option key={language} value={language}>{language==='zh'?'中文':language==='en'?'English':language.toUpperCase()}</option>)}</select>
  <button ref={toggleRef} type="button" className="header-tool mobile-menu-toggle" aria-label={open?'Close menu':'Open menu'} aria-expanded={open} aria-controls="mobile-nav" onClick={()=>open?close():setOpen(true)}>{open?<X/>:<Menu/>}</button></div>
  </div>
  {open&&<nav id="mobile-nav" aria-label="Mobile" className="review-navigation review-mobile"><Entries items={navigation} onNavigate={close}/></nav>}

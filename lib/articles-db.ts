@@ -1,4 +1,4 @@
-import {feedbackArticles} from '@/lib/feedback-20261109'
+import {getFeedbackArticles} from '@/lib/feedback-20261109'
 import { getSupabaseClient } from "@/lib/supabase"
 import sanitizeHtml from 'sanitize-html'
 import {localized as localizeValue} from '@/lib/catalog-model.mjs'
@@ -35,6 +35,7 @@ export async function getPublishedArticles(language?:string):Promise<Article[]>{
  const {data,error}=await db.from('articles').select('*').eq('tenant_id',tenant).eq('is_published',true).order('sort_order').order('published_at',{ascending:false,nullsFirst:false}).order('id')
  if(error)throw new Error('Updates service is unavailable')
  const existing=(data||[]).map((a:any)=>({slug:a.slug,category:articleCategory(a),title:localized(a.title_i18n,locale)||a.title_en||a.title||'',excerpt:localized(a.excerpt_i18n,locale)||a.excerpt_en||a.excerpt||'',content:sanitizeHtml(localized(a.content_i18n,locale)||a.content_en||a.content||'',{allowedTags:sanitizeHtml.defaults.allowedTags.concat(['img']),allowedAttributes:{...sanitizeHtml.defaults.allowedAttributes,img:['src','alt','width','height','loading']},allowedSchemes:['https','mailto','tel'],allowProtocolRelative:false}),publishedAt:a.published_at||a.created_at,updatedAt:a.updated_at||a.published_at||a.created_at,image:a.featured_image||undefined}))
+ const feedbackArticles=getFeedbackArticles(locale)
  const merged=(['preview','production'].includes(process.env.VERCEL_ENV ?? ''))?[...feedbackArticles,...existing.filter((a:Article)=>!feedbackArticles.some(p=>p.slug===a.slug))]:existing
  return sortByNewest(merged)
 }

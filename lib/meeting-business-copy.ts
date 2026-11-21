@@ -18,6 +18,9 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Home':'首页','About Us':'关于我们','Branded Products':'品牌产品','OEM':'OEM 成品代工','Custom Accessories':'配件定制','Contact Us':'联系我们',
+ 'RF Pain Therapy Series':'射频疼痛治疗系列','Neuraxial Anesthesia Series':'椎管内麻醉系列','Interventional Therapy Series':'介入治疗系列',
+ 'Bone Marrow Biopsy Series':'骨髓活检系列','Visceral Biopsy Series':'内脏活检系列','Ultrasound Guidance Solutions':'超声引导系列','Tip Structure Solutions':'针尖结构系列','End Structure Solutions':'管端结构系列',
  'Information':'资讯','Industry Information':'行业资讯','Corporate Information':'企业资讯','Product Information':'产品资讯','All Information':'全部资讯','View Information →':'查看资讯 →',
  'Company Introduction':'企业简介','Qualifications':'资质证书','Manufacturing Equipment & Inspection Instruments':'技术设备、质检仪器','Single-use RF Cannulas':'一次性射频套管',
  [manufacturingIntro]:'生产区域设有装配工作台及用于部分制造工序的设备。装配以人工操作为主，自动化打印设备用于相应生产环节。',
