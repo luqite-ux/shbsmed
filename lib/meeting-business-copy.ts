@@ -18,6 +18,12 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Inquire About This Product →':'咨询此产品 →','Product specifications':'产品规格',
+ 'Combination part number':'组合品号','Electrode part number':'电极品号','Cannula part number':'套管品号',
+ 'Electrode diameter':'电极直径','Cannula diameter':'套管直径','Working length (mm)':'工作长度（毫米）',
+ 'Active tip length (mm)':'活性端长度（毫米）','Tip structure':'针尖结构','Electrode model':'电极型号',
+ 'Electrode specification':'电极规格','Compatible cannula length (mm)':'适配套管长度（毫米）',
+ 'Cannula model':'套管型号','Specification':'规格','Nominal working length (mm)':'标称工作长度（毫米）',
  'OEM Manufacturing':'OEM 成品代工','Branded Medical Needle Products':'品牌医疗针类产品',
  'Tell us your product or cooperation requirements':'告诉我们您的产品或合作需求',
  'Send your product name or model and describe your requirements.':'请提供产品名称或型号，并说明您的需求。',
