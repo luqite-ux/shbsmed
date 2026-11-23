@@ -18,6 +18,8 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Search':'搜索','Search products, model numbers and information':'搜索产品、型号及资讯',
+ 'results for':'条搜索结果，关键词：','No matching results. Try a product name or model number.':'未找到匹配结果，请尝试产品名称或型号。',
  'Single-use Spinal Needle（Quincke Tip）':'一次性使用脊髓针（昆克针尖）',
  'Single-use Spinal Needle(Sprotte Tip)':'一次性使用脊髓针（Sprotte 针尖）',
  'Single-use Epidural Needle （Tuohy Tip）':'一次性使用硬膜外穿刺针（Tuohy 针尖）',
