@@ -18,6 +18,12 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Product purchase':'产品采购','OEM private-label manufacturing':'OEM 贴牌生产',
+ 'Needle tube & stylet contract manufacturing':'针管及针芯配件代工',
+ 'Contract manufacturing':'配件代工',
+ 'Guage (mm)':'针规（毫米）','Length (mm)':'长度（毫米）',
+ 'Spinal needle P/N':'脊髓针品号','Introducer needle P/N':'引导针品号',
+ 'Epidural needle P/N':'硬膜外穿刺针品号','Airfoil':'翼片类型','Fixed Wing':'固定翼',
  'Search':'搜索','Search products, model numbers and information':'搜索产品、型号及资讯',
  'results for':'条搜索结果，关键词：','No matching results. Try a product name or model number.':'未找到匹配结果，请尝试产品名称或型号。',
  'Single-use Spinal Needle（Quincke Tip）':'一次性使用脊髓针（昆克针尖）',

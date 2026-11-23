@@ -68,7 +68,7 @@ export function EnquiryForm({
           <select id="inquiryType" name="inquiryType" required defaultValue={defaultType==='ODM'?'OEM':inquiryTypes.includes(defaultType || '') ? defaultType : ''}
             className="h-11 w-full rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue">
             <option value="" disabled>{t('Select an inquiry type','请选择询盘类型')}</option>
-            {inquiryTypes.map(type => <option key={type} value={type}>{type}</option>)}
+            {inquiryTypes.map(type => <option key={type} value={type}>{zh?({'Product purchase':'产品采购','OEM':'OEM 成品代工','Contract manufacturing':'配件代工'} as Record<string,string>)[type]||type:type}</option>)}
           </select>
         </Field>
 
