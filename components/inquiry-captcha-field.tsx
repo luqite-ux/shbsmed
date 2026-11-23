@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import {useSiteLanguage} from '@/components/site-copy'
 import {
   createInquiryCaptchaScope,
   createLatestCaptchaRequestController,
@@ -27,6 +28,7 @@ export function InquiryCaptchaField({
   refreshKey = 0,
   className = '',
 }: InquiryCaptchaFieldProps) {
+  const {locale}=useSiteLanguage(); const zh=locale.startsWith('zh')
   const [scope] = useState(() => createInquiryCaptchaScope())
   const [requests] = useState(() => createLatestCaptchaRequestController())
   const [challenge, setChallenge] = useState<CaptchaResponse | null>(null)
@@ -50,11 +52,11 @@ export function InquiryCaptchaField({
       setChallenge(body)
     } catch {
       if (!requests.isCurrent(request)) return
-      setError('Verification image could not load. Please refresh and try again.')
+      setError(zh?'验证码图片加载失败，请刷新重试。':'Verification image could not load. Please refresh and try again.')
     } finally {
       if (requests.isCurrent(request)) setLoading(false)
     }
-  }, [requests, scope])
+  }, [requests, scope, zh])
 
   useEffect(() => {
     void refresh()
@@ -64,7 +66,7 @@ export function InquiryCaptchaField({
   return (
     <div className={className}>
       <label htmlFor={answerName} className="mb-2 block text-sm font-medium">
-        4-character image verification
+        {zh?'4 位图片验证码':'4-character image verification'}
       </label>
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex h-14 w-40 items-center justify-center overflow-hidden rounded-lg border bg-slate-50">
@@ -73,7 +75,7 @@ export function InquiryCaptchaField({
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(challenge.svg)}`}
-              alt="4-character verification image"
+              alt={zh?'4 位图片验证码':'4-character verification image'}
               width={160}
               height={56}
             />
@@ -98,7 +100,7 @@ export function InquiryCaptchaField({
           inputMode="text"
           aria-describedby={error ? `${answerName}-error` : undefined}
           className="h-11 w-32 rounded-lg border border-slate-300 bg-white px-3 text-base uppercase tracking-[0.25em] text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 disabled:cursor-not-allowed disabled:bg-slate-100"
-          placeholder="Code"
+          placeholder={zh?'验证码':'Code'}
         />
         <button
           type="button"
@@ -106,7 +108,7 @@ export function InquiryCaptchaField({
           disabled={loading}
           className="h-11 rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Refresh
+          {zh?'刷新':'Refresh'}
         </button>
       </div>
       {error ? (

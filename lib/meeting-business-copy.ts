@@ -18,6 +18,19 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'Single-use Spinal Needle（Quincke Tip）':'一次性使用脊髓针（昆克针尖）',
+ 'Single-use Spinal Needle(Sprotte Tip)':'一次性使用脊髓针（Sprotte 针尖）',
+ 'Single-use Epidural Needle （Tuohy Tip）':'一次性使用硬膜外穿刺针（Tuohy 针尖）',
+ 'Combined Spinal-Epidural Needle (CSE)':'腰硬联合穿刺针',
+ 'Building 1, No. 78 Kangtai Road, Zhujiajiao Town, Qingpu District, Shanghai, China':'中国上海市青浦区朱家角镇康泰路 78 号 1 幢',
+ 'Industry, product and company information.':'行业、产品与企业资讯。',
+ 'RF Electrode — K152642':'射频电极 — K152642','RF Cannula — K112231':'射频套管 — K112231',
+ 'VC-S RF Cannula — K191293':'VC-S 射频套管 — K191293',
+ 'Spinal & Epidural Needles — K131006':'脊髓针与硬膜外穿刺针 — K131006',
+ 'EC Certificate':'EC 证书','MDD Certificate Continuation Letter':'MDD 证书延续函',
+ 'Bone Marrow Biopsy Components (Type II)':'骨髓活检组件（II 型）',
+ 'Bone Marrow Biopsy Components (Type III)':'骨髓活检组件（III 型）',
+ 'Rotating Cut Biopsy Components':'旋切活检组件',
  'Inquire About This Product →':'咨询此产品 →','Product specifications':'产品规格',
  'Combination part number':'组合品号','Electrode part number':'电极品号','Cannula part number':'套管品号',
  'Electrode diameter':'电极直径','Cannula diameter':'套管直径','Working length (mm)':'工作长度（毫米）',
