@@ -9,8 +9,16 @@ import oemPreview from '@/lib/oem-preview-20261104.json'
 
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
+const previewNamesZh:Record<string,string>={
+ 'rf-electrode-set':'一次性使用射频针状电极及套管组合','rf-electrodes':'一次性使用射频针状电极',
+ 'straight-sharp-rf-cannulas':'一次性使用射频套管（直尖形）','curved-sharp-rf-cannulas':'一次性使用射频套管（弯尖形）',
+ 'curved-blunt-rf-cannulas':'一次性使用射频套管（弯钝形）','side-port-rf-cannulas':'一次性使用射频套管（侧孔弯尖形）',
+ 'quincke-spinal-needle':'一次性使用脊髓针（昆克针尖）','sprotte-spinal-needle':'一次性使用脊髓针（Sprotte 针尖）',
+ 'epidural-needle':'一次性使用硬膜外穿刺针（Tuohy 针尖）','combined-spinal-epidural-needle':'腰硬联合穿刺针',
+}
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
- if((['preview','production'].includes(process.env.VERCEL_ENV ?? '')))return [...oemPreview.map(p=>({slug:p.slug,name:p.name,image:p.image,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:[]})),...previewProducts.map(p=>({slug:p.slug,name:p.name,image:`/images/feedback-20261109/rf-${p.id}-card.webp`,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:p.rows.map((r,i)=>({model:r[0]||`pending-${i}`,gauge:p.id==='4.1'?r[3]:p.id==='4.2'?r[3]:r[3],length:p.id==='4.1'?r[5]:p.id==='4.2'?r[4]:r[4],activeTip:p.id==='4.1'?r[6]:p.id==='4.2'?'':r[5],color:'',moq:''}))}))]
+ const requestedLocale=language||await currentLocale()
+ if((['preview','production'].includes(process.env.VERCEL_ENV ?? '')))return [...oemPreview.map(p=>({slug:p.slug,name:requestedLocale.startsWith('zh')?previewNamesZh[p.slug]||p.name:p.name,image:p.image,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:[]})),...previewProducts.map(p=>({slug:p.slug,name:requestedLocale.startsWith('zh')?previewNamesZh[p.slug]||p.name:p.name,image:`/images/feedback-20261109/rf-${p.id}-card.webp`,tipImage:p.detail,description:p.description.join(' '),overview:p.description.join(' '),variants:p.rows.map((r,i)=>({model:r[0]||`pending-${i}`,gauge:p.id==='4.1'?r[3]:p.id==='4.2'?r[3]:r[3],length:p.id==='4.1'?r[5]:p.id==='4.2'?r[4]:r[4],activeTip:p.id==='4.1'?r[6]:p.id==='4.2'?'':r[5],color:'',moq:''}))}))]
  const locale=language||await currentLocale()
  const {defaultLocale}=await siteLanguages()
  const localized=(value:unknown,requested:string)=>localizeValue(value,requested,defaultLocale)
