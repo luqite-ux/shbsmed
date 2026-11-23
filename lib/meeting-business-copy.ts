@@ -18,6 +18,21 @@ export const manufacturingIntro='Our production area brings together assembly wo
 export const inspectionIntro='Inspection capability is presented alongside our manufacturing equipment. The photographs show our inspection instruments and dimensional inspection area, giving a closer look at the facilities used for product inspection.'
 export const processVideoIntro='These short videos show tube cutting and wire cutting during production. They complement the equipment photographs with a direct view of the machining processes in operation.'
 export const businessCopyZh:Record<string,string>={
+ 'OEM Manufacturing':'OEM 成品代工','Branded Medical Needle Products':'品牌医疗针类产品',
+ 'Tell us your product or cooperation requirements':'告诉我们您的产品或合作需求',
+ 'Send your product name or model and describe your requirements.':'请提供产品名称或型号，并说明您的需求。',
+ 'Manufacturing Technology & Equipment':'生产工艺与设备','Quality Inspection Instruments':'质量检测仪器',
+ 'Please contact us to discuss your requirements.':'欢迎联系我们沟通具体需求。',
+ 'We welcome custom manufacturing inquiries from partners worldwide. Send us your drawings or samples.':'欢迎全球合作伙伴咨询定制生产。请发送图纸或样品，与我们沟通需求。',
+ 'Company & Product Qualifications':'企业及产品资质',
+ 'ISO 13485 Quality Management System':'ISO 13485 质量管理体系认证',
+ 'High-tech Enterprise Certificate':'高新技术企业证书',
+ 'Medical Device Manufacturing License':'医疗器械生产许可证',
+ 'Single-use RF Electrode Registration':'一次性射频电极注册证',
+ 'Patent Certificates':'专利证书',
+ 'Software Copyright Certificates':'软件著作权证书',
+ 'From the outset, our company has focused on medical device research, development and manufacturing to high standards. We have developed a range of medical puncture instruments and electrodes, including single-use RF electrodes, RF cannulas, spinal needles and epidural needles. We have established a medical device quality management system that meets Chinese and US regulatory requirements and ISO 13485, and have obtained market-access documentation for the United States (FDA), the European Union (CE) and China (NMPA).':'自成立以来，公司始终专注于医疗器械的研发与规范化生产，形成了一次性射频电极、射频套管、腰椎穿刺针及硬膜外穿刺针等医疗穿刺器械产品。公司建立了符合中国、美国监管要求及 ISO 13485 标准的医疗器械质量管理体系，并取得美国 FDA、欧盟 CE 及中国 NMPA 相关市场准入文件。',
+ 'We are committed to helping relieve patients’ pain and serving colleagues across the global medical industry. Alongside compliant, high-quality branded products, we offer OEM and custom component manufacturing solutions, drawing on decades of specialist expertise and the mature production lines established since our company was founded.':'我们致力于帮助缓解患者疼痛，服务全球医疗行业客户。除合规的自有品牌产品外，公司依托多年专业经验和成熟产线，提供 OEM 成品代工及定制配件制造服务。',
  'Every self-developed product upholds our brand commitment to compliance and quality':'每一款自主产品，都承载着我们对合规与品质的承诺',
  'Every OEM project empowers partners with proven technology and production lines':'每一个 OEM 项目，都以成熟技术与产线能力助力合作伙伴',
  'Every batch of custom accessories brings your functional and quality vision to life':'每一批定制配件，都让您的功能与品质设想落地',
