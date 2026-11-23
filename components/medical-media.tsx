@@ -1,10 +1,13 @@
 "use client"
 
-import {SiteText,SiteImage,useSiteVideo} from '@/components/site-copy'
+import {SiteText,SiteImage,useSiteVideo,useSiteLanguage} from '@/components/site-copy'
+import {businessCopyZh} from '@/lib/meeting-business-copy'
+import {meetingCopyZh} from '@/lib/meeting-product-copy'
 import {useEffect,useRef,useState} from 'react'
 import {Dialog,DialogContent,DialogTitle,DialogTrigger} from '@/components/ui/dialog'
 export function ZoomImage({src,alt,className='',quarterTurn=false}:{src:string;alt:string;className?:string;quarterTurn?:boolean}){
- return <Dialog><DialogTrigger asChild><button type="button" className={`zoom-image ${className} ${quarterTurn?'quarter-turn':''}`} aria-label={`Enlarge ${alt}`}><SiteImage src={src} alt={alt} loading="lazy" onLoad={event=>{const image=event.currentTarget;if(image.naturalHeight)image.closest('figure')?.style.setProperty('--photo-ratio',String(image.naturalWidth/image.naturalHeight))}}/></button></DialogTrigger><DialogContent className="max-w-[94vw] sm:max-w-5xl"><DialogTitle className="sr-only">{alt}</DialogTitle>{quarterTurn?<div className="quarter-turn-dialog"><SiteImage src={src} alt={alt}/></div>:<SiteImage className="max-h-[82vh] w-full object-contain" src={src} alt={alt}/>}</DialogContent></Dialog>
+ const {locale}=useSiteLanguage(); const label=locale.startsWith('zh')?meetingCopyZh[alt]??businessCopyZh[alt]??alt:alt
+ return <Dialog><DialogTrigger asChild><button type="button" className={`zoom-image ${className} ${quarterTurn?'quarter-turn':''}`} aria-label={locale.startsWith('zh')?`放大${label}`:`Enlarge ${label}`}><SiteImage src={src} alt={label} loading="lazy" onLoad={event=>{const image=event.currentTarget;if(image.naturalHeight)image.closest('figure')?.style.setProperty('--photo-ratio',String(image.naturalWidth/image.naturalHeight))}}/></button></DialogTrigger><DialogContent className="max-w-[94vw] sm:max-w-5xl"><DialogTitle className="sr-only">{label}</DialogTitle>{quarterTurn?<div className="quarter-turn-dialog"><SiteImage src={src} alt={label}/></div>:<SiteImage className="max-h-[82vh] w-full object-contain" src={src} alt={label}/>}</DialogContent></Dialog>
 }
 export function ProcessVideo({src,poster,title}:{src:string;poster:string;title:string}){
  const configured=useSiteVideo(src);src=configured?.src||src;poster=configured?.poster||poster;title=configured?.title||title
