@@ -21,9 +21,9 @@ function Entries({items,onNavigate,level=0}:{items:Entry[];onNavigate:()=>void;l
  </details>:<Link key={item.href} href={item.href} onClick={onNavigate}><SiteText value={item.label}/></Link>)}</>
 }
 export function SiteHeader(){
- const [open,setOpen]=useState(false),path=usePathname()
+ const [open,setOpen]=useState(false),[switching,setSwitching]=useState(false),path=usePathname()
  const {locale,defaultLocale,locales}=useSiteLanguage()
- const changeLanguage=(language:string)=>{const bare=locale===defaultLocale?path:path.replace(new RegExp(`^/${locale}(?=/|$)`),'')||'/';window.location.assign((language===defaultLocale?bare:`/${language}${bare==='/'?'':bare}`)+window.location.search+window.location.hash)}
+ const changeLanguage=(language:string)=>{if(switching||language===locale)return;setSwitching(true);window.dispatchEvent(new Event('hq:nav-start'));const bare=locale===defaultLocale?path:path.replace(new RegExp(`^/${locale}(?=/|$)`),'')||'/';window.location.assign((language===defaultLocale?bare:`/${language}${bare==='/'?'':bare}`)+window.location.search+window.location.hash)}
  const headerRef=useRef<HTMLElement>(null),toggleRef=useRef<HTMLButtonElement>(null)
  const close=useCallback(()=>{setOpen(false);headerRef.current?.querySelectorAll('details[open]').forEach(item=>item.removeAttribute('open'))},[])
  useEffect(()=>close(),[path,close])
@@ -44,7 +44,7 @@ export function SiteHeader(){
  return <header ref={headerRef} className="feedback-header sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
  <div className="feedback-header-row">
  <BrandLogo/><nav aria-label="Primary" className="review-navigation desktop-navigation"><Entries items={navigation} onNavigate={close}/></nav>
- <div className="header-tools"><Link href="/search" aria-label={locale.startsWith('zh')?'搜索':'Search'} className="header-tool"><Search size={21}/></Link><select aria-label={locale.startsWith('zh')?'语言':'Language'} value={locale} onChange={e=>changeLanguage(e.target.value)}>{(locales||[locale]).map(language=><option key={language} value={language}>{language==='zh'?'中文':language==='en'?'English':language.toUpperCase()}</option>)}</select>
+ <div className="header-tools"><Link href="/search" aria-label={locale.startsWith('zh')?'搜索':'Search'} className="header-tool"><Search size={21}/></Link><select aria-label={locale.startsWith('zh')?'语言':'Language'} value={locale} disabled={switching} onChange={e=>changeLanguage(e.target.value)}>{(locales||[locale]).map(language=><option key={language} value={language}>{language==='zh'?'中文':language==='en'?'English':language.toUpperCase()}</option>)}</select>
  <button ref={toggleRef} type="button" className="header-tool mobile-menu-toggle" aria-label={locale.startsWith('zh')?(open?'关闭菜单':'打开菜单'):(open?'Close menu':'Open menu')} aria-expanded={open} aria-controls="mobile-nav" onClick={()=>open?close():setOpen(true)}>{open?<X/>:<Menu/>}</button></div>
  </div>
  {open&&<nav id="mobile-nav" aria-label="Mobile" className="review-navigation review-mobile"><Entries items={navigation} onNavigate={close}/></nav>}

@@ -18,7 +18,7 @@ test('REQ09-11 customer banners show only the supplied slogans and accessible si
  const html=renderToStaticMarkup(React.createElement(HeroCarousel))
  assert.equal(BANNER_INTERVAL_MS,14000)
  assert.equal((html.match(/data-banner="/g)||[]).length,3)
- assert.match(html,/Every self-developed product upholds our brand commitment/)
+ assert.match(html,/Every product upholds our brand commitment/)
  assert.match(html,/Every OEM project empowers partners/)
  assert.match(html,/Every batch of core component manufacturing/)
  assert.match(html,/aria-label="Previous Banner"/);assert.match(html,/aria-label="Next Banner"/)

@@ -13,7 +13,7 @@ const previewNamesZh:Record<string,string>={
  'rf-electrode-set':'一次性使用射频针状电极及套管组合','rf-electrodes':'一次性使用射频针状电极',
  'straight-sharp-rf-cannulas':'一次性使用射频套管（直尖形）','curved-sharp-rf-cannulas':'一次性使用射频套管（弯尖形）',
  'curved-blunt-rf-cannulas':'一次性使用射频套管（弯钝形）','side-port-rf-cannulas':'一次性使用射频套管（侧孔弯尖形）',
- 'quincke-spinal-needle':'一次性使用脊髓针（昆克针尖）','sprotte-spinal-needle':'一次性使用脊髓针（Sprotte 针尖）',
+ 'quincke-spinal-needle':'一次性使用腰椎针（昆克针尖）','sprotte-spinal-needle':'一次性使用腰椎针（Sprotte 针尖）',
  'epidural-needle':'一次性使用硬膜外穿刺针（Tuohy 针尖）','combined-spinal-epidural-needle':'腰硬联合穿刺针',
 }
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
