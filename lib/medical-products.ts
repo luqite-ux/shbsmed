@@ -10,7 +10,7 @@ import oemPreview from '@/lib/oem-preview-20261104.json'
 export type MedicalVariant={model:string;gauge:string;length:string;activeTip:string;color:string;moq:string}
 export type MedicalProduct={slug:string;name:string;image:string;tipImage:string|null;description:string;overview:string;variants:MedicalVariant[]}
 const previewNamesZh:Record<string,string>={
- 'rf-electrode-set':'一次性使用射频针状电极及套管组合','rf-electrodes':'一次性使用射频针状电极',
+ 'rf-electrode-set':'一次性使用射频电极及套管组合','rf-electrodes':'一次性使用射频探头',
  'straight-sharp-rf-cannulas':'一次性使用射频套管（直尖形）','curved-sharp-rf-cannulas':'一次性使用射频套管（弯尖形）',
  'curved-blunt-rf-cannulas':'一次性使用射频套管（弯钝形）','side-port-rf-cannulas':'一次性使用射频套管（侧孔弯尖形）',
  'quincke-spinal-needle':'一次性使用腰椎针（昆克针尖）','sprotte-spinal-needle':'一次性使用腰椎针（Sprotte 针尖）',
