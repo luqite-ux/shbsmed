@@ -14,7 +14,7 @@ const previewNamesZh:Record<string,string>={
  'straight-sharp-rf-cannulas':'一次性使用射频套管（直尖形）','curved-sharp-rf-cannulas':'一次性使用射频套管（弯尖形）',
  'curved-blunt-rf-cannulas':'一次性使用射频套管（弯钝形）','side-port-rf-cannulas':'一次性使用射频套管（侧孔弯尖形）',
  'quincke-spinal-needle':'一次性使用腰椎针（昆克针尖）','sprotte-spinal-needle':'一次性使用腰椎针（Sprotte 针尖）',
- 'epidural-needle':'一次性使用硬膜外穿刺针（Tuohy 针尖）','combined-spinal-epidural-needle':'腰硬联合穿刺针',
+ 'epidural-needle':'一次性使用硬膜外穿刺针（Tuohy 针尖）','combined-spinal-epidural-needle':'腰硬联合麻醉套针',
 }
 export const getMedicalProducts=cache(async(language?:string):Promise<MedicalProduct[]>=>{
  const requestedLocale=language||await currentLocale()
@@ -65,5 +65,5 @@ export const getContractComponents=cache(async(language?:string)=>{
  const groups=(categories||[]).filter(c=>inCategoryBranch(c,categories||[],'contract-components'))
  const existing=(products||[]).filter(p=>groups.some(g=>g.slug===p.category_slug)).map(p=>{const group=groups.find(g=>g.slug===p.category_slug)!;return{slug:p.slug,name:localized(p.name_i18n,locale)||p.name,image:p.image_url,description:localized(p.description_i18n,locale)||p.description||'',group:localized(group.name_i18n,locale)||group.name,application:typeof p.extra_data?.application_category==='string'?p.extra_data.application_category:undefined}})
  const refined=new Set(['triangular-echogenic-surface','mesh-echogenic-surface','matte-echogenic-surface','back-hole-tip','pencil-point','ball-tip-side-hole','flared-end','reduced-end','knurled-end'])
- return (['preview','production'].includes(process.env.VERCEL_ENV ?? ''))?[...existing.map(p=>({...p,image:refined.has(p.slug)?`/images/feedback-20261112/accessory-edges/${p.slug}.webp`:p.image,name:(p.application==='bone-marrow'||/bone.marrow/i.test(p.name))&&!p.name.includes('(Type I)')?p.name+' (Type I)':p.name})),...additionalComponents]:existing
+ return (['preview','production'].includes(process.env.VERCEL_ENV ?? ''))?[...existing.map(p=>({...p,image:refined.has(p.slug)?`/images/feedback-20261112/accessory-edges/${p.slug}.webp`:p.image,name:!locale.startsWith('zh')&&(p.application==='bone-marrow'||/bone.marrow/i.test(p.name))&&!p.name.includes('(Type I)')?p.name+' (Type I)':p.name})),...additionalComponents]:existing
 })

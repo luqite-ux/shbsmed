@@ -1,6 +1,8 @@
 'use client'
-import {useSiteBrand,SiteText,SiteImage} from '@/components/site-copy'
-export function ContactDetails({showAddress=true}:{showAddress?:boolean}){
- const brand=useSiteBrand()
- return <address className="contact-details not-italic">{showAddress&&<p><SiteText value={brand.address}/></p>}<p><span><SiteText value="Email"/>: </span><a href={`mailto:${brand.email}`}>{brand.email}</a></p>{brand.phone&&<p><span><SiteText value="Telephone"/>: </span><a href={`tel:${brand.phone.replace(/[^+\d]/g,'')}`}>{brand.phone}</a></p>}{brand.mobile&&<p><span><SiteText value="Mobile"/>: </span><a href={`tel:${brand.mobile.replace(/[^+\d]/g,'')}`}>{brand.mobile}</a></p>}{brand.wechatQr&&<figure><SiteImage src={brand.wechatQr} alt="WeChat QR code" className="wechat-qr"/><figcaption><SiteText value="WeChat"/></figcaption></figure>}</address>
+import {useSiteBrand,useSiteLanguage,SiteText,SiteImage} from '@/components/site-copy'
+export function ContactDetails({showAddress=true,showWeb=true}:{showAddress?:boolean;showWeb?:boolean}){
+ const brand=useSiteBrand(),{locale}=useSiteLanguage(),zh=locale.startsWith('zh')
+ const email=zh?'z13918734159@163.com':brand.email
+ const mobile=zh?'13482187255':brand.mobile
+ return <address className="contact-details not-italic">{showAddress&&<p><SiteText value={brand.address}/></p>}{mobile&&<p><span>Mobile: </span><a href={`tel:${mobile.replace(/[^+\d]/g,'')}`}>{mobile}</a></p>}<p><span>Email: </span><a href={`mailto:${email}`}>{email}</a></p>{zh&&showWeb&&<p><span>Web: </span><a href="https://www.shbsmed.com">www.shbsmed.com</a></p>}{brand.phone&&<p><span><SiteText value="Telephone"/>: </span><a href={`tel:${brand.phone.replace(/[^+\d]/g,'')}`}>{brand.phone}</a></p>}{brand.wechatQr&&<figure><SiteImage src={brand.wechatQr} alt="WeChat QR code" className="wechat-qr"/><figcaption><SiteText value="WeChat"/></figcaption></figure>}</address>
 }
