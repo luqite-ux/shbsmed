@@ -44,6 +44,7 @@ export default async function RootLayout({
         {preview&&<aside className="bg-amber-100 px-6 py-3 text-amber-950"><span>Website preview — not published</span><form className="ml-4 inline" action="/api/site-content/exit-preview" method="post"><button className="underline" type="submit">Exit preview</button></form></aside>}
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://shbsmed.com/#organization",name:brand.legalNameEn,url:"https://shbsmed.com",email:brand.email,logo:new URL(brand.logo,'https://shbsmed.com').href,address:brand.address},{"@type":"WebSite","@id":"https://shbsmed.com/#website",url:"https://shbsmed.com",name:brand.brandName,publisher:{"@id":"https://shbsmed.com/#organization"}}]}).replace(/</g,'\\u003c')}} />
         <SiteCopyProvider value={copy}><NavigationProgress/>{children}<PageBackButton/></SiteCopyProvider>
+      <script async src={`https://admin.globle-trade.com/api/public/analytics.js?tenantId=${encodeURIComponent(process.env.NEXT_PUBLIC_TENANT_ID || "fd8a0387-ffb2-4cf1-87d3-be3a3a15810b")}`} />
       </body>
     </html>
   )
